@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  html,
+body {
+  height: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+#container {
+    display: flex;
+    background-color: black;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #game {
+    width: 100%;
+    max-width: 750px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    border-bottom: 1px solid rgb(58, 58, 60);
+  }
+  
+  .title {
+    color: gainsboro;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.4rem 0 0.4rem 0;
+    text-align: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
+  #crafting-board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  
+  #crafting-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .squareCrafting {
+    border: 2px solid rgb(58, 58, 60);
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 50px;
+    font-weight: bold;
+    color: gainsboro;
+    text-transform: uppercase;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #inventory-board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  
+  #inventory-board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .squareInventory {
+    border: 2px solid rgb(58, 58, 60);
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 50px;
+    font-weight: bold;
+    color: gainsboro;
+    text-transform: uppercase;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
