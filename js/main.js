@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   createCraftingSquares();
   createInventorySquares();
-  var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png");
+  var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png");
   createInventoryBlocks();
 
   //creates crafting grid where blocks can be dropped
@@ -30,6 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
       squareInventory.setAttribute("ondragover","onDragOver(event)");
       squareInventory.setAttribute("ondrop","onDrop(event)");
       gameInventoryBoard.appendChild(squareInventory);
+      if(index >= 36){
+        squareInventory.classList.add("lastInventoryLine");
+      }
     }
   }
 
