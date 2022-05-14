@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
   }
-  html,
-body {
+  html,body {
   height: 100%;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -110,6 +109,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .block {
+    background-image: "images/wood_plank.png";
   }
   .squareResult {
     border: 2px solid rgb(58, 58, 60);

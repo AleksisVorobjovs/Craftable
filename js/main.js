@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
       squareInventory.classList.add("squareInventory");
       squareInventory.classList.add("animate__animated");
       squareInventory.setAttribute("id", index + 1);
+      squareInventory.setAttribute("ondragover","onDragOver(event)");
+      squareInventory.setAttribute("ondrop","onDrop(event)");
       gameInventoryBoard.appendChild(squareInventory);
     }
   }
