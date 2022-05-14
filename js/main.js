@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   createCraftingSquares();
   createInventorySquares();
+  var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png");
   createInventoryBlocks();
   //createGuessSquares();
 
+  //creates crafting grid where blocks can be dropped
   function createCraftingSquares() {
     const gameCraftBoard = document.getElementById("crafting-board");
     for (let index = 0; index < 9; index++) {
@@ -18,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  //creates inventory grid where blocks are stored
   function createInventorySquares() {
     const gameInventoryBoard = document.getElementById("inventory-board");
     for (let index = 9; index <45; index++) {
@@ -31,18 +34,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  //creats randomly selected blocks that are image elements
   function createInventoryBlocks() {
+    var rng;
     for (let index = 9; index <45; index++) {
-      let block = document.createElement("div");
+      let block = document.createElement("img");
       block.classList.add("block");
       block.classList.add("draggable");
       block.setAttribute("id", "block-"+(index + 1));
       block.setAttribute("draggable", "true");
       block.setAttribute("ondragstart","onDragStart(event)");
+      rng = Math.floor(Math.random() * blockList.length);
+      block.setAttribute("src",blockList[rng])
       let square = document.getElementById(index + 1);
       square.appendChild(block);
     }
   }
+
   function createGuessSquares() {
     const gameGuesses = document.getElementById("guessSquares");
     for(let count = 0; count < 4; count++) {

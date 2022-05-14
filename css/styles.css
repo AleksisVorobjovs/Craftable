@@ -110,9 +110,6 @@
     justify-content: center;
     align-items: center;
   }
-  .block {
-    background-image: "images/wood_plank.png";
-  }
   .squareResult {
     border: 2px solid rgb(58, 58, 60);
     background-color: #8B8B8B;
