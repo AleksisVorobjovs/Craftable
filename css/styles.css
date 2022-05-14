@@ -10,7 +10,7 @@ body {
 }
 #container {
     display: flex;
-    background-color: black;
+    background-color: rgb(73, 5, 5);
     height: 100%;
     align-items: center;
     flex-direction: column;
@@ -87,12 +87,13 @@ body {
     border: 2px solid rgb(58, 58, 60);
     min-width: 60px;
     min-height: 60px;
-    font-size: 50px;
-    font-weight: bold;
-    color: gainsboro;
-    text-transform: uppercase;
-  
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+ 
+  .block {
+    background: url(../images/wood_plank.png) no-repeat;
+    min-width: 60px;
+    min-height: 60px;
   }
