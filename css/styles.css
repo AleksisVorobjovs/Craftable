@@ -1,8 +1,19 @@
+@font-face {
+  font-family: 'Minecraft-Regular';
+  src:url('../fonts/Minecraft-Regular.ttf.woff') format('woff'),
+      url('../fonts/Minecraft-Regular.ttf.svg#Minecraft-Regular') format('svg'),
+      url('../fonts/Minecraft-Regular.ttf.eot'),
+      url('../fonts/Minecraft-Regular.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
 * {
     margin: 0;
     padding: 0;
   }
-  html,body {
+  html,
+
+body {
   height: 100%;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -10,173 +21,190 @@
 }
 #container {
     display: flex;
-;
     height: 100%;
     align-items: center;
     flex-direction: column;
-  }
-  
-  #game {
-    width: 100%;
-    max-width: 750px;
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    background-color: #C6C6C6;
-    border-radius: 1%;
-    border-color: black;
-    border-style: solid;
-    border-bottom-color: #555555;
-    border-right-color: #555555;
-    border-left-color: #FFFFFF;
-    border-top-color: #FFFFFF;
+}
+#game-container{
+  height: 100%;
+  vertical-align: middle;
+}
+#game {
+  width: 100%;
+  max-width: 670px;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #C6C6C6;
+  border-radius: 1%;
+  border-color: black;
+  border: 5px solid;
+  border-bottom-color: #555555;
+  border-right-color: #555555;
+  border-left-color: #FFFFFF;
+  border-top-color: #FFFFFF;
+  outline: 2px;
+  outline-style: solid;
+  outline-color: black;
+}
 
-  }
-  
-  header {
-    border-bottom: 1px solid rgb(58, 58, 60);
-  }
-  
-  .title {
-    color: gainsboro;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 0.4rem 0 0.4rem 0;
-    text-align: center;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  }
-  
-  #crafting-board-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    overflow: hidden;
-  }
-  
-  #crafting-board {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
-  .squareCrafting {
-    border: 2px solid rgb(58, 58, 60);
-    background-color: #8B8B8B;
-    border-top-color: #373737;
-    border-left-color: #373737;
-    border-right-color: #FFFFFF;
-    border-bottom-color: #FFFFFF;
-    min-width: 60px;
-    min-height: 60px;
-    font-size: 50px;
-    font-weight: bold;
-    color: gainsboro;
-    text-transform: uppercase;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #inventory-board-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    overflow: hidden;
-  }
-  
-  #inventory-board {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-gap: 5px;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
-  .squareInventory {
-    border: 2px solid rgb(58, 58, 60);
-    background-color: #8B8B8B;
-    border-top-color: #373737;
-    border-left-color: #373737;
-    border-right-color: #FFFFFF;
-    border-bottom-color: #FFFFFF;
-    min-width: 60px;
-    min-height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .block {
-    background-image: "images/wood_plank.png";
-  }
-  .squareResult {
-    border: 2px solid rgb(58, 58, 60);
-    background-color: #8B8B8B;
-    border-top-color: #373737;
-    border-left-color: #373737;
-    border-right-color: #FFFFFF;
-    border-bottom-color: #FFFFFF;
-    min-width: 90px;
-    min-height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .arrow {
-    max-height: 120px;
-    max-width: 120px;
-  }
-  .recipeBookImg {
-    height: 60px;
-    width: 65px;
-  }
-  .guess-history-container {
-    width: 100%;
-    max-width: 750px;
-    height: 20%;
-    display: flex;
-    margin-top: 2%;
-    flex-direction: column;
-    background-color: #C6C6C6;
-    border-radius: 1%;
-    border-color: black;
-    border-style: solid;
-    border-bottom-color: #555555;
-    border-right-color: #555555;
-    border-left-color: #FFFFFF;
-    border-top-color: #FFFFFF;
-  }
-  .guess {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  .guessSquare {
-    border: 2px solid rgb(58, 58, 60);
-    background-color: #8B8B8B;
-    border-top-color: #373737;
-    border-left-color: #373737;
-    border-right-color: #FFFFFF;
-    border-bottom-color: #FFFFFF;
-    min-width: 60px;
-    min-height: 60px;
-    font-size: 50px;
-    font-weight: bold;
-    color: gainsboro;
-    text-transform: uppercase;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .block {
-    background: url(../images/wood_plank.png) no-repeat;
-    min-width: 60px;
-    min-height: 60px;
-  }
+header {
+  border-bottom: 1px solid rgb(58, 58, 60);
+}
+
+.title {
+  color: gainsboro;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0.4rem 0 0.4rem 0;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#crafting-board-container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#crafting-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 190px;
+  grid-gap: 5px;
+  box-sizing: border-box;
+}
+
+.squareCrafting {
+  border: 4px solid;
+  background-color: #8B8B8B;
+  border-top-color: #373737;
+  border-left-color: #373737;
+  border-right-color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+  width: 66px;
+  height: 66px;
+  font-size: 50px;
+  font-weight: bold;
+  color: gainsboro;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#inventory-board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+#inventory-board {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 4px;
+  box-sizing: border-box;
+}
+
+.squareInventory {
+  border: 4px solid;
+  background-color: #8B8B8B;
+  border-top-color: #373737;
+  border-left-color: #373737;
+  border-right-color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+  width: 66px;
+  height: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.squareResult {
+  border: 4px solid;
+  background-color: #8B8B8B;
+  border-top-color: #373737;
+  border-left-color: #373737;
+  border-right-color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow {
+  max-height: 120px;
+  max-width: 120px;
+}
+.recipeBookImg {
+  justify-content: left;
+  height: 60px;
+  width: 65px;
+}
+.guess-history-container {
+  width: 100%;
+  max-width: 670px;
+  height: 20%;
+  display: flex;
+  margin-top: 2%;
+  flex-direction: column;
+  background-color: #C6C6C6;
+  border-radius: 1%;
+  border-color: black;
+  border: 5px solid;
+  border-bottom-color: #555555;
+  border-right-color: #555555;
+  border-left-color: #FFFFFF;
+  border-top-color: #FFFFFF;
+  outline: 2px;
+  outline-style: solid;
+  outline-color: black;
+}
+.guess {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.guessSquare {
+  border: 2px solid rgb(58, 58, 60);
+  background-color: #8B8B8B;
+  border-top-color: #373737;
+  border-left-color: #373737;
+  border-right-color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+  min-width: 60px;
+  min-height: 60px;
+  font-size: 50px;
+  font-weight: bold;
+  color: gainsboro;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rowItem {
+  width: 100%;
+}
+.block {
+  background: url(../images/wood_plank.png) no-repeat;
+  min-width: 60px;
+  min-height: 60px;
+}
+.text {
+  color:#3f3f3f;
+  font-family: 'Minecraft-Regular';
+  margin:0;
+  vertical-align: bottom;
+}

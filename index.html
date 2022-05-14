@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -17,41 +18,43 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
   </head>
   <body>
     <header>
       <h1 class="title">CRAFTABLE</h1>
     </header>
-    <div id="container" style="height: 100%; vertical-align: middle;">
-      <div id="game">
+    <div id="container" class="game-container">
+      <div id="game" class="container">
+        <h2 class="text" style="margin-left: 20%; margin-top: 1%;">Crafting</h2>
 
-        <div id="crafting-board-container" class="row">
-          <div id="recipe-book" class="recipeBook">
+        <div id="crafting-board-container" class="row" >
+          <div id="recipe-book" class="col-1" style="padding: 0;">
             <img class="recipeBookImg" src="./images/RecipeBook.jpg">
           </div>
-          <div id="crafting-board" class="col-4">
+          <div class="col-5">
+            <div id="crafting-board">
 
+            </div>
           </div>
-          <div class="col-4">
+          <div class="row-3">
             <img class="arrow" src="./images/CraftingArrow.jpg">
           </div>
-          <div class="squareResult" class="arrow col-4">
-            <div>
+          <div class="row-3">
+            <div class="squareResult">
 
             </div>
           </div>
         </div>
-
+        <h2 class="text" style="margin-left: 2%;">Inventory</h2>
         <div id="inventory-board-container">
-            <div id="inventory-board">
-            </div>
+          <div id="inventory-board">
+          </div>
         </div>
         <script src="js/dragging.js"></script>
       </div>
-      <div id="guess-history-container" class="guess-history-container">
-        <div id="guessSquares">
-        </div>
+      <div id="guess-history-container" class="guess-history-container container">
+
       </div>
-    </div>
   </body>
 </html>
