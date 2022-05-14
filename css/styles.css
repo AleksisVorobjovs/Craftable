@@ -7,10 +7,11 @@ body {
   height: 100%;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    background-color: rgb(73, 5, 5)
 }
 #container {
     display: flex;
-    background-color: rgb(73, 5, 5);
+;
     height: 100%;
     align-items: center;
     flex-direction: column;
@@ -22,6 +23,15 @@ body {
     height: 60%;
     display: flex;
     flex-direction: column;
+    background-color: #C6C6C6;
+    border-radius: 1%;
+    border-color: black;
+    border-style: solid;
+    border-bottom-color: #555555;
+    border-right-color: #555555;
+    border-left-color: #FFFFFF;
+    border-top-color: #FFFFFF;
+
   }
   
   header {
@@ -56,6 +66,11 @@ body {
   
   .squareCrafting {
     border: 2px solid rgb(58, 58, 60);
+    background-color: #8B8B8B;
+    border-top-color: #373737;
+    border-left-color: #373737;
+    border-right-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
     min-width: 60px;
     min-height: 60px;
     font-size: 50px;
@@ -85,13 +100,79 @@ body {
   
   .squareInventory {
     border: 2px solid rgb(58, 58, 60);
+    background-color: #8B8B8B;
+    border-top-color: #373737;
+    border-left-color: #373737;
+    border-right-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
     min-width: 60px;
     min-height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
- 
+  .squareResult {
+    border: 2px solid rgb(58, 58, 60);
+    background-color: #8B8B8B;
+    border-top-color: #373737;
+    border-left-color: #373737;
+    border-right-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    min-width: 90px;
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .arrow {
+    max-height: 120px;
+    max-width: 120px;
+  }
+  .recipeBookImg {
+    height: 60px;
+    width: 65px;
+  }
+  .guess-history-container {
+    width: 100%;
+    max-width: 750px;
+    height: 20%;
+    display: flex;
+    margin-top: 2%;
+    flex-direction: column;
+    background-color: #C6C6C6;
+    border-radius: 1%;
+    border-color: black;
+    border-style: solid;
+    border-bottom-color: #555555;
+    border-right-color: #555555;
+    border-left-color: #FFFFFF;
+    border-top-color: #FFFFFF;
+  }
+  .guess {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .guessSquare {
+    border: 2px solid rgb(58, 58, 60);
+    background-color: #8B8B8B;
+    border-top-color: #373737;
+    border-left-color: #373737;
+    border-right-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 50px;
+    font-weight: bold;
+    color: gainsboro;
+    text-transform: uppercase;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .block {
     background: url(../images/wood_plank.png) no-repeat;
     min-width: 60px;

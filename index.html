@@ -1,9 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Wordle Clone!</title>
 
     <script src="js/main.js"></script>
@@ -15,19 +19,36 @@
     />
   </head>
   <body>
-    <div id="container">
+    <header>
+      <h1 class="title">CRAFTABLE</h1>
+    </header>
+    <div id="container" style="height: 100%; vertical-align: middle;">
       <div id="game">
-        <header>
-          <h1 class="title">CRAFTABLE</h1>
-        </header>
 
-        <div id="crafting-board-container">
-          <div id="crafting-board"></div>
+        <div id="crafting-board-container" class="row">
+          <div id="recipe-book" class="recipeBook">
+            <img class="recipeBookImg" src="./images/RecipeBook.jpg">
+          </div>
+          <div id="crafting-board" class="col-4">
+
+          </div>
+          <div class="col-4">
+            <img class="arrow" src="./images/CraftingArrow.jpg">
+          </div>
+          <div class="squareResult" class="arrow col-4">
+            <div>
+
+            </div>
+          </div>
         </div>
 
         <div id="inventory-board-container">
             <div id="inventory-board">
             </div>
+        </div>
+      </div>
+      <div id="guess-history-container" class="guess-history-container">
+        <div id="guessSquares">
         </div>
       </div>
     </div>

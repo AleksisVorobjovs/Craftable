@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   createCraftingSquares();
   createInventorySquares();
   createInventoryBlocks();
+  //createGuessSquares();
 
   function createCraftingSquares() {
     const gameCraftBoard = document.getElementById("crafting-board");
@@ -38,6 +39,16 @@ document.addEventListener("DOMContentLoaded", () => {
       block.setAttribute("ondragstart","onDragStart(event)");
       let square = document.getElementById(index + 1);
       square.appendChild(block);
+    }
+  }
+  function createGuessSquares() {
+    const gameGuesses = document.getElementById("guessSquares");
+    for(let count = 0; count < 4; count++) {
+      for (let index = 0; index < 9; index++) {
+        let squareCrafting = document.createElement("div");
+        squareCrafting.classList.add("guessSquare");
+        gameGuesses.appendChild(squareCrafting);
+      }
     }
   }
 
