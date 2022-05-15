@@ -75,6 +75,7 @@ header {
 }
 .recipe-book{
   border: 4px solid;
+  border-radius: 1%;
   background-color: #C6C6C6;
   border-bottom-color: #373737;
   border-right-color: #373737;
@@ -181,7 +182,7 @@ header {
   width: 100%;
   max-width: 670px;
   height: 20%;
-  display: flex;
+  max-height: 174px;
   margin-top: 2%;
   flex-direction: column;
   background-color: #C6C6C6;
@@ -204,20 +205,15 @@ header {
   padding: 10px;
   box-sizing: border-box;
 }
-.guessSquare {
+.squareGuess {
   border: 3px solid rgb(58, 58, 60);
   background-color: #8B8B8B;
   border-top-color: #373737;
   border-left-color: #373737;
   border-right-color: #FFFFFF;
   border-bottom-color: #FFFFFF;
-  width: 45px;
-  height: 45px;
-  font-size: 50px;
-  font-weight: bold;
-  color: gainsboro;
-  text-transform: uppercase;
-
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,11 +279,14 @@ header {
 
 /* Modal Content/Box */
 .modal-content {
+  display: block;
+  font-family: 'Minecraft-Regular';
   margin: 15% auto; /* 15% from the top and centered */
   margin-top: 5%;
   padding: 20px;
   border: 1px solid #888;
   width: 40%; /* Could be more or less, depending on screen size */
+  max-width: 500px;
   height: 80%;
   background-color: #C6C6C6;
   border-radius: 1%;
@@ -304,9 +303,9 @@ header {
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: #555555;
   float: right;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
 }
 

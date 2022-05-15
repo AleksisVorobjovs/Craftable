@@ -29,18 +29,19 @@
         <h2 class="text" style="margin-left: 20%; margin-top: 1%;">Crafting</h2>
 
         <div id="crafting-board-container" class="row" >
-          <div class="col-6 container">
+          <div class="col-sm-6 container">
             <div class="row">
-              <div id="butt" class="recipe-book col-3">
+              <div id="butt" class="recipe-book col-sm-3">
                 <img id="recipe-book-img" class="recipeBookImg" src="./images/RecipeBook.png" onclick="openModal()">
                 <div id="rulesModal" class="modal">
                   <div class="modal-content">
                     <span class="close">&times;</span>
+                    <h2 id="rulesModalText">RULES</h2>
                     <p id="rulesModalText">Here we explain the rules</p>
                   </div>
                 </div>
               </div>
-              <div class="col-9">
+              <div class="col-sm-9">
                 <div id="crafting-board">
 
                 </div>
@@ -48,18 +49,18 @@
             </div>
           </div>
 
-          <div class="col-5 container" style="padding: 0; margin-left: 0;">
+          <div class="col-sm-5 container" style="padding: 0; margin-left: 0;">
             <div class="row">
-                <div class="col-4" style="padding-left: 0;">
+                <div class="col-sm-4" style="padding-left: 0;">
                   <img class="arrow" src="./images/CraftingArrow.png">
                   
                 </div>
-              <div class="col-4">
+              <div class="col-sm-4">
                 <div class="squareResult">
 
                 </div>
               </div>
-              <div class="col-4" ></div>
+              <div class="col-sm-4" ></div>
             </div>
           </div>
         </div>
@@ -80,111 +81,8 @@
       </div>
 
       <div id="guess-history-container" class="guess-history-container container">
-        <div class="row" style="justify-content:space-between;">
-          <div class="firstGuess col-3">
-            <div class="guessRow row">
-              <div class="guessSquare col4" style="background-color: green;">
-              </div>
-              <div class="guessSquare col4" style="background-color:yellow;">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-            </div>
-            <div class="guessRow row">
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-            </div>
-            <div class="guessRow row">
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-            </div>
-          </div>
-          <div class="secondGuess col-3">
-            <div class="guessRow row">
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-            </div>
-            <div class="guessRow row">
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-            </div>
-            <div class="guessRow row">
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-            </div>
-          </div>
-          <div class="thirdGuess col-3">
-            <div class="guessRow row">
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-            </div>
-            <div class="guessRow row">
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-            </div>
-            <div class="guessRow row">
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="guessRow row">
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-            </div>
-            <div class="guessRow row">
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-            </div>
-            <div class="guessRow row">
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-              <div class="guessSquare col4">
-              </div>
-            </div>
-          </div>
+        <div id="guesses" class="row">
+
         </div>
       </div>
   </body>

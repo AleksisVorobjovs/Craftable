@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   createInventorySquares();
   var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png");
   inventoryBlockList = createInventoryBlocks(); 
+  createGuessSquares();
 
   //creates crafting grid where blocks can be dropped
   function createCraftingSquares() {
@@ -36,7 +37,25 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
-
+  //creates grids for previous guesses
+  function createGuessSquares(){
+    const guessHistory = document.getElementById("guesses"); 
+    let totalIndex = 45;
+    for(let count = 0; count <4; count ++) {
+      const guess = document.createElement("div")
+      guess.classList.add("guess")
+      guess.classList.add("col-3")
+      guess.setAttribute("id", "guess" + (count + 1))
+      for (let localIndex = 0; localIndex<9; localIndex++) {
+        let squareGuess = document.createElement("div");
+        squareGuess.classList.add("squareGuess");
+        squareGuess.setAttribute("id", totalIndex + 1);
+        totalIndex++;
+        guess.appendChild(squareGuess);
+      }
+      guessHistory.appendChild(guess);
+    }
+  }
   //creats randomly selected blocks that are image elements
   function createInventoryBlocks() {
     var rng;
@@ -58,6 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+
 function openModal(){
   // Get the modal
   var modal = document.getElementById("rulesModal");
