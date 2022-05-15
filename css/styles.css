@@ -229,6 +229,24 @@ header {
   width: 60px;
   height: 60px;
 }
+.guessedBlock {
+  width: 30px;
+  height: 30px;
+}
+.green{
+  background-color: #538D4E;
+  border-top-color: #192a17;
+  border-left-color: #192a17;
+  border-right-color: #98bb95;
+  border-bottom-color: #98bb95;
+}
+.yellow{
+  background-color: #B59F3B;
+  border-top-color: #484018;
+  border-left-color: #484018;
+  border-right-color: #cbbc76;
+  border-bottom-color: #cbbc76;
+}
 .text {
   color:#3f3f3f;
   font-family: 'Minecraft-Regular';
@@ -241,7 +259,7 @@ header {
 .button {
   font-family: 'Minecraft-Regular';
   color:#3f3f3f;
-  width: 65px;
+  min-width: 65px;
   background-color: #C6C6C6;
   border: solid 4px;
   border-bottom-color: #373737;
@@ -302,6 +320,9 @@ header {
   outline: 2px;
   outline-style: solid;
   outline-color: black;
+}
+.exampleImg {
+  width: 100%;
 }
 
 /* The Close Button */

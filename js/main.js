@@ -162,9 +162,11 @@ var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blo
 function submitGuess(){
   const gameCraftBoard = document.getElementById("crafting-board");
   var guessList = [];
+  var notEmpty = false;
   for (let index = 0; index < 9; index++) {
     var guessedSquare = document.getElementById(index + 1);
     if(guessedSquare.childNodes.length==1){
+      notEmpty = true;
       var guessedBlock = guessedSquare.childNodes[0];
       guessList.push(guessedBlock.src.substring(guessedBlock.src.search("blocks/")));
     }else{
@@ -185,9 +187,40 @@ function submitGuess(){
       }
     }
   }
-  console.log(colorlist)
+  if(notEmpty == true){
+    firstGuessGrid = document.getElementById("guess1");
+    secondGuessGrid = document.getElementById("guess2");
+    thirdGuessGrid = document.getElementById("guess3");
+    fourthGuessGrid = document.getElementById("guess4");
+    let idvar;
+    if (!(firstGuessGrid.classList.contains("guessMade"))){
+      currentGuess = firstGuessGrid;
+      idvar = 46;
+    } else if (!(secondGuessGrid.classList.contains("guessMade"))){
+      currentGuess = secondGuessGrid;
+      idvar = 55;
+    } else if (!(thirdGuessGrid.classList.contains("guessMade"))){ 
+      currentGuess = thirdGuessGrid;
+      idvar = 64;
+    } else if (!(fourthGuessGrid.classList.contains("guessMade"))){ 
+      currentGuess = fourthGuessGrid;
+      idvar = 73;
+    }
+
+    for(let k = 0; k < 9; k++){
+      if(!(guessList[k]==null)){
+        square = document.getElementById(k+idvar);
+        let block = document.createElement("img");
+        block.classList.add("guessedBlock");
+        square.classList.add(colorlist[k]);
+        block.setAttribute("src", guessList[k]);
+        square.appendChild(block);
+      }
+    }
+    currentGuess.classList.add("guessMade");
+  }
 }
-//refreshes inventory by creating new blocks with the same layout as before
+  //refreshes inventory by creating new blocks with the same layout as before
 function refresh(){
   var inventory = inventoryBlockList;
   for (let index = 9; index <45; index++) {
