@@ -1,8 +1,9 @@
+var inventoryBlockList;
 document.addEventListener("DOMContentLoaded", () => {
   createCraftingSquares();
   createInventorySquares();
   var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png");
-  createInventoryBlocks();
+  inventoryBlockList = createInventoryBlocks(); 
 
   //creates crafting grid where blocks can be dropped
   function createCraftingSquares() {
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //creats randomly selected blocks that are image elements
   function createInventoryBlocks() {
     var rng;
+    var inventoryBlockList = [];
     for (let index = 9; index <45; index++) {
       let block = document.createElement("img");
       block.classList.add("block");
@@ -50,9 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
       block.setAttribute("src",blockList[rng])
       let square = document.getElementById(index + 1);
       square.appendChild(block);
+      inventoryBlockList.push(block);
     }
+    return inventoryBlockList;
   }
-
 });
-    
-  

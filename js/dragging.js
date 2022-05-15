@@ -19,6 +19,8 @@ function onDrop(event) {
     
   const draggableElement = document.getElementById(id);
   const dropzone = event.target;
-  dropzone.appendChild(draggableElement);
+  if(dropzone.classList.contains("draggable")==false){
+    dropzone.appendChild(draggableElement);
+  }
   }
   
