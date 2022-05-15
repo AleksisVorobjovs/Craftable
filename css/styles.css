@@ -229,6 +229,16 @@ header {
   width: 60px;
   height: 60px;
 }
+.guessedBlock {
+  width: 30px;
+  height: 30px;
+}
+.green{
+  background-color: #538D4E;
+}
+.yellow{
+  background-color: #B59F3B;
+}
 .text {
   color:#3f3f3f;
   font-family: 'Minecraft-Regular';

@@ -148,5 +148,45 @@ function submitGuess(){
       }
     }
   }
+
+  firstGuessGrid = document.getElementById("guess1");
+  secondGuessGrid = document.getElementById("guess2");
+  thirdGuessGrid = document.getElementById("guess3");
+  fourthGuessGrid = document.getElementById("guess4");
+  let idvar;
+  console.log((firstGuessGrid.classList.contains("guessMade")));
+  console.log(firstGuessGrid);
+  if (!(firstGuessGrid.classList.contains("guessMade"))){
+    currentGuess = firstGuessGrid;
+    idvar = 46;
+  } else if (!(secondGuessGrid.classList.contains("guessMade"))){
+    currentGuess = secondGuessGrid;
+    idvar = 55;
+  } else if (!(thirdGuessGrid.classList.contains("guessMade"))){ 
+    currentGuess = thirdGuessGrid;
+    idvar = 64;
+  } else if (!(fourthGuessGrid.classList.contains("guessMade"))){ 
+    currentGuess = fourthGuessGrid;
+    idvar = 73;
+  }
+
+  for(let k = 0; k < 9; k++){
+    console.log(k)
+    if(!(guessList[k]==null)){
+      console.log("inside");
+      console.log(k+idvar);
+      square = document.getElementById(k+idvar);
+      console.log(square);
+      let block = document.createElement("img");
+      block.classList.add("guessedBlock");
+      square.classList.add(colorlist[k]);
+      block.setAttribute("src", guessList[k]);
+      square.appendChild(block);
+    }
+  }
+  console.log(currentGuess);
+  currentGuess.classList.add("guessMade");
+
+
   console.log(colorlist)
 }
