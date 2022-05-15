@@ -133,9 +133,11 @@ var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blo
 function submitGuess(){
   const gameCraftBoard = document.getElementById("crafting-board");
   var guessList = [];
+  var notEmpty = false;
   for (let index = 0; index < 9; index++) {
     var guessedSquare = document.getElementById(index + 1);
     if(guessedSquare.childNodes.length==1){
+      notEmpty = true;
       var guessedBlock = guessedSquare.childNodes[0];
       guessList.push(guessedBlock.src.substring(guessedBlock.src.search("blocks/")));
     }else{
@@ -156,52 +158,42 @@ function submitGuess(){
       }
     }
   }
-
-  firstGuessGrid = document.getElementById("guess1");
-  secondGuessGrid = document.getElementById("guess2");
-  thirdGuessGrid = document.getElementById("guess3");
-  fourthGuessGrid = document.getElementById("guess4");
-  let idvar;
-  console.log((firstGuessGrid.classList.contains("guessMade")));
-  console.log(firstGuessGrid);
-  if (!(firstGuessGrid.classList.contains("guessMade"))){
-    currentGuess = firstGuessGrid;
-    idvar = 46;
-  } else if (!(secondGuessGrid.classList.contains("guessMade"))){
-    currentGuess = secondGuessGrid;
-    idvar = 55;
-  } else if (!(thirdGuessGrid.classList.contains("guessMade"))){ 
-    currentGuess = thirdGuessGrid;
-    idvar = 64;
-  } else if (!(fourthGuessGrid.classList.contains("guessMade"))){ 
-    currentGuess = fourthGuessGrid;
-    idvar = 73;
-  }
-
-  for(let k = 0; k < 9; k++){
-    console.log(k)
-    if(!(guessList[k]==null)){
-      console.log("inside");
-      console.log(k+idvar);
-      square = document.getElementById(k+idvar);
-      console.log(square);
-      let block = document.createElement("img");
-      block.classList.add("guessedBlock");
-      square.classList.add(colorlist[k]);
-      block.setAttribute("src", guessList[k]);
-      square.appendChild(block);
+  if(notEmpty == true){
+    firstGuessGrid = document.getElementById("guess1");
+    secondGuessGrid = document.getElementById("guess2");
+    thirdGuessGrid = document.getElementById("guess3");
+    fourthGuessGrid = document.getElementById("guess4");
+    let idvar;
+    if (!(firstGuessGrid.classList.contains("guessMade"))){
+      currentGuess = firstGuessGrid;
+      idvar = 46;
+    } else if (!(secondGuessGrid.classList.contains("guessMade"))){
+      currentGuess = secondGuessGrid;
+      idvar = 55;
+    } else if (!(thirdGuessGrid.classList.contains("guessMade"))){ 
+      currentGuess = thirdGuessGrid;
+      idvar = 64;
+    } else if (!(fourthGuessGrid.classList.contains("guessMade"))){ 
+      currentGuess = fourthGuessGrid;
+      idvar = 73;
     }
+
+    for(let k = 0; k < 9; k++){
+      if(!(guessList[k]==null)){
+        square = document.getElementById(k+idvar);
+        let block = document.createElement("img");
+        block.classList.add("guessedBlock");
+        square.classList.add(colorlist[k]);
+        block.setAttribute("src", guessList[k]);
+        square.appendChild(block);
+      }
+    }
+    currentGuess.classList.add("guessMade");
   }
-  console.log(currentGuess);
-  currentGuess.classList.add("guessMade");
-
-
-  console.log(colorlist)
 }
-//refreshes inventory by creating new blocks with the same layout as before
+  //refreshes inventory by creating new blocks with the same layout as before
 function refresh(){
   var inventory = inventoryBlockList;
-  console.log(inventory[0].src.substring(inventory[0].src.search("blocks/")));
   for (let index = 9; index <45; index++) {
     let block = document.getElementById("block-"+(index + 1));
     block.parentNode.removeChild(block);
