@@ -1,4 +1,4 @@
-var inventoryBlockList = [];
+var inventoryBlockList = new Array(36);
 var CorrectRecipes = [["blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png",null,null,null],[null,null,null,"blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png"]];
 document.addEventListener("DOMContentLoaded", () => {
   createCraftingSquares();
@@ -60,19 +60,48 @@ document.addEventListener("DOMContentLoaded", () => {
   //creats randomly selected blocks that are image elements
   function createInventoryBlocks() {
     var rng;
+    var rngList = [];
     var inventoryBlockList = [];
+    for(let i = 0; i <=9; i++){
+      minNeeded = CorrectRecipes[0][i];
+      if(minNeeded==null){
+      }else{
+        for(let j = 0; j <blockList.length; j++){
+          if(minNeeded==blockList[j]){
+            do{
+              rng = Math.floor((Math.random() * 36)+10);
+            }while(rngList.includes(rng));
+            rngList.push(rng);
+            let block = document.createElement("img");
+            block.classList.add("block");
+            block.classList.add("draggable");
+            block.setAttribute("id", "block-"+rng);
+            block.setAttribute("draggable", "true");
+            block.setAttribute("ondragstart","onDragStart(event)");
+            block.setAttribute("src",blockList[j]);
+            let square = document.getElementById(rng);
+            square.appendChild(block);
+            inventoryBlockList[rng-10]= block;
+            
+          }
+        }
+      }
+    }
+    
     for (let index = 9; index <45; index++) {
-      let block = document.createElement("img");
-      block.classList.add("block");
-      block.classList.add("draggable");
-      block.setAttribute("id", "block-"+(index + 1));
-      block.setAttribute("draggable", "true");
-      block.setAttribute("ondragstart","onDragStart(event)");
-      rng = Math.floor(Math.random() * blockList.length);
-      block.setAttribute("src",blockList[rng])
-      let square = document.getElementById(index + 1);
-      square.appendChild(block);
-      inventoryBlockList.push(block);
+      if(rngList.includes(index+1)==false){
+        let block = document.createElement("img");
+        block.classList.add("block");
+        block.classList.add("draggable");
+        block.setAttribute("id", "block-"+(index + 1));
+        block.setAttribute("draggable", "true");
+        block.setAttribute("ondragstart","onDragStart(event)");
+        rng = Math.floor(Math.random() * blockList.length);
+        block.setAttribute("src",blockList[rng]);
+        let square = document.getElementById(index + 1);
+        square.appendChild(block);
+        inventoryBlockList[index-9]=block;
+      }
     }
     return inventoryBlockList;
   }
@@ -161,7 +190,6 @@ function submitGuess(){
 //refreshes inventory by creating new blocks with the same layout as before
 function refresh(){
   var inventory = inventoryBlockList;
-  console.log(inventory[0].src.substring(inventory[0].src.search("blocks/")));
   for (let index = 9; index <45; index++) {
     let block = document.getElementById("block-"+(index + 1));
     block.parentNode.removeChild(block);
