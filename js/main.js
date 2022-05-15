@@ -1,4 +1,5 @@
 var inventoryBlockList;
+var CorrectRecipes = [["blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png",null,null,null],[null,null,null,"blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png"]];
 document.addEventListener("DOMContentLoaded", () => {
   createCraftingSquares();
   createInventorySquares();
@@ -77,7 +78,20 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+startGame();
+function startGame() {
+  document.addEventListener("click", handleMouseClick);
+}
 
+//checks which button is pressed
+function handleMouseClick(e) {
+  if (e.target.matches("[id='recipe-book-img']")) {
+    openModal();
+  }
+  if (e.target.matches("[id='submitButton']")) {
+    submitGuess();
+  }
+  }
 
 function openModal(){
   // Get the modal
@@ -105,4 +119,38 @@ function openModal(){
       modal.style.display = "none";
     }
   }
+}
+var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png");
+//creats a list of objectsa placed in crafting table
+function submitGuess(){
+  const gameCraftBoard = document.getElementById("crafting-board");
+  var guessList = [];
+  for (let index = 0; index < 9; index++) {
+    var guessedSquare = document.getElementById(index + 1);
+    if(guessedSquare.childNodes.length==1){
+      var guessedBlock = guessedSquare.childNodes[0];
+      guessList.push(guessedBlock.src.substring(44));
+    }else{
+      guessList.push(null);
+    }
+  }
+  //creats a list with colors based on placed blocks
+  var colorlist= new Array(9);
+  for (let i = 0; i < CorrectRecipes.length; i++) {
+    var subArray = CorrectRecipes[i];
+    for (let j = 0; j < guessList.length; j++) {
+      if(guessList[j]==CorrectRecipes[i][j]){
+        colorlist[j]= "green";
+      }else if(guessList[j]==null && CorrectRecipes[i][j]!=null && colorlist[j]!="green"){
+        colorlist[j]= "gray";
+      }else if(CorrectRecipes[i].includes(guessList[j])){
+        if(colorlist[j]!="green"){
+          colorlist[j]= "yellow";
+        }
+      }else{
+        colorlist[j]= "gray";
+      }
+    }
+  }
+  console.log(colorlist)
 }
