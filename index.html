@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Wordle Clone!</title>
 
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
     <link rel="stylesheet" href="css/styles.css" />
     <link
@@ -29,32 +29,56 @@
         <h2 class="text" style="margin-left: 20%; margin-top: 1%;">Crafting</h2>
 
         <div id="crafting-board-container" class="row" >
-          <div id="recipe-book" class="col-1" style="padding: 0;">
-            <img class="recipeBookImg" src="./images/RecipeBook.jpg">
-          </div>
-          <div class="col-5">
-            <div id="crafting-board">
+          <div class="col-6 container">
+            <div class="row">
+              <div id="butt" class="recipe-book col-3">
+                <img id="recipe-book-img" class="recipeBookImg" src="./images/RecipeBook.png" onclick="openModal()">
+                <div id="rulesModal" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="rulesModalText">Here we explain the rules</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-9">
+                <div id="crafting-board">
 
+                </div>
+              </div>
             </div>
           </div>
-          <div class="row-2">
-            <img class="arrow" src="./images/CraftingArrow.jpg">
-            <button id="submitButton">Craft</button>
-            
-          </div>
-          <div class="row-3">
-            <div class="squareResult">
 
+          <div class="col-5 container" style="padding: 0; margin-left: 0;">
+            <div class="row">
+                <div class="col-4" style="padding-left: 0;">
+                  <img class="arrow" src="./images/CraftingArrow.png">
+                  
+                </div>
+              <div class="col-4">
+                <div class="squareResult">
+
+                </div>
+              </div>
+              <div class="col-4" ></div>
             </div>
           </div>
         </div>
-        <h2 class="text" style="margin-left: 2%;">Inventory</h2>
+
+        <div class="row" style="justify-content:space-between;">
+          <h2 class="text" style="margin-left: 2%;">Inventory</h2>
+          <div class="buttons">
+            <button id="submitButton" class="button">Craft</button>
+            <button id="resetButton" class="button">Reset</button>
+          </div>
+        </div>
+
         <div id="inventory-board-container">
           <div id="inventory-board">
           </div>
         </div>
         <script src="js/dragging.js"></script>
       </div>
+
       <div id="guess-history-container" class="guess-history-container container">
         <div class="row" style="justify-content:space-between;">
           <div class="firstGuess col-3">
