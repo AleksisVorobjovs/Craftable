@@ -112,6 +112,8 @@ function startGame() {
   document.addEventListener("click", handleMouseClick);
 }
 
+
+
 //checks which button is pressed
 function handleMouseClick(e) {
   if (e.target.matches("[id='recipe-book-img']")) {
@@ -126,6 +128,12 @@ function handleMouseClick(e) {
     createInventorySquares();
     inventoryBlockList = createInventoryBlocks(); 
     createGuessSquares();
+  }
+  if (e.target.matches("#tempBtn")) {
+    openVictoryScreen();
+  }
+  if (e.target.matches("#tempBtn2")) {
+    openFailureScreen();
   }
   }
 
@@ -235,5 +243,49 @@ function refresh(){
     block.setAttribute("src",inventory[index-9].src.substring(inventory[index-9].src.search("blocks/")));
     let square = document.getElementById(index + 1);
     square.appendChild(block);
+  }
+}
+
+function openVictoryScreen() {
+    var modal = document.getElementById("victoryModal");
+
+    var btn = document.getElementById("tempBtn");
+  
+    var span = document.getElementsByClassName("close")[0];
+  
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+  
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+  
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+}
+
+function openFailureScreen() {
+  var modal = document.getElementById("failureModal");
+
+  var btn = document.getElementById("tempBtn2");
+
+  var span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
   }
 }
