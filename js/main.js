@@ -92,6 +92,12 @@ function handleMouseClick(e) {
     submitGuess();
     refresh();
   }
+  if (e.target.matches("[id='newGameButton']")) {
+    createCraftingSquares();
+    createInventorySquares();
+    inventoryBlockList = createInventoryBlocks(); 
+    createGuessSquares();
+  }
   }
 
 function openModal(){
@@ -121,6 +127,7 @@ function openModal(){
     }
   }
 }
+//creates list with paths to images
 var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png");
 //creats a list of objectsa placed in crafting table
 function submitGuess(){
