@@ -129,7 +129,7 @@ function submitGuess(){
     var guessedSquare = document.getElementById(index + 1);
     if(guessedSquare.childNodes.length==1){
       var guessedBlock = guessedSquare.childNodes[0];
-      guessList.push(guessedBlock.src.substring(44));
+      guessList.push(guessedBlock.src.substring(guessedBlock.src.search("blocks/")));
     }else{
       guessList.push(null);
     }
@@ -141,12 +141,12 @@ function submitGuess(){
     for (let j = 0; j < guessList.length; j++) {
       if(guessList[j]==CorrectRecipes[i][j]){
         colorlist[j]= "green";
-      }else if(guessList[j]==null && CorrectRecipes[i][j]!=null && colorlist[j]!="green"){
-        colorlist[j]= "gray";
-      }else if(CorrectRecipes[i].includes(guessList[j])){
+      }else if(CorrectRecipes[i].includes(guessList[j]) && guessList[j]!=null){
         if(colorlist[j]!="green"){
           colorlist[j]= "yellow";
         }
+      }else if(guessList[j]==null && colorlist[j]!="yellow" && colorlist[j]!="green"){
+        colorlist[j]= "gray";
       }else{
         colorlist[j]= "gray";
       }
