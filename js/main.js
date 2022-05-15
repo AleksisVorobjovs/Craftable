@@ -1,4 +1,4 @@
-var inventoryBlockList;
+var inventoryBlockList = [];
 var CorrectRecipes = [["blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png",null,null,null],[null,null,null,"blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png"]];
 document.addEventListener("DOMContentLoaded", () => {
   createCraftingSquares();
@@ -90,6 +90,13 @@ function handleMouseClick(e) {
   }
   if (e.target.matches("[id='submitButton']")) {
     submitGuess();
+    refresh();
+  }
+  if (e.target.matches("[id='newGameButton']")) {
+    createCraftingSquares();
+    createInventorySquares();
+    inventoryBlockList = createInventoryBlocks(); 
+    createGuessSquares();
   }
   }
 
@@ -120,6 +127,7 @@ function openModal(){
     }
   }
 }
+//creates list with paths to images
 var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png");
 //creats a list of objectsa placed in crafting table
 function submitGuess(){
@@ -189,4 +197,22 @@ function submitGuess(){
 
 
   console.log(colorlist)
+}
+//refreshes inventory by creating new blocks with the same layout as before
+function refresh(){
+  var inventory = inventoryBlockList;
+  console.log(inventory[0].src.substring(inventory[0].src.search("blocks/")));
+  for (let index = 9; index <45; index++) {
+    let block = document.getElementById("block-"+(index + 1));
+    block.parentNode.removeChild(block);
+    let newblock = document.createElement("img");
+    block.classList.add("block");
+    block.classList.add("draggable");
+    block.setAttribute("id", "block-"+(index + 1));
+    block.setAttribute("draggable", "true");
+    block.setAttribute("ondragstart","onDragStart(event)");
+    block.setAttribute("src",inventory[index-9].src.substring(inventory[index-9].src.search("blocks/")));
+    let square = document.getElementById(index + 1);
+    square.appendChild(block);
+  }
 }
