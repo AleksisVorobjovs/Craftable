@@ -50,14 +50,18 @@ body {
 }
 
 header { 
-  max-height: 8%;
+  max-height: 77px;
+  width: 100%;
+  background-image: url("../images/GrassBlockSide.png");
+  margin-bottom: 10px;
 }
 
 .title {
   color: gainsboro;
   font-size: 4rem;
+  margin: 0;
+  padding-top: 10px;
   font-weight: bold;
-  margin: 0.4rem 0 0.4rem 0;
   text-align: center;
   font-family: "Minecraft-Regular";
   text-shadow: 3px 3px black;
