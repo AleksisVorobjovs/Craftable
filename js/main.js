@@ -139,15 +139,11 @@ function submitGuess(){
   for (let i = 0; i < CorrectRecipes.length; i++) {
     var subArray = CorrectRecipes[i];
     for (let j = 0; j < guessList.length; j++) {
-      if(guessList[j]==CorrectRecipes[i][j]){
+      if(guessList[j]==CorrectRecipes[i][j]&&guessList[j]!=null){
         colorlist[j]= "green";
-      }else if(CorrectRecipes[i].includes(guessList[j]) && guessList[j]!=null){
-        if(colorlist[j]!="green"){
+      }else if(CorrectRecipes[i].includes(guessList[j]) && guessList[j]!=null && colorlist[j]!="green"){
           colorlist[j]= "yellow";
-        }
-      }else if(guessList[j]==null && colorlist[j]!="yellow" && colorlist[j]!="green"){
-        colorlist[j]= "gray";
-      }else{
+      }else if(colorlist[j]!="green" && colorlist[j]!="yellow"){
         colorlist[j]= "gray";
       }
     }
