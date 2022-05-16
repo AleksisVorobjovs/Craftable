@@ -1,15 +1,16 @@
-startGame();
 var gussesMade = 0;
 var inventoryBlockList = new Array(36);
-//stores CorrectRecipes
-var CorrectRecipes = [["blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png",null,null,null],[null,null,null,"blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png"]];
+//stores correctRecipes
+var correctRecipes = [["blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png",null,null,null],[null,null,null,"blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png"]];
+var nameRecipe = "Bed";
 //stores list of all block paths
 var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png", "blocks/stick.png", "blocks/coal.png", "blocks/wood_log.png", "blocks/stone.png", "blocks/glowstone_dust.png", "blocks/snow_ball.png", "blocks/sand.png", "blocks/gunpowder.png", "blocks/clay_ball.png", "blocks/brick.png", "blocks/book.png", "blocks/sandstone.png", "blocks/sandstone_slab.png", "blocks/redstone_dust.png", "blocks/torch.png", "blocks/pumpkin.png", "blocks/lapis_lazuli.png", "blocks/diamond.png", "blocks/gold_ingot.png", "blocks/iron_ingot.png", "blocks/emerald.png", "blocks/nether_quartz.png", "blocks/quartz_slab.png", "blocks/quartz_block.png", "blocks/wheat.png");
 var isGameOn=false;
-
+startGame();
 //starts game
 function startGame() {
   isGameOn=true;
+  document.addEventListener("click", handleCrafting);
   document.addEventListener("click", handleMouseClick);
   document.addEventListener("DOMContentLoaded", () => {
     createCraftingSquares();
@@ -22,21 +23,53 @@ function startGame() {
 //ends game
 function stopGame() {
   isGameOn=false;
-  document.removeEventListener("click", handleMouseClick);
+  document.removeEventListener("click", handleCrafting);
 }
 
 //checks which button is pressed
 function handleMouseClick(e) {
-  if (e.target.matches("[id='recipe-book-img']")) {
+  if(e.target.matches("[id='recipe-book-img']")) {
     openModal();
   }
-  if (e.target.matches("[id='submitButton']")) {
-    submitGuess(); 
-  }
-  if (e.target.matches("[id='newGameButton']")) {
-    window.location.reload();
+  if(e.target.matches("[id='newGameButton']")) {
+    newGame();
   }
 }
+function handleCrafting(e) {
+  if(e.target.matches("[id='submitButton']")) {
+    submitGuess(); 
+  }
+}
+
+//creats new game
+function newGame(){
+  for (let index = 9; index <45; index++) {
+    let oldBlock = document.getElementById("block-"+(index + 1));
+    oldBlock.parentNode.removeChild(oldBlock);
+    let oldInventorySquare = document.getElementById(index + 1);
+    oldInventorySquare.parentNode.removeChild(oldInventorySquare);
+  }
+  for (let index = 46; index <=81; index++) {
+    let oldGuessSquare = document.getElementById(index);
+    if(oldGuessSquare.childNodes>=1){
+      oldGuessSquare.removeChild(oldBlock);
+    }
+    oldGuessSquare.parentNode.removeChild(oldGuessSquare);
+  }
+  for (let index = 1; index <=4; index++) {
+    let oldGuessParentSquare = document.getElementById("guess"+index);
+    oldGuessParentSquare.parentNode.removeChild(oldGuessParentSquare);
+  }
+  gussesMade = 0;
+  correctRecipes = [["blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png",null,null,null],[null,null,null,"blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png"]];
+  nameRecipe = "Bed";
+  blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png", "blocks/stick.png", "blocks/coal.png", "blocks/wood_log.png", "blocks/stone.png", "blocks/glowstone_dust.png", "blocks/snow_ball.png", "blocks/sand.png", "blocks/gunpowder.png", "blocks/clay_ball.png", "blocks/brick.png", "blocks/book.png", "blocks/sandstone.png", "blocks/sandstone_slab.png", "blocks/redstone_dust.png", "blocks/torch.png", "blocks/pumpkin.png", "blocks/lapis_lazuli.png", "blocks/diamond.png", "blocks/gold_ingot.png", "blocks/iron_ingot.png", "blocks/emerald.png", "blocks/nether_quartz.png", "blocks/quartz_slab.png", "blocks/quartz_block.png", "blocks/wheat.png");
+  inventoryBlockList=[];
+  createInventorySquares();
+  inventoryBlockList = createInventoryBlocks();
+  createGuessSquares();
+}
+
 
 //creates crafting grid where blocks can be dropped
  function createCraftingSquares() {
@@ -96,7 +129,7 @@ function createInventoryBlocks() {
 
   //first create blocks that are need to complete the game
   for(let i = 0; i <=9; i++){
-    minNeeded = CorrectRecipes[0][i];
+    minNeeded = correctRecipes[0][i];
     if(minNeeded==null){
     }else{
       for(let j = 0; j <blockList.length; j++){
@@ -203,38 +236,40 @@ function submitGuess(){
       guessList.push(null);
     }
   }
+  //if crafting table not null then submit guess
+  if(notEmpty == true){
+    gussesMade++;
+    //if recipe is correct
+    for (let i = 0; i < correctRecipes.length; i++) {
+      if(guessList.every((val, index) => val === correctRecipes[i][index])){
+        openVictoryScreen();
+        stopGame();
+        return
+      }
+    }
 
-  //if recipe is correct
-  for (let i = 0; i < CorrectRecipes.length; i++) {
-    if(guessList.every((val, index) => val === CorrectRecipes[i][index])){
-      openVictoryScreen();
+    //if don't guess in 4 tries you lose :(
+    if(gussesMade>4){
+      openFailureScreen();
       stopGame();
       return
     }
-  }
-
-  //if don't guess in 4 tries you lose :(
-  if(gussesMade>2){
-    openFailureScreen();
-    stopGame();
-    return
-  }
-  //creats a list with colors based on placed blocks
-  var colorlist= new Array(9);
-  for (let i = 0; i < CorrectRecipes.length; i++) {
-    for (let j = 0; j < guessList.length; j++) {
-      if(guessList[j]==CorrectRecipes[i][j]&&guessList[j]!=null){
-        colorlist[j]= "green";
-      }else if(CorrectRecipes[i].includes(guessList[j]) && guessList[j]!=null && colorlist[j]!="green"){
-        colorlist[j]= "yellow";
-      }else if(colorlist[j]!="green" && colorlist[j]!="yellow"){
-        colorlist[j]= "black";
+    //creats a list with colors based on placed blocks
+    var colorlist= new Array(9);
+    for (let i = 0; i < correctRecipes.length; i++) {
+      for (let j = 0; j < guessList.length; j++) {
+        if(guessList[j]==correctRecipes[i][j]&&guessList[j]!=null){
+          colorlist[j]= "green";
+        }else if(correctRecipes[i].includes(guessList[j]) && guessList[j]!=null && colorlist[j]!="green"){
+          colorlist[j]= "yellow";
+        }else if(colorlist[j]!="green" && colorlist[j]!="yellow"){
+          colorlist[j]= "black";
+        }
       }
     }
-  }
 
-  //refreshes inventory by creating new blocks with the same layout as before but now with colors
-  var inventory = inventoryBlockList;
+    //refreshes inventory by creating new blocks with the same layout as before but now with colors
+    var inventory = inventoryBlockList;
     for (let index = 9; index <45; index++) {
       let block = document.getElementById("block-"+(index + 1));
       block.parentNode.removeChild(block);
@@ -259,10 +294,6 @@ function submitGuess(){
         }
       }
     }
-  
-  //if crafting table not null then submit guess
-  if(notEmpty == true){
-    gussesMade++;
     firstGuessGrid = document.getElementById("guess1");
     secondGuessGrid = document.getElementById("guess2");
     thirdGuessGrid = document.getElementById("guess3");
@@ -271,13 +302,13 @@ function submitGuess(){
     if(!(firstGuessGrid.classList.contains("guessMade"))){
       currentGuess = firstGuessGrid;
       idvar = 46;
-    }else if (!(secondGuessGrid.classList.contains("guessMade"))){
+    }else if(!(secondGuessGrid.classList.contains("guessMade"))){
       currentGuess = secondGuessGrid;
       idvar = 55;
-    }else if (!(thirdGuessGrid.classList.contains("guessMade"))){ 
+    }else if(!(thirdGuessGrid.classList.contains("guessMade"))){ 
       currentGuess = thirdGuessGrid;
       idvar = 64;
-    }else if (!(fourthGuessGrid.classList.contains("guessMade"))){ 
+    }else if(!(fourthGuessGrid.classList.contains("guessMade"))){ 
       currentGuess = fourthGuessGrid;
       idvar = 73;
     }
@@ -296,15 +327,17 @@ function submitGuess(){
     currentGuess.classList.add("guessMade");
   }
 }
+
 //victory pop up
 function openVictoryScreen() {
   var modal = document.getElementById("victoryModal");
-  var btn = document.getElementById("tempBtn");
   var span = document.getElementsByClassName("close")[1];
   
   //open model
   modal.style.display = "block";
-  
+  var victoryText = document.getElementById('victory-text');
+  victoryText.innerHTML += "<p>You correctly guessed the recipe in "+gussesMade+" guesses.</p>";
+  victoryText.innerHTML += "<p>The answer was "+nameRecipe+".</p>";
   //close model
   span.onclick = function() {
     modal.style.display = "none";
@@ -320,11 +353,13 @@ function openVictoryScreen() {
 //lose pop up
 function openFailureScreen() {
   var modal = document.getElementById("failureModal");
-  var btn = document.getElementById("tempBtn2");
   var span = document.getElementsByClassName("close")[2];
 
   //open model
   modal.style.display = "block";
+  var failureText = document.getElementById('failure-text');
+  failureText.innerHTML += "<p>You couldn't correctly guess the recipe.</p>"
+  failureText.innerHTML +="<p>The answer was "+nameRecipe+".</p>";
 
   //close model
   span.onclick = function() {
