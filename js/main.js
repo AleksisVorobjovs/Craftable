@@ -107,6 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+var gussesMade = 0;
 startGame();
 function startGame() {
   document.addEventListener("click", handleMouseClick);
@@ -174,6 +175,7 @@ function submitGuess(){
   for (let index = 0; index < 9; index++) {
     var guessedSquare = document.getElementById(index + 1);
     if(guessedSquare.childNodes.length==1){
+      gussesMade++;
       notEmpty = true;
       var guessedBlock = guessedSquare.childNodes[0];
       guessList.push(guessedBlock.src.substring(guessedBlock.src.search("blocks/")));
@@ -181,10 +183,16 @@ function submitGuess(){
       guessList.push(null);
     }
   }
+  //if recipe is correct
+  for (let i = 0; i < CorrectRecipes.length; i++) {
+    if(guessList.every((val, index) => val === CorrectRecipes[i][index])){
+      console.log("test");
+      openVictoryScreen();
+    }
+  }
   //creats a list with colors based on placed blocks
   var colorlist= new Array(9);
   for (let i = 0; i < CorrectRecipes.length; i++) {
-    var subArray = CorrectRecipes[i];
     for (let j = 0; j < guessList.length; j++) {
       if(guessList[j]==CorrectRecipes[i][j]&&guessList[j]!=null){
         colorlist[j]= "green";
@@ -246,6 +254,7 @@ function refresh(){
   }
 }
 
+
 function openVictoryScreen() {
     var modal = document.getElementById("victoryModal");
 
@@ -253,14 +262,14 @@ function openVictoryScreen() {
   
     var span = document.getElementsByClassName("close")[0];
   
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
+
+    modal.style.display = "block";
   
     span.onclick = function() {
       modal.style.display = "none";
     }
   
+    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
       if (event.target == modal) {
         modal.style.display = "none";
