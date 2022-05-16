@@ -3,7 +3,7 @@ var CorrectRecipes = [["blocks/white_wool.png","blocks/white_wool.png","blocks/w
 document.addEventListener("DOMContentLoaded", () => {
   createCraftingSquares();
   createInventorySquares();
-  var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png");
+  var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png", "blocks/stick.png", "blocks/coal.png", "blocks/wood_log.png", "blocks/stone.png", "blocks/glowstone_dust.png", "blocks/snow_ball.png", "blocks/sand.png", "blocks/gunpowder.png", "blocks/clay_ball.png", "/blocks/brick.png", "blocks/book.png", "blocks/sandstone.png", "blocks/sandstone_slab.png", "blocks/redstone_dust.png", "blocks/torch.png", "blocks/pumpkin.png", "blocks/lapis_lazuli.png", "blocks/diamond.png", "blocks/gold_ingot.png", "blocks/iron_ingot.png", "blocks/emerald.png", "blocks/nether_quartz.png", "blocks/quartz_slab.png", "blocks/quartz_block.png", "blocks/wheat.png");
   inventoryBlockList = createInventoryBlocks(); 
   createGuessSquares();
 
@@ -260,7 +260,7 @@ function openVictoryScreen() {
 
     var btn = document.getElementById("tempBtn");
   
-    var span = document.getElementsByClassName("close")[0];
+    var span = document.getElementsByClassName("close")[1];
   
 
     modal.style.display = "block";
@@ -282,7 +282,7 @@ function openFailureScreen() {
 
   var btn = document.getElementById("tempBtn2");
 
-  var span = document.getElementsByClassName("close")[0];
+  var span = document.getElementsByClassName("close")[2];
 
   btn.onclick = function() {
     modal.style.display = "block";
