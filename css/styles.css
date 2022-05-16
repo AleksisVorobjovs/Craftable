@@ -247,6 +247,13 @@ header {
   border-right-color: #cbbc76;
   border-bottom-color: #cbbc76;
 }
+.black{
+  background-color: #1f1e1a;
+  border-top-color: #000000;
+  border-left-color: #000000;
+  border-right-color: #373737;
+  border-bottom-color: #373737;
+}
 .text {
   color:#3f3f3f;
   font-family: 'Minecraft-Regular';
