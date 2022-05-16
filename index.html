@@ -83,10 +83,8 @@
                       <div style="display: flex;  justify-content:right">
                       <span class="close">&times;</span>
                       </div>
-                      <div>
+                      <div id="victory-text">
                         <h1>VICTORY!</h1>
-                        <p>You correctly guessed the recipe in NUMBER guesses.</p>
-                        <p>The answer was ANSWER</p>
                       </div>
                     </div>
                   </div>
@@ -95,15 +93,11 @@
                       <div style="display: flex;  justify-content:right">
                       <span class="close" style="float:none;">&times;</span>
                       </div>
-                      <div>
+                      <div id="failure-text">
                         <h1>Nice Try!</h1>
-                        <p>You couldn't correctly guess the recipe.</p>
-                        <p>The answer was ANSWER</p>
                       </div>
                     </div>
                   </div>
-                  <btn class="btn" id="tempBtn" style="background-color: red;"></btn>
-                  <btn class="btn" id="tempBtn2" style="background-color: blue;"></btn>
                 </div>
               </div>
               <div class="col-sm-4" ></div>
@@ -123,7 +117,6 @@
           <div id="inventory-board">
           </div>
         </div>
-        <script src="js/dragging.js"></script>
       </div>
 
       <div id="guess-history-container" class="guess-history-container container">
