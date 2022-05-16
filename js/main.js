@@ -1,76 +1,109 @@
+startGame();
+var gussesMade = 0;
 var inventoryBlockList = new Array(36);
+//stores CorrectRecipes
 var CorrectRecipes = [["blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png",null,null,null],[null,null,null,"blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png"]];
-document.addEventListener("DOMContentLoaded", () => {
-  createCraftingSquares();
-  createInventorySquares();
-  var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png", "blocks/stick.png", "blocks/coal.png", "blocks/wood_log.png", "blocks/stone.png", "blocks/glowstone_dust.png", "blocks/snow_ball.png", "blocks/sand.png", "blocks/gunpowder.png", "blocks/clay_ball.png", "/blocks/brick.png", "blocks/book.png", "blocks/sandstone.png", "blocks/sandstone_slab.png", "blocks/redstone_dust.png", "blocks/torch.png", "blocks/pumpkin.png", "blocks/lapis_lazuli.png", "blocks/diamond.png", "blocks/gold_ingot.png", "blocks/iron_ingot.png", "blocks/emerald.png", "blocks/nether_quartz.png", "blocks/quartz_slab.png", "blocks/quartz_block.png", "blocks/wheat.png");
-  inventoryBlockList = createInventoryBlocks(); 
-  createGuessSquares();
+//stores list of all block paths
+var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png", "blocks/stick.png", "blocks/coal.png", "blocks/wood_log.png", "blocks/stone.png", "blocks/glowstone_dust.png", "blocks/snow_ball.png", "blocks/sand.png", "blocks/gunpowder.png", "blocks/clay_ball.png", "blocks/brick.png", "blocks/book.png", "blocks/sandstone.png", "blocks/sandstone_slab.png", "blocks/redstone_dust.png", "blocks/torch.png", "blocks/pumpkin.png", "blocks/lapis_lazuli.png", "blocks/diamond.png", "blocks/gold_ingot.png", "blocks/iron_ingot.png", "blocks/emerald.png", "blocks/nether_quartz.png", "blocks/quartz_slab.png", "blocks/quartz_block.png", "blocks/wheat.png");
+var isGameOn=false;
 
-  //creates crafting grid where blocks can be dropped
-  function createCraftingSquares() {
-    const gameCraftBoard = document.getElementById("crafting-board");
-    for (let index = 0; index < 9; index++) {
-      let squareCrafting = document.createElement("div");
-      squareCrafting.classList.add("squareCrafting");
-      squareCrafting.classList.add("animate__animated");
-      squareCrafting.classList.add("dropzone");
-      squareCrafting.setAttribute("id",index + 1);
-      squareCrafting.setAttribute("ondragover","onDragOver(event)");
-      squareCrafting.setAttribute("ondrop","onDrop(event)");
-      gameCraftBoard.appendChild(squareCrafting);
-    }
-  }
+//starts game
+function startGame() {
+  isGameOn=true;
+  document.addEventListener("click", handleMouseClick);
+  document.addEventListener("DOMContentLoaded", () => {
+    createCraftingSquares();
+    createInventorySquares();
+    inventoryBlockList = createInventoryBlocks(); 
+    createGuessSquares();
+  });
+}
 
-  //creates inventory grid where blocks are stored
-  function createInventorySquares() {
-    const gameInventoryBoard = document.getElementById("inventory-board");
-    for (let index = 9; index <45; index++) {
-      let squareInventory = document.createElement("div");
-      squareInventory.classList.add("squareInventory");
-      squareInventory.classList.add("animate__animated");
-      squareInventory.setAttribute("id", index + 1);
-      squareInventory.setAttribute("ondragover","onDragOver(event)");
-      squareInventory.setAttribute("ondrop","onDrop(event)");
-      gameInventoryBoard.appendChild(squareInventory);
-      if(index >= 36){
-        squareInventory.classList.add("lastInventoryLine");
-      }
+//ends game
+function stopGame() {
+  isGameOn=false;
+  document.removeEventListener("click", handleMouseClick);
+}
+
+//checks which button is pressed
+function handleMouseClick(e) {
+  if (e.target.matches("[id='recipe-book-img']")) {
+    openModal();
+  }
+  if (e.target.matches("[id='submitButton']")) {
+    submitGuess(); 
+  }
+  if (e.target.matches("[id='newGameButton']")) {
+    window.location.reload();
+  }
+}
+
+//creates crafting grid where blocks can be dropped
+ function createCraftingSquares() {
+  const gameCraftBoard = document.getElementById("crafting-board");
+  for (let index = 0; index < 9; index++) {
+    let squareCrafting = document.createElement("div");
+    squareCrafting.classList.add("squareCrafting");
+    squareCrafting.classList.add("animate__animated");
+    squareCrafting.classList.add("dropzone");
+    squareCrafting.setAttribute("id",index + 1);
+    squareCrafting.setAttribute("ondragover","onDragOver(event)");
+    squareCrafting.setAttribute("ondrop","onDrop(event)");
+    gameCraftBoard.appendChild(squareCrafting);
+  }
+}
+
+//creates inventory grid where blocks are stored
+function createInventorySquares() {
+  const gameInventoryBoard = document.getElementById("inventory-board");
+  for (let index = 9; index <45; index++) {
+    let squareInventory = document.createElement("div");
+    squareInventory.classList.add("squareInventory");
+    squareInventory.classList.add("animate__animated");
+    squareInventory.setAttribute("id", index + 1);
+    squareInventory.setAttribute("ondragover","onDragOver(event)");
+    squareInventory.setAttribute("ondrop","onDrop(event)");
+    gameInventoryBoard.appendChild(squareInventory);
+    if(index >= 36){
+      squareInventory.classList.add("lastInventoryLine");
     }
   }
-  //creates grids for previous guesses
-  function createGuessSquares(){
-    const guessHistory = document.getElementById("guesses"); 
-    let totalIndex = 45;
-    for(let count = 0; count <4; count ++) {
-      const guess = document.createElement("div")
-      guess.classList.add("guess")
-      guess.classList.add("col-3")
-      guess.setAttribute("id", "guess" + (count + 1))
-      for (let localIndex = 0; localIndex<9; localIndex++) {
-        let squareGuess = document.createElement("div");
-        squareGuess.classList.add("squareGuess");
-        squareGuess.setAttribute("id", totalIndex + 1);
-        totalIndex++;
-        guess.appendChild(squareGuess);
-      }
-      guessHistory.appendChild(guess);
+}
+//creates grids for previous guesses
+function createGuessSquares(){
+  const guessHistory = document.getElementById("guesses"); 
+  let totalIndex = 45;
+  for(let count = 0; count <4; count ++) {
+    const guess = document.createElement("div")
+    guess.classList.add("guess")
+    guess.classList.add("col-3")
+    guess.setAttribute("id", "guess" + (count + 1))
+    for (let localIndex = 0; localIndex<9; localIndex++) {
+      let squareGuess = document.createElement("div");
+      squareGuess.classList.add("squareGuess");
+      squareGuess.setAttribute("id", totalIndex + 1);
+      totalIndex++;
+      guess.appendChild(squareGuess);
     }
+    guessHistory.appendChild(guess);
   }
-  //creats randomly selected blocks that are image elements
-  function createInventoryBlocks() {
-    var rng;
-    var rngList = [];
-    var inventoryBlockList = [];
-    for(let i = 0; i <=9; i++){
-      minNeeded = CorrectRecipes[0][i];
-      if(minNeeded==null){
-      }else{
-        for(let j = 0; j <blockList.length; j++){
-          if(minNeeded==blockList[j]){
-            do{
-              rng = Math.floor((Math.random() * 36)+10);
-            }while(rngList.includes(rng));
+}
+//creats randomly selected blocks that are image elements
+function createInventoryBlocks() {
+  var rng;
+  var rngList = [];
+  var inventoryBlockList = [];
+
+  //first create blocks that are need to complete the game
+  for(let i = 0; i <=9; i++){
+    minNeeded = CorrectRecipes[0][i];
+    if(minNeeded==null){
+    }else{
+      for(let j = 0; j <blockList.length; j++){
+        if(minNeeded==blockList[j]){
+          do{
+            rng = Math.floor((Math.random() * 36)+10);
+          }while(rngList.includes(rng));
             rngList.push(rng);
             let block = document.createElement("img");
             block.classList.add("block");
@@ -82,92 +115,80 @@ document.addEventListener("DOMContentLoaded", () => {
             let square = document.getElementById(rng);
             square.appendChild(block);
             inventoryBlockList[rng-10]= block;
-            
           }
         }
       }
     }
-    
-    for (let index = 9; index <45; index++) {
-      if(rngList.includes(index+1)==false){
-        let block = document.createElement("img");
-        block.classList.add("block");
-        block.classList.add("draggable");
-        block.setAttribute("id", "block-"+(index + 1));
-        block.setAttribute("draggable", "true");
-        block.setAttribute("ondragstart","onDragStart(event)");
-        rng = Math.floor(Math.random() * blockList.length);
-        block.setAttribute("src",blockList[rng]);
-        let square = document.getElementById(index + 1);
-        square.appendChild(block);
-        inventoryBlockList[index-9]=block;
-      }
-    }
-    return inventoryBlockList;
-  }
 
-});
-var gussesMade = 0;
-startGame();
-function startGame() {
-  document.addEventListener("click", handleMouseClick);
+  //second add random blocks
+  for (let index = 9; index <45; index++) {
+    if(rngList.includes(index+1)==false){
+      let block = document.createElement("img");
+      block.classList.add("block");
+      block.classList.add("draggable");
+      block.setAttribute("id", "block-"+(index + 1));
+      block.setAttribute("draggable", "true");
+      block.setAttribute("ondragstart","onDragStart(event)");
+      rng = Math.floor(Math.random() * blockList.length);
+      block.setAttribute("src",blockList[rng]);
+      let square = document.getElementById(index + 1);
+      square.appendChild(block);
+      inventoryBlockList[index-9]=block;
+    }
+  }
+  return inventoryBlockList;
 }
 
+//adds dragging functionality
+function onDragStart(event) {
+  event
+    .dataTransfer
+    .setData('text/plain', event.target.id);
+  
+  event
+    .currentTarget
+    .style;
+}
+function onDragOver(event) {
+  event.preventDefault();
+}
+function onDrop(event) {
+  const id = event
+    .dataTransfer
+    .getData('text');
+    
+  const draggableElement = document.getElementById(id);
+  const dropzone = event.target;
+  if(dropzone.childNodes.length!=1 && dropzone.classList.contains("draggable")==false){
+    dropzone.appendChild(draggableElement);
+  }
+}
 
-
-//checks which button is pressed
-function handleMouseClick(e) {
-  if (e.target.matches("[id='recipe-book-img']")) {
-    openModal();
-  }
-  if (e.target.matches("[id='submitButton']")) {
-    submitGuess();
-    refresh();
-  }
-  if (e.target.matches("[id='newGameButton']")) {
-    createCraftingSquares();
-    createInventorySquares();
-    inventoryBlockList = createInventoryBlocks(); 
-    createGuessSquares();
-  }
-  if (e.target.matches("#tempBtn")) {
-    openVictoryScreen();
-  }
-  if (e.target.matches("#tempBtn2")) {
-    openFailureScreen();
-  }
-  }
-
+//funcionality for discription pop up
 function openModal(){
-  // Get the modal
   var modal = document.getElementById("rulesModal");
-
-  // Get the button that opens the modal
   var img = document.getElementById("recipe-book-img");
-
-  // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
 
-  // When the user clicks on the button, open the modal
+  //open the modal
   img.onclick = function() {
     modal.style.display = "block";
   }
 
-  // When the user clicks on <span> (x), close the modal
+  //close the modal button
   span.onclick = function() {
     modal.style.display = "none";
   }
 
-  // When the user clicks anywhere outside of the modal, close it
+  //close it
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
   }
 }
-//creates list with paths to images
-var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png");
-//creats a list of objectsa placed in crafting table
+
+//creats a list of objects that were placed in crafting table
 function submitGuess(){
   const gameCraftBoard = document.getElementById("crafting-board");
   var guessList = [];
@@ -175,7 +196,6 @@ function submitGuess(){
   for (let index = 0; index < 9; index++) {
     var guessedSquare = document.getElementById(index + 1);
     if(guessedSquare.childNodes.length==1){
-      gussesMade++;
       notEmpty = true;
       var guessedBlock = guessedSquare.childNodes[0];
       guessList.push(guessedBlock.src.substring(guessedBlock.src.search("blocks/")));
@@ -183,12 +203,21 @@ function submitGuess(){
       guessList.push(null);
     }
   }
+
   //if recipe is correct
   for (let i = 0; i < CorrectRecipes.length; i++) {
     if(guessList.every((val, index) => val === CorrectRecipes[i][index])){
-      console.log("test");
       openVictoryScreen();
+      stopGame();
+      return
     }
+  }
+
+  //if don't guess in 4 tries you lose :(
+  if(gussesMade>2){
+    openFailureScreen();
+    stopGame();
+    return
   }
   //creats a list with colors based on placed blocks
   var colorlist= new Array(9);
@@ -197,32 +226,63 @@ function submitGuess(){
       if(guessList[j]==CorrectRecipes[i][j]&&guessList[j]!=null){
         colorlist[j]= "green";
       }else if(CorrectRecipes[i].includes(guessList[j]) && guessList[j]!=null && colorlist[j]!="green"){
-          colorlist[j]= "yellow";
+        colorlist[j]= "yellow";
       }else if(colorlist[j]!="green" && colorlist[j]!="yellow"){
-        colorlist[j]= "gray";
+        colorlist[j]= "black";
       }
     }
   }
+
+  //refreshes inventory by creating new blocks with the same layout as before but now with colors
+  var inventory = inventoryBlockList;
+    for (let index = 9; index <45; index++) {
+      let block = document.getElementById("block-"+(index + 1));
+      block.parentNode.removeChild(block);
+      let newblock = document.createElement("img");
+      block.classList.add("block");
+      block.classList.add("draggable");
+      block.setAttribute("id", "block-"+(index + 1));
+      block.setAttribute("draggable", "true");
+      block.setAttribute("ondragstart","onDragStart(event)");
+      block.setAttribute("src",inventory[index-9].src.substring(inventory[index-9].src.search("blocks/")));
+      let square = document.getElementById(index + 1);
+      square.appendChild(block);
+      for(let i = 0; i<guessList.length; i++){
+        if(guessList[i]==inventory[index-9].src.substring(inventory[index-9].src.search("blocks/"))){
+          if(square.classList.contains("green")){
+            continue;
+          }else if(square.classList.contains("yellow")){
+            square.classList.remove("yellow");
+            square.classList.add(colorlist[i]);
+          }
+          square.classList.add(colorlist[i]);
+        }
+      }
+    }
+  
+  //if crafting table not null then submit guess
   if(notEmpty == true){
+    gussesMade++;
     firstGuessGrid = document.getElementById("guess1");
     secondGuessGrid = document.getElementById("guess2");
     thirdGuessGrid = document.getElementById("guess3");
     fourthGuessGrid = document.getElementById("guess4");
     let idvar;
-    if (!(firstGuessGrid.classList.contains("guessMade"))){
+    if(!(firstGuessGrid.classList.contains("guessMade"))){
       currentGuess = firstGuessGrid;
       idvar = 46;
-    } else if (!(secondGuessGrid.classList.contains("guessMade"))){
+    }else if (!(secondGuessGrid.classList.contains("guessMade"))){
       currentGuess = secondGuessGrid;
       idvar = 55;
-    } else if (!(thirdGuessGrid.classList.contains("guessMade"))){ 
+    }else if (!(thirdGuessGrid.classList.contains("guessMade"))){ 
       currentGuess = thirdGuessGrid;
       idvar = 64;
-    } else if (!(fourthGuessGrid.classList.contains("guessMade"))){ 
+    }else if (!(fourthGuessGrid.classList.contains("guessMade"))){ 
       currentGuess = fourthGuessGrid;
       idvar = 73;
     }
 
+    //create guess table with colors
     for(let k = 0; k < 9; k++){
       if(!(guessList[k]==null)){
         square = document.getElementById(k+idvar);
@@ -236,62 +296,42 @@ function submitGuess(){
     currentGuess.classList.add("guessMade");
   }
 }
-  //refreshes inventory by creating new blocks with the same layout as before
-function refresh(){
-  var inventory = inventoryBlockList;
-  for (let index = 9; index <45; index++) {
-    let block = document.getElementById("block-"+(index + 1));
-    block.parentNode.removeChild(block);
-    let newblock = document.createElement("img");
-    block.classList.add("block");
-    block.classList.add("draggable");
-    block.setAttribute("id", "block-"+(index + 1));
-    block.setAttribute("draggable", "true");
-    block.setAttribute("ondragstart","onDragStart(event)");
-    block.setAttribute("src",inventory[index-9].src.substring(inventory[index-9].src.search("blocks/")));
-    let square = document.getElementById(index + 1);
-    square.appendChild(block);
-  }
-}
-
-
+//victory pop up
 function openVictoryScreen() {
-    var modal = document.getElementById("victoryModal");
-
-    var btn = document.getElementById("tempBtn");
+  var modal = document.getElementById("victoryModal");
+  var btn = document.getElementById("tempBtn");
+  var span = document.getElementsByClassName("close")[1];
   
-    var span = document.getElementsByClassName("close")[1];
+  //open model
+  modal.style.display = "block";
   
-
-    modal.style.display = "block";
+  //close model
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
   
-    span.onclick = function() {
+  //When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
       modal.style.display = "none";
     }
-  
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
+  }
 }
-
+//lose pop up
 function openFailureScreen() {
   var modal = document.getElementById("failureModal");
-
   var btn = document.getElementById("tempBtn2");
-
   var span = document.getElementsByClassName("close")[2];
 
-  btn.onclick = function() {
-    modal.style.display = "block";
-  }
+  //open model
+  modal.style.display = "block";
 
+  //close model
   span.onclick = function() {
     modal.style.display = "none";
   }
 
+  //When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
