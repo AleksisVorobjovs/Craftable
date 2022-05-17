@@ -336,6 +336,7 @@ function submitGuess(){
 function openVictoryScreen() {
   var modal = document.getElementById("victoryModal");
   var span = document.getElementsByClassName("close")[1];
+  var button = document.getElementById("newGameButtonVictory");
   
   //open model
   modal.style.display = "block";
@@ -360,12 +361,19 @@ function openVictoryScreen() {
       modal.style.display = "none";
     }
   }
+  button.onclick = function() {
+    victoryGuessMade.parentNode.removeChild(victoryGuessMade);
+    victoryNameRecipe.parentNode.removeChild(victoryNameRecipe);
+    modal.style.display = "none";
+    newGame();
+  }
 }
+
 //lose pop up
 function openFailureScreen() {
   var modal = document.getElementById("failureModal");
   var span = document.getElementsByClassName("close")[2];
-
+  var button = document.getElementById("newGameButtonFailure");
   //open model
   modal.style.display = "block";
   var failureText = document.getElementById('failure-text');
@@ -388,5 +396,11 @@ function openFailureScreen() {
       failureNameRecipe.parentNode.removeChild(failureNameRecipe);
       modal.style.display = "none";
     }
+  }
+  button.onclick = function() {
+    failureGuessMade.parentNode.removeChild(failureGuessMade);
+    failureNameRecipe.parentNode.removeChild(failureNameRecipe);
+    modal.style.display = "none";
+    newGame();
   }
 }
