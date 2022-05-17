@@ -6,24 +6,16 @@ var nameRecipe = "Bed";
 //stores list of all block paths
 var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png", "blocks/stick.png", "blocks/coal.png", "blocks/wood_log.png", "blocks/stone.png", "blocks/glowstone_dust.png", "blocks/snow_ball.png", "blocks/sand.png", "blocks/gunpowder.png", "blocks/clay_ball.png", "blocks/brick.png", "blocks/book.png", "blocks/sandstone.png", "blocks/sandstone_slab.png", "blocks/redstone_dust.png", "blocks/torch.png", "blocks/pumpkin.png", "blocks/lapis_lazuli.png", "blocks/diamond.png", "blocks/gold_ingot.png", "blocks/iron_ingot.png", "blocks/emerald.png", "blocks/nether_quartz.png", "blocks/quartz_slab.png", "blocks/quartz_block.png", "blocks/wheat.png");
 var isGameOn=false;
+openPage();
 startGame();
 //starts game
-function startGame() {
-  isGameOn=true;
-  document.addEventListener("click", handleCrafting);
-  document.addEventListener("click", handleMouseClick);
+function openPage(){
   document.addEventListener("DOMContentLoaded", () => {
     createCraftingSquares();
     createInventorySquares();
     inventoryBlockList = createInventoryBlocks(); 
     createGuessSquares();
   });
-}
-
-//ends game
-function stopGame() {
-  isGameOn=false;
-  document.removeEventListener("click", handleCrafting);
 }
 
 //checks which button is pressed
@@ -68,8 +60,20 @@ function newGame(){
   createInventorySquares();
   inventoryBlockList = createInventoryBlocks();
   createGuessSquares();
+  startGame();
 }
 
+function startGame() {
+  isGameOn=true;
+  document.addEventListener("click", handleCrafting);
+  document.addEventListener("click", handleMouseClick);
+}
+
+//ends game
+function stopGame() {
+  isGameOn=false;
+  document.removeEventListener("click", handleCrafting);
+}
 
 //creates crafting grid where blocks can be dropped
  function createCraftingSquares() {
@@ -336,16 +340,23 @@ function openVictoryScreen() {
   //open model
   modal.style.display = "block";
   var victoryText = document.getElementById('victory-text');
-  victoryText.innerHTML += "<p>You correctly guessed the recipe in "+gussesMade+" guesses.</p>";
-  victoryText.innerHTML += "<p>The answer was "+nameRecipe+".</p>";
+  victoryText.innerHTML += "<p id='victory-guessMade'>You correctly guessed the recipe in "+gussesMade+" guesses.</p>";
+  victoryText.innerHTML += "<p id='victory-nameRecipe'>The answer was "+nameRecipe+".</p>";
+  
+  var victoryGuessMade = document.getElementById('victory-guessMade');
+  var victoryNameRecipe = document.getElementById('victory-nameRecipe');
   //close model
   span.onclick = function() {
+    victoryGuessMade.parentNode.removeChild(victoryGuessMade);
+    victoryNameRecipe.parentNode.removeChild(victoryNameRecipe);
     modal.style.display = "none";
   }
   
   //When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
+      victoryGuessMade.parentNode.removeChild(victoryGuessMade);
+      victoryNameRecipe.parentNode.removeChild(victoryNameRecipe);
       modal.style.display = "none";
     }
   }
@@ -358,17 +369,23 @@ function openFailureScreen() {
   //open model
   modal.style.display = "block";
   var failureText = document.getElementById('failure-text');
-  failureText.innerHTML += "<p>You couldn't correctly guess the recipe.</p>"
-  failureText.innerHTML +="<p>The answer was "+nameRecipe+".</p>";
+  failureText.innerHTML += "<p id='failure-guessMade'>You couldn't correctly guess the recipe.</p>"
+  failureText.innerHTML +="<p id='failure-nameRecipe'>The answer was "+nameRecipe+".</p>";
 
+  var failureGuessMade = document.getElementById('failure-guessMade');
+  var failureNameRecipe = document.getElementById('failure-nameRecipe');
   //close model
   span.onclick = function() {
+    failureGuessMade.parentNode.removeChild(failureGuessMade);
+    failureNameRecipe.parentNode.removeChild(failureNameRecipe);
     modal.style.display = "none";
   }
 
   //When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
+      failureGuessMade.parentNode.removeChild(failureGuessMade);
+      failureNameRecipe.parentNode.removeChild(failureNameRecipe);
       modal.style.display = "none";
     }
   }
