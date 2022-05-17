@@ -1,0 +1,178 @@
+{
+"items" : {
+    "Wood plank" : {
+        "recipes" : [
+            ["wood_log.png",null,null,
+            null,null,null,
+            null,null,null],
+
+            [null,"wood_log.png",null,
+            null,null,null,
+            null,null,null],
+
+            [null,null,"wood_log.png",
+            null,null,null,
+            null,null,null],
+
+            [null,null,null,
+            "wood_log.png",null,null,
+            null,null,null],
+
+            [null,null,null,
+            null,"wood_log.png",null,
+            null,null,null],
+
+            [null,null,null,
+            null,null,"wood_log.png",
+            null,null,null],
+
+            [null,null,null,
+            null,null,null,
+            "wood_log.png",null,null],
+            [null,null,null,
+            null,null,null,
+            null,"wood_log.png",null],
+
+            [null,null,null,
+            null,null,null,
+            null,null,"wood_log.png"]
+        ],
+        "src" : "wood_plank.png"
+    }
+    },
+    "Torch" : {
+        "recipes" : [
+            ["coal.png",null,null,
+            "stick.png",null,null,
+            null,null,null],
+
+            [null,"coal.png",null,
+            null,"stick.png",null,
+            null,null,null],
+
+            [null,null,"coal.png",
+            null,null,"stick.png",
+            null,null,null],
+
+            [null,null,null,
+            "coal.png",null,null,
+            "stick.png",null,null],
+
+            [null,null,null,
+            null,"coal.png",null,
+            null,"stick.png",null],
+
+            [null,null,null,
+            null,null,"coal.png",
+            null,null,"stick.png"]
+        ],
+            "src" : "torch.png"
+    },
+    "Stick" : {
+        "recipes" : [
+            ["wood_plank.png",null,null,
+            "wood_plank.png",null,null,
+            null,null,null],
+
+            [null,"wood_plank.png",null,
+            null,"wood_plank.png",null,
+            null,null,null],
+
+            [null,null,"wood_plank.png",
+            null,null,"wood_plank.png",
+            null,null,null],
+
+            [null,null,null,
+            "wood_plank.png",null,null,
+            "wood_plank.png",null,null],
+
+            [null,null,null,
+            null,"wood_plank.png",null,
+            null,"wood_plank.png",null],
+
+            [null,null,null,
+            null,null,"wood_plank.png",
+            null,null,"wood_plank.png"]
+        ],
+            "src" : "stick.png"
+    },
+    "Crafting Table" : {
+        "recipes" : [
+            ["wood_plank.png","wood_plank.png",null,"wood_plank.png","wood_plank.png",null,null,null,null],
+
+            [null,"wood_plank.png","wood_plank.png",null,"wood_plank.png","wood_plank.png",null,null,null],
+
+            [null,null,"wood_plank.png","wood_plank.png",null,"wood_plank.png","wood_plank.png",null,null],
+
+            [null,null,null,"wood_plank.png","wood_plank.png",null,"wood_plank.png","wood_plank.png",null],
+
+            [null,null,null,null,"wood_plank.png","wood_plank.png",null,"wood_plank.png","wood_plank.png"]
+        ],
+        "src" : "crafting_table.png"
+    },
+    "Furnace" : {
+        "recipes" : [
+            ["cobblestone.png","cobblestone.png","cobblestone.png",
+            "cobblestone.png",null,"cobblestone.png",
+            "cobblestone.png","cobblestone.png","cobblestone.png"]
+        ],
+            "src" : "furnace.png"
+    },
+    "Chest" : {
+        "recipes" : [
+        ["wood_plank.png","wood_plank.png","wood_plank.png",
+        "wood_plank.png",null,"wood_plank.png",
+        "wood_plank.png","wood_plank.png","wood_plank.png"]
+        ],
+        "src" : "chest.png"
+    },
+    "Ladder" : {
+        "recipes" : [
+        ["stick.png",null,"stick.png",
+        "stick.png","stick.png","stick.png",
+        "stick.png",null,"stick.png"]
+        ],
+        "src" : "ladder.png"
+    },
+    "Fence" : {
+        "recipes" : [
+        ["wood_plank.png","stick.png","wood_plank.png",
+        "wood_plank.png","stick.png","wood_plank.png",
+        null,null,null],
+
+        [null,null,null,
+        "wood_plank.png","stick.png","wood_plank.png",
+        "wood_plank.png","stick.png","wood_plank.png"]
+    ],
+    "src" : "fence.png"
+    },
+    "boat" : {
+        "recipes" : [
+            ["wood_plank.png", null, "wood_plank.png",
+            "wood_plank.png", "wood_plank.png","wood_plank.png",
+            null, null, null],
+
+            [null, null, null,
+            "wood_plank.png", null, "wood_plank.png",
+            "wood_plank.png", "wood_plank.png", "wood_plank.png"]
+        ],
+        "src" : "boat.png"
+    },
+    "item" : {
+        "recipes" : [
+            [null, null, null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "src.png"
+    },
+}
+
+"item" : {
+    "recipes" : [
+        [null, null, null,
+        null, null, null,
+        null, null, null]
+    ],
+    "src" : "src.png"
+},

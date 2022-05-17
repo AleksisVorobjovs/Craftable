@@ -8,6 +8,13 @@ var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blo
 var isGameOn=false;
 openPage();
 startGame();
+/*
+fetch("../recipes.json")
+.then(Response => {
+  return Response.json();
+}).then(jsondata => console.log(jsondata))
+*/
+
 //starts game
 function openPage(){
   document.addEventListener("DOMContentLoaded", () => {
