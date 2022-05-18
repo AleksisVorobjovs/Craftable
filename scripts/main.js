@@ -1,23 +1,29 @@
 var gussesMade = 0;
 var inventoryBlockList = new Array(36);
-//stores correctRecipes
-var correctRecipes = [["blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png",null,null,null],[null,null,null,"blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png"]];
-var nameRecipe = "Bed";
-//stores list of all block paths
-var blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png", "blocks/stick.png", "blocks/coal.png", "blocks/wood_log.png", "blocks/stone.png", "blocks/glowstone_dust.png", "blocks/snow_ball.png", "blocks/sand.png", "blocks/gunpowder.png", "blocks/clay_ball.png", "blocks/brick.png", "blocks/book.png", "blocks/sandstone.png", "blocks/sandstone_slab.png", "blocks/redstone_dust.png", "blocks/torch.png", "blocks/pumpkin.png", "blocks/lapis_lazuli.png", "blocks/diamond.png", "blocks/gold_ingot.png", "blocks/iron_ingot.png", "blocks/emerald.png", "blocks/nether_quartz.png", "blocks/quartz_slab.png", "blocks/quartz_block.png", "blocks/wheat.png");
-var isGameOn=false;
+var correctRecipes = new Array();
+var nameRecipe;
+var blockList = new Array();
+var blockListStr;
 openPage();
 startGame();
-/*
-fetch("../recipes.json")
-.then(Response => {
-  return Response.json();
-}).then(jsondata => console.log(jsondata))
-*/
 
 //starts game
 function openPage(){
   document.addEventListener("DOMContentLoaded", () => {
+    fetchBlockList();
+    if(!window.localStorage.getItem("blockList")){
+      location.reload(); 
+    }
+    blockListStr = window.localStorage.getItem("blockList");
+    blockList = JSON.parse(blockListStr);
+    fetchGuessingWord();
+    if(!window.localStorage.getItem("nameRecipe")){
+      location.reload(); 
+    }
+    correctRecipesStr = window.localStorage.getItem("correctRecipes");
+    correctRecipes = JSON.parse(correctRecipesStr);
+    src = window.localStorage.getItem("src");
+    nameRecipe = window.localStorage.getItem("nameRecipe");
     createCraftingSquares();
     createInventorySquares();
     inventoryBlockList = createInventoryBlocks(); 
@@ -60,9 +66,13 @@ function newGame(){
     oldGuessParentSquare.parentNode.removeChild(oldGuessParentSquare);
   }
   gussesMade = 0;
-  correctRecipes = [["blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png",null,null,null],[null,null,null,"blocks/white_wool.png","blocks/white_wool.png","blocks/white_wool.png","blocks/wood_plank.png","blocks/wood_plank.png","blocks/wood_plank.png"]];
-  nameRecipe = "Bed";
-  blockList = new Array("blocks/cobblestone.png","blocks/wood_plank.png", "blocks/white_wool.png", "blocks/stick.png", "blocks/coal.png", "blocks/wood_log.png", "blocks/stone.png", "blocks/glowstone_dust.png", "blocks/snow_ball.png", "blocks/sand.png", "blocks/gunpowder.png", "blocks/clay_ball.png", "blocks/brick.png", "blocks/book.png", "blocks/sandstone.png", "blocks/sandstone_slab.png", "blocks/redstone_dust.png", "blocks/torch.png", "blocks/pumpkin.png", "blocks/lapis_lazuli.png", "blocks/diamond.png", "blocks/gold_ingot.png", "blocks/iron_ingot.png", "blocks/emerald.png", "blocks/nether_quartz.png", "blocks/quartz_slab.png", "blocks/quartz_block.png", "blocks/wheat.png");
+  fetchGuessingWord();
+  correctRecipesStr = window.localStorage.getItem("correctRecipes");
+  correctRecipes = JSON.parse(correctRecipesStr);
+  src = window.localStorage.getItem("src");
+  nameRecipe = window.localStorage.getItem("nameRecipe");
+  blockListStr = window.localStorage.getItem("blockList");
+  blockList = JSON.parse(blockListStr);
   inventoryBlockList=[];
   createInventorySquares();
   inventoryBlockList = createInventoryBlocks();
@@ -81,6 +91,60 @@ function stopGame() {
   isGameOn=false;
   document.removeEventListener("click", handleCrafting);
 }
+function fetchBlockList(){
+  fetch("scripts/recipes.json").then(response => {
+    return response.json()
+  }).then(jsonFile => {
+    var blistOfBlockNames = new Array();
+    var blistOfBlocks = new Array();
+    var blistOfBlockSrc = new Array();
+    blistOfBlocks.push(jsonFile.items);
+    Object.keys(jsonFile.items).forEach(function(key){
+      blistOfBlockNames.push(key);
+    })
+for(let i = 0; i<blistOfBlockNames.length;i++){
+  j=0;
+  blistOfBlocks[0][blistOfBlockNames[i]]["recipes"].forEach(function(brecipe){
+    if(j==0){
+      brecipe.forEach(function(bblock){
+        if(bblock!=null && blistOfBlockSrc.includes(bblock)==false){
+          blistOfBlockSrc.push(bblock);
+        }
+      })
+      j++;
+    }
+  })
+}
+localStorage.setItem('blockList', JSON.stringify(blistOfBlockSrc));
+})
+}
+
+//fetching block from json and storing it in local storage
+function fetchGuessingWord(){
+fetch("scripts/recipes.json").then(response => {
+  return response.json()
+}).then(jsonFile => {
+  var flistOfBlocks = new Array();
+  flistOfBlocks.push(jsonFile.items);
+  var flistOfBlockNames = new Array();
+  var fcorrectRecipes = new Array();
+  var fsrc;
+  Object.keys(jsonFile.items).forEach(function(key){
+    flistOfBlockNames.push(key);
+  })
+  var frandomBlockNameNumber = Math.floor(Math.random() * flistOfBlockNames.length);
+  fnameRecipe = flistOfBlockNames[frandomBlockNameNumber];
+  flistOfBlocks[0][fnameRecipe]["recipes"].forEach(function(recipe){
+    fcorrectRecipes.push(recipe);
+  })
+
+  fsrc = flistOfBlocks[0][fnameRecipe]["src"];
+  localStorage.setItem('src', JSON.stringify(fsrc));
+  localStorage.setItem('correctRecipes', JSON.stringify(fcorrectRecipes));
+  localStorage.setItem('nameRecipe', JSON.stringify(fnameRecipe));
+  });
+}
+
 
 //creates crafting grid where blocks can be dropped
  function createCraftingSquares() {
@@ -155,7 +219,7 @@ function createInventoryBlocks() {
             block.setAttribute("id", "block-"+rng);
             block.setAttribute("draggable", "true");
             block.setAttribute("ondragstart","onDragStart(event)");
-            block.setAttribute("src",blockList[j]);
+            block.setAttribute("src","blocks/"+blockList[j]);
             let square = document.getElementById(rng);
             square.appendChild(block);
             inventoryBlockList[rng-10]= block;
@@ -174,7 +238,7 @@ function createInventoryBlocks() {
       block.setAttribute("draggable", "true");
       block.setAttribute("ondragstart","onDragStart(event)");
       rng = Math.floor(Math.random() * blockList.length);
-      block.setAttribute("src",blockList[rng]);
+      block.setAttribute("src","blocks/"+blockList[rng]);
       let square = document.getElementById(index + 1);
       square.appendChild(block);
       inventoryBlockList[index-9]=block;
@@ -242,11 +306,12 @@ function submitGuess(){
     if(guessedSquare.childNodes.length==1){
       notEmpty = true;
       var guessedBlock = guessedSquare.childNodes[0];
-      guessList.push(guessedBlock.src.substring(guessedBlock.src.search("blocks/")));
+      guessList.push(guessedBlock.src.substring(guessedBlock.src.search("blocks/")+7));
     }else{
       guessList.push(null);
     }
   }
+
   //if crafting table not null then submit guess
   if(notEmpty == true){
     gussesMade++;
@@ -294,7 +359,7 @@ function submitGuess(){
       let square = document.getElementById(index + 1);
       square.appendChild(block);
       for(let i = 0; i<guessList.length; i++){
-        if(guessList[i]==inventory[index-9].src.substring(inventory[index-9].src.search("blocks/"))){
+        if(guessList[i]==inventory[index-9].src.substring(inventory[index-9].src.search("blocks/")+7)){
           if(square.classList.contains("green")){
             continue;
           }else if(square.classList.contains("yellow")){
@@ -331,7 +396,7 @@ function submitGuess(){
         let block = document.createElement("img");
         block.classList.add("guessedBlock");
         square.classList.add(colorlist[k]);
-        block.setAttribute("src", guessList[k]);
+        block.setAttribute("src","blocks/"+ guessList[k]);
         square.appendChild(block);
       }
     }

@@ -38,7 +38,6 @@
             null,null,"wood_log.png"]
         ],
         "src" : "wood_plank.png"
-    }
     },
     "Torch" : {
         "recipes" : [
@@ -157,22 +156,6 @@
             "wood_plank.png", "wood_plank.png", "wood_plank.png"]
         ],
         "src" : "boat.png"
-    },
-    "item" : {
-        "recipes" : [
-            [null, null, null,
-            null, null, null,
-            null, null, null]
-        ],
-        "src" : "src.png"
-    },
+    }
 }
-
-"item" : {
-    "recipes" : [
-        [null, null, null,
-        null, null, null,
-        null, null, null]
-    ],
-    "src" : "src.png"
-},
+}
