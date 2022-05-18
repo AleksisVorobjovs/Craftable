@@ -48,23 +48,12 @@ function handleCrafting(e) {
 
 //creats new game
 function newGame(){
-  for (let index = 9; index <45; index++) {
-    let oldBlock = document.getElementById("block-"+(index + 1));
-    oldBlock.parentNode.removeChild(oldBlock);
-    let oldInventorySquare = document.getElementById(index + 1);
-    oldInventorySquare.parentNode.removeChild(oldInventorySquare);
-  }
-  for (let index = 46; index <=81; index++) {
-    let oldGuessSquare = document.getElementById(index);
-    if(oldGuessSquare.childNodes>=1){
-      oldGuessSquare.removeChild(oldBlock);
-    }
-    oldGuessSquare.parentNode.removeChild(oldGuessSquare);
-  }
-  for (let index = 1; index <=4; index++) {
-    let oldGuessParentSquare = document.getElementById("guess"+index);
-    oldGuessParentSquare.parentNode.removeChild(oldGuessParentSquare);
-  }
+  var craftNode = document.getElementById('crafting-board');
+  craftNode.innerHTML = "";
+  var inventoryNode = document.getElementById('inventory-board');
+  inventoryNode.innerHTML = "";
+  var guessNode = document.getElementById('guesses');
+  guessNode.innerHTML = "";
   gussesMade = 0;
   fetchGuessingWord();
   correctRecipesStr = window.localStorage.getItem("correctRecipes");
@@ -74,6 +63,7 @@ function newGame(){
   blockListStr = window.localStorage.getItem("blockList");
   blockList = JSON.parse(blockListStr);
   inventoryBlockList=[];
+  createCraftingSquares();
   createInventorySquares();
   inventoryBlockList = createInventoryBlocks();
   createGuessSquares();
