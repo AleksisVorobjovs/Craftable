@@ -1096,21 +1096,21 @@
     },
     "Honey Block" : {
         "recipes" : [
-            ["honey_bottles.png", "honey_bottles.png", null,
-            "honey_bottles.png", "honey_bottles.png", null,
+            ["honey_bottle.png", "honey_bottle.png", null,
+            "honey_bottle.png", "honey_bottle.png", null,
             null, null, null],
             
-            [null, "honey_bottles.png", "honey_bottles.png",
-            null, "honey_bottles.png", "honey_bottles.png",
+            [null, "honey_bottle.png", "honey_bottle.png",
+            null, "honey_bottle.png", "honey_bottle.png",
             null, null, null],
             
             [null, null, null,
-            null, "honey_bottles.png", "honey_bottles.png",
-            null, "honey_bottles.png", "honey_bottles.png"],
+            null, "honey_bottle.png", "honey_bottle.png",
+            null, "honey_bottle.png", "honey_bottle.png"],
             
             [null, null, null,
-            "honey_bottles.png", "honey_bottles.png", null,
-            "honey_bottles.png", "honey_bottles.png", null]
+            "honey_bottle.png", "honey_bottle.png", null,
+            "honey_bottle.png", "honey_bottle.png", null]
         ],
         "src" : "honey_block.png"
     },
@@ -1341,7 +1341,7 @@
     },
     "Diamond Pickaxe" : {
         "recipes" : [
-            ["diamond_ingot.png", "diamond_ingot.png", "diamond_ingot.png",
+            ["diamond.png", "diamond.png", "diamond.png",
             null, "stick.png", null,
             null, "stick.png", null]
         ],
@@ -2114,13 +2114,13 @@
     },
     "Turtle Shell" : {
         "recipes" : [
-            ["scuta.png", "scuta.png", "scuta.png",
-            "scuta.png", null, "scuta.png",
+            ["scute.png", "scute.png", "scute.png",
+            "scute.png", null, "scute.png",
             null, null, null],
 
             [null, null, null,
-            "scuta.png", "scuta.png", "scuta.png",
-            "scuta.png", null, "scuta.png"]
+            "scute.png", "scute.png", "scute.png",
+            "scute.png", null, "scute.png"]
         ],
         "src" : "turtle_shell.png"
     },
@@ -2388,28 +2388,28 @@
     },
     "Redstone Torch" : {
         "recipes" : [
-            ["redstone.png",null,null,
+            ["redstone_dust.png",null,null,
             "stick.png",null,null,
             null,null,null],
 
-            [null,"redstone.png",null,
+            [null,"redstone_dust.png",null,
             null,"stick.png",null,
             null,null,null],
 
-            [null,null,"redstone.png",
+            [null,null,"redstone_dust.png",
             null,null,"stick.png",
             null,null,null],
 
             [null,null,null,
-            "redstone.png",null,null,
+            "redstone_dust.png",null,null,
             "stick.png",null,null],
 
             [null,null,null,
-            null,"redstone.png",null,
+            null,"redstone_dust.png",null,
             null,"stick.png",null],
 
             [null,null,null,
-            null,null,"redstone.png",
+            null,null,"redstone_dust.png",
             null,null,"stick.png"]
         ],
             "src" : "redstone_torch.png"
@@ -2432,7 +2432,7 @@
     },
     "Piston" : {
         "recipes" : [
-            ["wodd_plank.png", "wood_plank.png", "wood_plank.png",
+            ["wood_plank.png", "wood_plank.png", "wood_plank.png",
             "cobblestone.png", "iron_ingot.png", "cobblestone.png",
             "cobblestone.png", "redstone_dust.png", "cobblestone.png"]
         ],
