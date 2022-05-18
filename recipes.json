@@ -1,6 +1,6 @@
 {
 "items" : {
-    "Wood plank" : {
+    "Wood Planks" : {
         "recipes" : [
             ["wood_log.png",null,null,
             null,null,null,
@@ -38,7 +38,6 @@
             null,null,"wood_log.png"]
         ],
         "src" : "wood_plank.png"
-    }
     },
     "Torch" : {
         "recipes" : [
@@ -98,15 +97,21 @@
     },
     "Crafting Table" : {
         "recipes" : [
-            ["wood_plank.png","wood_plank.png",null,"wood_plank.png","wood_plank.png",null,null,null,null],
+            ["wood_plank.png","wood_plank.png",null,
+            "wood_plank.png","wood_plank.png",null,
+            null,null,null],
 
-            [null,"wood_plank.png","wood_plank.png",null,"wood_plank.png","wood_plank.png",null,null,null],
+            [null,"wood_plank.png","wood_plank.png",
+            null,"wood_plank.png","wood_plank.png",
+            null,null,null],
 
-            [null,null,"wood_plank.png","wood_plank.png",null,"wood_plank.png","wood_plank.png",null,null],
+            [null,null,null,
+            "wood_plank.png","wood_plank.png",null,
+            "wood_plank.png","wood_plank.png",null],
 
-            [null,null,null,"wood_plank.png","wood_plank.png",null,"wood_plank.png","wood_plank.png",null],
-
-            [null,null,null,null,"wood_plank.png","wood_plank.png",null,"wood_plank.png","wood_plank.png"]
+            [null,null,null,
+            null,"wood_plank.png","wood_plank.png",
+            null,"wood_plank.png","wood_plank.png"]
         ],
         "src" : "crafting_table.png"
     },
@@ -146,7 +151,7 @@
     ],
     "src" : "fence.png"
     },
-    "boat" : {
+    "Boat" : {
         "recipes" : [
             ["wood_plank.png", null, "wood_plank.png",
             "wood_plank.png", "wood_plank.png","wood_plank.png",
@@ -158,21 +163,3459 @@
         ],
         "src" : "boat.png"
     },
-    "item" : {
+    "Wooden Slab" : {
         "recipes" : [
+            ["wood_plank.png", "wood_plank.png", "wood_plank.png",
+            null, null, null,
+            null, null, null],
+
             [null, null, null,
+            "wood_plank.png", "wood_plank.png", "wood_plank.png",
+            null, null, null],
+
+            [null, null, null,
+            null, null, null,
+            "wood_plank.png", "wood_plank.png", "wood_plank.png"]
+        ],
+        "src" : "wood_slab.png"
+    },
+    "Sign" : {
+        "recipes" : [
+            ["wood_plank.png", "wood_plank.png", "wood_plank.png",
+            "wood_plank.png", "wood_plank.png", "wood_plank.png",
+            null, "stick.png", null]
+        ],
+        "src" : "sign.png"
+    },
+    "door" : {
+        "recipes" : [
+            ["wood_plank.png", "wood_plank.png", null,
+            "wood_plank.png", "wood_plank.png", null,
+            "wood_plank.png", "wood_plank.png", null],
+
+            [null, "wood_plank.png", "wood_plank.png",
+            null, "wood_plank.png", "wood_plank.png",
+            null, "wood_plank.png", "wood_plank.png"]
+        ],
+        "src" : "door.png"
+    },
+    "Glowstone" : {
+        "recipes" : [
+            ["glowstone_dust.png", "glowstone_dust.png", null,
+            "glowstone_dust.png", "glowstone_dust.png", null,
+            null, null, null],
+                        
+            [null, "glowstone_dust.png", "glowstone_dust.png",
+            null, "glowstone_dust.png", "glowstone_dust.png",
+            null, null, null],
+                        
+            [null, null, null,
+            null, "glowstone_dust.png", "glowstone_dust.png",
+            null, "glowstone_dust.png", "glowstone_dust.png"],
+
+                        
+            [null, null, null,
+            "glowstone_dust.png", "glowstone_dust.png", null,
+            "glowstone_dust.png", "glowstone_dust.png", null]
+        ],
+        "src" : "glowstone.png"
+    },
+    "Snow block" : {
+        "recipes" : [
+
+            ["snow_ball.png", "snow_ball.png", null,
+            "snow_ball.png", "snow_ball.png", null,
+            null, null, null],
+            
+            [null, "snow_ball.png", "snow_ball.png",
+            null, "snow_ball.png", "snow_ball.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "snow_ball.png", "snow_ball.png",
+            null, "snow_ball.png", "snow_ball.png"],
+            
+            [null, null, null,
+            "snow_ball.png", "snow_ball.png", null,
+            "snow_ball.png", "snow_ball.png", null]
+                                    
+        ],
+        "src" : "snow_block.png"
+    },
+    "TNT" : {
+        "recipes" : [
+            ["gunpowder.png", "sand.png", "gunpowder.png",
+            "sand.png", "gunpowder.png", "sand.png",
+            "gunpowder.png", "sand.png", "gunpowder.png"]
+        ],
+        "src" : "tnt.png"
+    },
+    "Clay Block" : {
+        "recipes" : [
+            ["clay_ball.png", "clay_ball.png", null,
+            "clay_ball.png", "clay_ball.png", null,
+            null, null, null],
+            
+            [null, "clay_ball.png", "clay_ball.png",
+            null, "clay_ball.png", "clay_ball.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "clay_ball.png", "clay_ball.png",
+            null, "clay_ball.png", "clay_ball.png"],
+            
+            [null, null, null,
+            "clay_ball.png", "clay_ball.png", null,
+            "clay_ball.png", "clay_ball.png", null]
+        ],
+        "src" : "clay_block.png"
+    },
+    "Bricks" : {
+        "recipes" : [
+            ["brick.png", "brick.png", null,
+            "brick.png", "brick.png", null,
+            null, null, null],
+            
+            [null, "brick.png", "brick.png",
+            null, "brick.png", "brick.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "brick.png", "brick.png",
+            null, "brick.png", "brick.png"],
+            
+            [null, null, null,
+            "brick.png", "brick.png", null,
+            "brick.png", "brick.png", null]
+        ],
+        "src" : "bricks.png"
+    },
+    "Bookshelf" : {
+        "recipes" : [
+            ["wood_plank.png", "wood_plank.png", "wood_plank.png",
+            "book.png", "book.png", "book.png",
+            "wood_plank.png", "wood_plank.png", "wood_plank.png"]
+        ],
+        "src" : "bookshelf.png"
+    },
+    "Sandstone" : {
+        "recipes" : [
+            ["sand.png", "sand.png", null,
+            "sand.png", "sand.png", null,
+            null, null, null],
+            
+            [null, "sand.png", "sand.png",
+            null, "sand.png", "sand.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "sand.png", "sand.png",
+            null, "sand.png", "sand.png"],
+            
+            [null, null, null,
+            "sand.png", "sand.png", null,
+            "sand.png", "sand.png", null]
+        ],
+        "src" : "sandstone.png"
+    },
+    "Cut Sandstone" : {
+        "recipes" : [
+            ["sandstone.png", "sandstone.png", null,
+            "sandstone.png", "sandstone.png", null,
+            null, null, null],
+            
+            [null, "sandstone.png", "sandstone.png",
+            null, "sandstone.png", "sandstone.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "sandstone.png", "sandstone.png",
+            null, "sandstone.png", "sandstone.png"],
+            
+            [null, null, null,
+            "sandstone.png", "sandstone.png", null,
+            "sandstone.png", "sandstone.png", null]
+        ],
+        "src" : "cut_sandstone.png"
+    },
+    "Chiseled Sandstone" : {
+        "recipes" : [
+            ["sandstone_slab.png",null,null,
+            "sandstone_slab.png",null,null,
+            null,null,null],
+
+            [null,"sandstone_slab.png",null,
+            null,"sandstone_slab.png",null,
+            null,null,null],
+
+            [null,null,"sandstone_slab.png",
+            null,null,"sandstone_slab.png",
+            null,null,null],
+
+            [null,null,null,
+            "sandstone_slab.png",null,null,
+            "sandstone_slab.png",null,null],
+
+            [null,null,null,
+            null,"sandstone_slab.png",null,
+            null,"sandstone_slab.png",null],
+
+            [null,null,null,
+            null,null,"sandstone_slab.png",
+            null,null,"sandstone_slab.png"]
+        ],
+        "src" : "chiseled_sandstone.png"
+    },
+    "Note Block" : {
+        "recipes" : [
+            ["wood_plank.png", "wood_plank.png", "wood_plank.png",
+            "wood_plank.png", "redstone_dust.png", "wood_plank.png",
+            "wood_plank.png", "wood_plank.png", "wood_plank.png"]
+        ],
+        "src" : "note_block.png"
+    },
+    "Jack-O Lantern" : {
+        "recipes" : [
+            ["pumpkin.png",null,null,
+            "torch.png",null,null,
+            null,null,null],
+
+            [null,"pumpkin.png",null,
+            null,"torch.png",null,
+            null,null,null],
+
+            [null,null,"pumpkin.png",
+            null,null,"torch.png",
+            null,null,null],
+
+            [null,null,null,
+            "pumpkin.png",null,null,
+            "torch.png",null,null],
+
+            [null,null,null,
+            null,"pumpkin.png",null,
+            null,"torch.png",null],
+
+            [null,null,null,
+            null,null,"pumpkin.png",
+            null,null,"torch.png"]
+        ],
+        "src" : "jack_o_lantern.png"
+    },
+    "Lapis Lazuli Block" : {
+        "recipes" : [
+            ["lapis_lazuli.png", "lapis_lazuli.png", "lapis_lazuli.png",
+            "lapis_lazuli.png", "lapis_lazuli.png", "lapis_lazuli.png",
+            "lapis_lazuli.png", "lapis_lazuli.png", "lapis_lazuli.png"]
+        ],
+        "src" : "lapis_lazuli_block.png"
+    },
+    "Diamond Block" : {
+        "recipes" : [
+            ["diamond.png", "diamond.png", "diamond.png",
+            "diamond.png", "diamond.png", "diamond.png",
+            "diamond.png", "diamond.png", "diamond.png"]
+        ],
+        "src" : "diamond_block.png"
+    },
+    "Gold Block" : {
+        "recipes" : [
+            ["gold_ingot.png", "gold_ingot.png", "gold_ingot.png",
+            "gold_ingot.png", "gold_ingot.png", "gold_ingot.png",
+            "gold_ingot.png", "gold_ingot.png", "gold_ingot.png"]
+        ],
+        "src" : "gold_block.png"
+    },
+    "Iron Block" : {
+        "recipes" : [
+            ["iron_ingot.png", "iron_ingot.png", "iron_ingot.png",
+            "iron_ingot.png", "iron_ingot.png", "iron_ingot.png",
+            "iron_ingot.png", "iron_ingot.png", "iron_ingot.png"]
+        ],
+        "src" : "iron_block.png"
+    },
+    "Emerald Block" : {
+        "recipes" : [
+            ["emerald.png", "emerald.png", "emerald.png",
+            "emerald.png", "emerald.png", "emerald.png",
+            "emerald.png", "emerald.png", "emerald.png"]
+        ],
+        "src" : "emerald_block.png"
+    },
+    "Coal Block" : {
+        "recipes" : [
+            ["coal.png", "coal.png", "coal.png",
+            "coal.png", "coal.png", "coal.png",
+            "coal.png", "coal.png", "coal.png"]
+        ],
+        "src" : "coal_block.png"
+    },
+    "Stone Brick" : {
+        "recipes" : [
+            ["stone.png", "stone.png", null,
+            "stone.png", "stone.png", null,
+            null, null, null],
+            
+            [null, "stone.png", "stone.png",
+            null, "stone.png", "stone.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "stone.png", "stone.png",
+            null, "stone.png", "stone.png"],
+            
+            [null, null, null,
+            "stone.png", "stone.png", null,
+            "stone.png", "stone.png", null]
+        ],
+        "src" : "stone_brick.png"
+    },
+    "Wooden stairs" : {
+        "recipes" : [
+            [null, null, "wood_plank.png",
+            null, "wood_plank.png", "wood_plank.png",
+            "wood_plank.png", "wood_plank.png", "wood_plank.png"]
+        ],
+        "src" : "wood_stairs.png"
+    },
+    "Cobblestone Wall" : {
+        "recipes" : [
+            ["cobblestone.png", "cobblestone.png", "cobblestone.png",
+            "cobblestone.png", "cobblestone.png", "cobblestone.png",
+            null, null, null],
+
+            [null, null, null,
+            "cobblestone.png", "cobblestone.png", "cobblestone.png",
+            "cobblestone.png", "cobblestone.png", "cobblestone.png"]
+        ],
+        "src" : "cobblestone_wall.png"
+    },
+    "Redstone Block" : {
+        "recipes" : [
+            ["redstone_dust.png", "redstone_dust.png", "redstone_dust.png",
+            "redstone_dust.png", "redstone_dust.png", "redstone_dust.png",
+            "redstone_dust.png", "redstone_dust.png", "redstone_dust.png"]
+        ],
+        "src" : "redstone_block.png"
+    },
+    "Quartz block" : {
+        "recipes" : [
+            ["nether_quartz.png", "nether_quartz.png", null,
+            "nether_quartz.png", "nether_quartz.png", null,
+            null, null, null],
+            
+            [null, "nether_quartz.png", "nether_quartz.png",
+            null, "nether_quartz.png", "nether_quartz.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "nether_quartz.png", "nether_quartz.png",
+            null, "nether_quartz.png", "nether_quartz.png"],
+            
+            [null, null, null,
+            "nether_quartz.png", "nether_quartz.png", null,
+            "nether_quartz.png", "nether_quartz.png", null]
+        ],
+        "src" : "quartz_block.png"
+    },
+    "Chiseled Quartz block" : {
+        "recipes" : [
+            ["quartz_slab.png",null,null,
+            "quartz_slab.png",null,null,
+            null,null,null],
+
+            [null,"quartz_slab.png",null,
+            null,"quartz_slab.png",null,
+            null,null,null],
+
+            [null,null,"quartz_slab.png",
+            null,null,"quartz_slab.png",
+            null,null,null],
+
+            [null,null,null,
+            "quartz_slab.png",null,null,
+            "quartz_slab.png",null,null],
+
+            [null,null,null,
+            null,"quartz_slab.png",null,
+            null,"quartz_slab.png",null],
+
+            [null,null,null,
+            null,null,"quartz_slab.png",
+            null,null,"quartz_slab.png"]
+        ],
+        "src" : "chiseled_quartz_block.png"
+    },
+    "Pillar Quartz block" : {
+        "recipes" : [
+            ["quartz_block.png",null,null,
+            "quartz_block.png",null,null,
+            null,null,null],
+
+            [null,"quartz_block.png",null,
+            null,"quartz_block.png",null,
+            null,null,null],
+
+            [null,null,"quartz_block.png",
+            null,null,"quartz_block.png",
+            null,null,null],
+
+            [null,null,null,
+            "quartz_block.png",null,null,
+            "quartz_block.png",null,null],
+
+            [null,null,null,
+            null,"quartz_block.png",null,
+            null,"quartz_block.png",null],
+
+            [null,null,null,
+            null,null,"quartz_block.png",
+            null,null,"quartz_block.png"]
+        ],
+        "src" : "quartz_pillar.png"
+    },
+    "Quartz bricks" : {
+        "recipes" : [
+            ["quartz_block.png", "quartz_block.png", null,
+            "quartz_block.png", "quartz_block.png", null,
+            null, null, null],
+            
+            [null, "quartz_block.png", "quartz_block.png",
+            null, "quartz_block.png", "quartz_block.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "quartz_block.png", "quartz_block.png",
+            null, "quartz_block.png", "quartz_block.png"],
+            
+            [null, null, null,
+            "quartz_block.png", "quartz_block.png", null,
+            "quartz_block.png", "quartz_block.png", null]
+        ],
+        "src" : "quartz_bricks.png"
+    },
+    "Hay Bale" : {
+        "recipes" : [
+            ["wheat.png", "wheat.png", "wheat.png",
+            "wheat.png", "wheat.png", "wheat.png",
+            "wheat.png", "wheat.png", "wheat.png"]
+        ],
+        "src" : "hay_block.png"
+    },
+    "Granite" : {
+        "recipes" : [
+            ["diorite.png", "nether_quartz.png", null,
             null, null, null,
             null, null, null]
         ],
+        "src" : "granite.png",
+        "any-order": "true"
+    },
+    "Andesite" : {
+        "recipes" : [
+            ["diorite.png", "cobblestone.png", null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "andesite.png",
+        "any-order" : "true"
+    },
+    "Diorite" : {
+        "recipes" : [
+            ["cobblestone.png", "nether_quartz.png", null,
+            "nether_quartz.png", "cobblestone.png", null,
+            null, null, null],
+            
+            [null, "cobblestone.png", "nether_quartz.png",
+            null, "nether_quartz.png", "cobblestone.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "cobblestone.png", "nether_quartz.png",
+            null, "nether_quartz.png", "cobblestone.png"],
+            
+            [null, null, null,
+            "cobblestone.png", "nether_quartz.png", null,
+            "nether_quartz.png", "cobblestone.png", null],
+
+            ["nether_quartz.png", "cobblestone.png", null,
+            "cobblestone.png", "nether_quartz.png", null,
+            null, null, null],
+            
+            [null, "nether_quartz.png", "cobblestone.png",
+            null, "cobblestone.png", "nether_quartz.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "nether_quartz.png", "cobblestone.png",
+            null, "cobblestone.png", "nether_quartz.png"],
+            
+            [null, null, null,
+            "nether_quartz.png", "cobblestone.png", null,
+            "cobblestone.png", "nether_quartz.png", null]
+                
+        ],
+        "src" : "diorite.png"
+    },
+    "Polished Granite" : {
+        "recipes" : [
+            ["granite.png", "granite.png", null,
+            "granite.png", "granite.png", null,
+            null, null, null],
+            
+            [null, "granite.png", "granite.png",
+            null, "granite.png", "granite.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "granite.png", "granite.png",
+            null, "granite.png", "granite.png"],
+            
+            [null, null, null,
+            "granite.png", "granite.png", null,
+            "granite.png", "granite.png", null]
+        ],
+        "src" : "polished_granite.png"
+    },
+    "Polished Andesite" : {
+        "recipes" : [
+            ["andesite.png", "andesite.png", null,
+            "andesite.png", "andesite.png", null,
+            null, null, null],
+            
+            [null, "andesite.png", "andesite.png",
+            null, "andesite.png", "andesite.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "andesite.png", "andesite.png",
+            null, "andesite.png", "andesite.png"],
+            
+            [null, null, null,
+            "andesite.png", "andesite.png", null,
+            "andesite.png", "andesite.png", null]
+        ],
+        "src" : "polished_andesite.png"
+    },
+    "Polished Diorite" : {
+        "recipes" : [
+            ["diorite.png", "diorite.png", null,
+            "diorite.png", "diorite.png", null,
+            null, null, null],
+            
+            [null, "diorite.png", "diorite.png",
+            null, "diorite.png", "diorite.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "diorite.png", "diorite.png",
+            null, "diorite.png", "diorite.png"],
+            
+            [null, null, null,
+            "diorite.png", "diorite.png", null,
+            "diorite.png", "diorite.png", null]
+        ],
+        "src" : "polished_diorite.png"
+    },
+    "Prismarine" : {
+        "recipes" : [
+            ["prismarine_shard.png", "prismarine_shard.png", null,
+            "prismarine_shard.png", "prismarine_shard.png", null,
+            null, null, null],
+            
+            [null, "prismarine_shard.png", "prismarine_shard.png",
+            null, "prismarine_shard.png", "prismarine_shard.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "prismarine_shard.png", "prismarine_shard.png",
+            null, "prismarine_shard.png", "prismarine_shard.png"],
+            
+            [null, null, null,
+            "prismarine_shard.png", "prismarine_shard.png", null,
+            "prismarine_shard.png", "prismarine_shard.png", null]
+        ],
+        "src" : "prismarine.png"
+    },
+    "Prismarine bricks" : {
+        "recipes" : [
+            ["prismarine_shard.png", "prismarine_shard.png", "prismarine_shard.png",
+            "prismarine_shard.png", "prismarine_shard.png", "prismarine_shard.png",
+            "prismarine_shard.png", "prismarine_shard.png", "prismarine_shard.png"]
+        ],
+        "src" : "prismarine_bricks.png"
+    },
+    "Dark Prismarine" : {
+        "recipes" : [
+            ["prismarine_shard.png", "prismarine_shard.png", "prismarine_shard.png",
+            "prismarine_shard.png", "black_dye.png", "prismarine_shard.png",
+            "prismarine_shard.png", "prismarine_shard.png", "prismarine_shard.png"]
+        ],
+        "src" : "dark_prismarine.png"
+    },
+    "Sea Lantern" : {
+        "recipes" : [
+            ["prismarine_shard.png", "prismarine_crystals.png", "prismarine_shard.png",
+            "prismarine_crystals.png", "prismarine_crystals.png", "prismarine_crystals.png",
+            "prismarine_shard.png", "prismarine_crystals.png", "prismarine_shard.png"]
+        ],
+        "src" : "sea_lantern.gif"
+    },
+    "Coarse dirt" : {
+        "recipes" : [
+            ["dirt.png", "gravel.png", null,
+            "gravel.png", "dirt.png", null,
+            null, null, null],
+            
+            [null, "dirt.png", "gravel.png",
+            null, "gravel.png", "dirt.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "dirt.png", "gravel.png",
+            null, "gravel.png", "dirt.png"],
+            
+            [null, null, null,
+            "dirt.png", "gravel.png", null,
+            "gravel.png", "dirt.png", null],
+
+            ["gravel.png", "dirt.png", null,
+            "dirt.png", "gravel.png", null,
+            null, null, null],
+            
+            [null, "gravel.png", "dirt.png",
+            null, "dirt.png", "gravel.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "gravel.png", "dirt.png",
+            null, "dirt.png", "gravel.png"],
+            
+            [null, null, null,
+            "gravel.png", "dirt.png", null,
+            "dirt.png", "gravel.png", null]
+                
+        ],
+        "src" : "coarse_dirt.png"
+    },
+    "Slime Block" : {
+        "recipes" : [
+            ["slime_ball.png", "slime_ball.png", "slime_ball.png",
+            "slime_ball.png", "slime_ball.png", "slime_ball.png",
+            "slime_ball.png", "slime_ball.png", "slime_ball.png"]
+        ],
+        "src" : "slime_block.png"
+    },
+    "Chiseled Stone Brick" : {
+        "recipes" : [
+            ["stone_brick_slab.png",null,null,
+            "stone_brick_slab.png",null,null,
+            null,null,null],
+
+            [null,"stone_brick_slab.png",null,
+            null,"stone_brick_slab.png",null,
+            null,null,null],
+
+            [null,null,"stone_brick_slab.png",
+            null,null,"stone_brick_slab.png",
+            null,null,null],
+
+            [null,null,null,
+            "stone_brick_slab.png",null,null,
+            "stone_brick_slab.png",null,null],
+
+            [null,null,null,
+            null,"stone_brick_slab.png",null,
+            null,"stone_brick_slab.png",null],
+
+            [null,null,null,
+            null,null,"stone_brick_slab.png",
+            null,null,"stone_brick_slab.png"]
+        ],
+        "src" : "chiseled_stone_brick.png"
+    },
+    "Red Sandstone" : {
+        "recipes" : [
+            ["red_sand.png", "red_sand.png", null,
+            "red_sand.png", "red_sand.png", null,
+            null, null, null],
+            
+            [null, "red_sand.png", "red_sand.png",
+            null, "red_sand.png", "red_sand.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "red_sand.png", "red_sand.png",
+            null, "red_sand.png", "red_sand.png"],
+            
+            [null, null, null,
+            "red_sand.png", "red_sand.png", null,
+            "red_sand.png", "red_sand.png", null]
+        ],
+        "src" : "red_sandstone.png"
+    },
+    "Smooth Red Sandstone" : {
+        "recipes" : [
+            ["red_sandstone.png", "red_sandstone.png", null,
+            "red_sandstone.png", "red_sandstone.png", null,
+            null, null, null],
+            
+            [null, "red_sandstone.png", "red_sandstone.png",
+            null, "red_sandstone.png", "red_sandstone.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "red_sandstone.png", "red_sandstone.png",
+            null, "red_sandstone.png", "red_sandstone.png"],
+            
+            [null, null, null,
+            "red_sandstone.png", "red_sandstone.png", null,
+            "red_sandstone.png", "red_sandstone.png", null]
+        ],
+        "src" : "smooth_red_sandstone.png"
+    },
+    "Chiseled Red Sandstone" : {
+        "recipes" : [
+            ["red_sandstone_slab.png",null,null,
+            "red_sandstone_slab.png",null,null,
+            null,null,null],
+
+            [null,"red_sandstone_slab.png",null,
+            null,"red_sandstone_slab.png",null,
+            null,null,null],
+
+            [null,null,"red_sandstone_slab.png",
+            null,null,"red_sandstone_slab.png",
+            null,null,null],
+
+            [null,null,null,
+            "red_sandstone_slab.png",null,null,
+            "red_sandstone_slab.png",null,null],
+
+            [null,null,null,
+            null,"red_sandstone_slab.png",null,
+            null,"red_sandstone_slab.png",null],
+
+            [null,null,null,
+            null,null,"red_sandstone_slab.png",
+            null,null,"red_sandstone_slab.png"]
+        ],
+        "src" : "chiseled_red_sandstone.png"
+    },
+    "Purpur Block" : {
+        "recipes" : [
+            ["popped_chorus_fruit.png", "popped_chorus_fruit.png", null,
+            "popped_chorus_fruit.png", "popped_chorus_fruit.png", null,
+            null, null, null],
+            
+            [null, "popped_chorus_fruit.png", "popped_chorus_fruit.png",
+            null, "popped_chorus_fruit.png", "popped_chorus_fruit.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "popped_chorus_fruit.png", "popped_chorus_fruit.png",
+            null, "popped_chorus_fruit.png", "popped_chorus_fruit.png"],
+            
+            [null, null, null,
+            "popped_chorus_fruit.png", "popped_chorus_fruit.png", null,
+            "popped_chorus_fruit.png", "popped_chorus_fruit.png", null]
+        ],
+        "src" : "purpur_block.png"
+    },
+    "Purpur Pillar" : {
+        "recipes" : [
+            ["purpur_slab.png",null,null,
+            "purpur_slab.png",null,null,
+            null,null,null],
+
+            [null,"purpur_slab.png",null,
+            null,"purpur_slab.png",null,
+            null,null,null],
+
+            [null,null,"purpur_slab.png",
+            null,null,"purpur_slab.png",
+            null,null,null],
+
+            [null,null,null,
+            "purpur_slab.png",null,null,
+            "purpur_slab.png",null,null],
+
+            [null,null,null,
+            null,"purpur_slab.png",null,
+            null,"purpur_slab.png",null],
+
+            [null,null,null,
+            null,null,"purpur_slab.png",
+            null,null,"purpur_slab.png"]
+        ],
+        "src" : "purpur_pillar.png"
+    },
+    "Magma Block" : {
+        "recipes" : [
+            ["magma_cream.png", "magma_cream.png", null,
+            "magma_cream.png", "magma_cream.png", null,
+            null, null, null],
+            
+            [null, "magma_cream.png", "magma_cream.png",
+            null, "magma_cream.png", "magma_cream.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "magma_cream.png", "magma_cream.png",
+            null, "magma_cream.png", "magma_cream.png"],
+            
+            [null, null, null,
+            "magma_cream.png", "magma_cream.png", null,
+            "magma_cream.png", "magma_cream.png", null]
+        ],
+        "src" : "magma_block.png"
+    },
+    "Nether Wart Block" : {
+        "recipes" : [
+            ["nether_wart.png", "nether_wart.png", "nether_wart.png",
+            "nether_wart.png", "nether_wart.png", "nether_wart.png",
+            "nether_wart.png", "nether_wart.png", "nether_wart.png"]
+        ],
+        "src" : "nether_wart_block.png"
+    },
+    "Nether Bricks" : {
+        "recipes" : [
+            ["nether_brick.png", "nether_brick.png", null,
+            "nether_brick.png", "nether_brick.png", null,
+            null, null, null],
+            
+            [null, "nether_brick.png", "nether_brick.png",
+            null, "nether_brick.png", "nether_brick.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "nether_brick.png", "nether_brick.png",
+            null, "nether_brick.png", "nether_brick.png"],
+            
+            [null, null, null,
+            "nether_brick.png", "nether_brick.png", null,
+            "nether_brick.png", "nether_brick.png", null]
+        ],
+        "src" : "nether_bricks.png"
+    },
+    "Red Nether Bricks" : {
+        "recipes" : [
+            ["nether_wart.png", "nether_brick.png", null,
+            "nether_brick.png", "nether_wart.png", null,
+            null, null, null],
+            
+            [null, "nether_wart.png", "nether_brick.png",
+            null, "nether_brick.png", "nether_wart.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "nether_wart.png", "nether_brick.png",
+            null, "nether_brick.png", "nether_wart.png"],
+            
+            [null, null, null,
+            "nether_wart.png", "nether_brick.png", null,
+            "nether_brick.png", "nether_wart.png", null],
+
+            ["nether_brick.png", "nether_wart.png", null,
+            "nether_wart.png", "nether_brick.png", null,
+            null, null, null],
+            
+            [null, "nether_brick.png", "nether_wart.png",
+            null, "nether_wart.png", "nether_brick.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "nether_brick.png", "nether_wart.png",
+            null, "nether_wart.png", "nether_brick.png"],
+            
+            [null, null, null,
+            "nether_brick.png", "nether_wart.png", null,
+            "nether_wart.png", "nether_brick.png", null]
+        ],
+        "src" : "red_nether_bricks.png"
+    },
+    "Chiseled Nether Bricks" : {
+        "recipes" : [
+            ["nether_brick_slab.png",null,null,
+            "nether_brick_slab.png",null,null,
+            null,null,null],
+
+            [null,"nether_brick_slab.png",null,
+            null,"nether_brick_slab.png",null,
+            null,null,null],
+
+            [null,null,"nether_brick_slab.png",
+            null,null,"nether_brick_slab.png",
+            null,null,null],
+
+            [null,null,null,
+            "nether_brick_slab.png",null,null,
+            "nether_brick_slab.png",null,null],
+
+            [null,null,null,
+            null,"nether_brick_slab.png",null,
+            null,"nether_brick_slab.png",null],
+
+            [null,null,null,
+            null,null,"nether_brick_slab.png",
+            null,null,"nether_brick_slab.png"]
+        ],
+        "src" : "chiseled_nether_bricks.png"
+    },
+    "Bone Block" : {
+        "recipes" : [
+            ["bone_meal.png", "bone_meal.png", "bone_meal.png",
+            "bone_meal.png", "bone_meal.png", "bone_meal.png",
+            "bone_meal.png", "bone_meal.png", "bone_meal.png"]
+        ],
+        "src" : "bone_block.png"
+    },
+    "Dried Kelp Block" : {
+        "recipes" : [
+            ["dried_kelp.png", "dried_kelp.png", "dried_kelp.png",
+            "dried_kelp.png", "dried_kelp.png", "dried_kelp.png",
+            "dried_kelp.png", "dried_kelp.png", "dried_kelp.png"]
+        ],
+        "src" : "dried_kelp_block.png"
+    },
+    "Packed Ice" : {
+        "recipes" : [
+            ["ice.png", "ice.png", "ice.png",
+            "ice.png", "ice.png", "ice.png",
+            "ice.png", "ice.png", "ice.png"]
+        ],
+        "src" : "packed_ice.png"
+    },
+    "Blue Ice" : {
+        "recipes" : [
+            ["packed_ice.png", "packed_ice.png", "packed_ice.png",
+            "packed_ice.png", "packed_ice.png", "packed_ice.png",
+            "packed_ice.png", "packed_ice.png", "packed_ice.png"]
+        ],
+        "src" : "blue_ice.png"
+    },
+    "Honey Block" : {
+        "recipes" : [
+            ["honey_bottles.png", "honey_bottles.png", null,
+            "honey_bottles.png", "honey_bottles.png", null,
+            null, null, null],
+            
+            [null, "honey_bottles.png", "honey_bottles.png",
+            null, "honey_bottles.png", "honey_bottles.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "honey_bottles.png", "honey_bottles.png",
+            null, "honey_bottles.png", "honey_bottles.png"],
+            
+            [null, null, null,
+            "honey_bottles.png", "honey_bottles.png", null,
+            "honey_bottles.png", "honey_bottles.png", null]
+        ],
+        "src" : "honey_block.png"
+    },
+    "Honeycomb Block" : {
+        "recipes" : [
+            ["honeycomb.png", "honeycomb.png", null,
+            "honeycomb.png", "honeycomb.png", null,
+            null, null, null],
+            
+            [null, "honeycomb.png", "honeycomb.png",
+            null, "honeycomb.png", "honeycomb.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "honeycomb.png", "honeycomb.png",
+            null, "honeycomb.png", "honeycomb.png"],
+            
+            [null, null, null,
+            "honeycomb.png", "honeycomb.png", null,
+            "honeycomb.png", "honeycomb.png", null]
+        ],
+        "src" : "honeycomb_block.png"
+    },
+    "Polished Basalt" : {
+        "recipes" : [
+            ["basalt.png", "basalt.png", null,
+            "basalt.png", "basalt.png", null,
+            null, null, null],
+            
+            [null, "basalt.png", "basalt.png",
+            null, "basalt.png", "basalt.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "basalt.png", "basalt.png",
+            null, "basalt.png", "basalt.png"],
+            
+            [null, null, null,
+            "basalt.png", "basalt.png", null,
+            "basalt.png", "basalt.png", null]
+        ],
+        "src" : "polished_basalt.png"
+    },
+    "Polished Blackstone" : {
+        "recipes" : [
+            ["blackstone.png", "blackstone.png", null,
+            "blackstone.png", "blackstone.png", null,
+            null, null, null],
+            
+            [null, "blackstone.png", "blackstone.png",
+            null, "blackstone.png", "blackstone.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "blackstone.png", "blackstone.png",
+            null, "blackstone.png", "blackstone.png"],
+            
+            [null, null, null,
+            "blackstone.png", "blackstone.png", null,
+            "blackstone.png", "blackstone.png", null]
+        ],
+        "src" : "blackstone_polished.png"
+    },
+    "Chiseled Polished Blackstone" : {
+        "recipes" : [
+            ["slab_blackstone_polished.png",null,null,
+            "slab_blackstone_polished.png",null,null,
+            null,null,null],
+
+            [null,"slab_blackstone_polished.png",null,
+            null,"slab_blackstone_polished.png",null,
+            null,null,null],
+
+            [null,null,"slab_blackstone_polished.png",
+            null,null,"slab_blackstone_polished.png",
+            null,null,null],
+
+            [null,null,null,
+            "slab_blackstone_polished.png",null,null,
+            "slab_blackstone_polished.png",null,null],
+
+            [null,null,null,
+            null,"slab_blackstone_polished.png",null,
+            null,"slab_blackstone_polished.png",null],
+
+            [null,null,null,
+            null,null,"slab_blackstone_polished.png",
+            null,null,"slab_blackstone_polished.png"]
+        ],
+        "src" : "blackstone_polished_chiseled.png"
+    },
+    "Polished Blackstone Bricks" : {
+        "recipes" : [
+            ["blackstone_polished.png", "blackstone_polished.png", null,
+            "blackstone_polished.png", "blackstone_polished.png", null,
+            null, null, null],
+            
+            [null, "blackstone_polished.png", "blackstone_polished.png",
+            null, "blackstone_polished.png", "blackstone_polished.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "blackstone_polished.png", "blackstone_polished.png",
+            null, "blackstone_polished.png", "blackstone_polished.png"],
+            
+            [null, null, null,
+            "blackstone_polished.png", "blackstone_polished.png", null,
+            "blackstone_polished.png", "blackstone_polished.png", null]
+        ],
+        "src" : "blackstone_bricks_polished.png"
+    },
+    "Netherite Block" : {
+        "recipes" : [
+            ["netherite_ingot.png", "netherite_ingot.png", "netherite_ingot.png",
+            "netherite_ingot.png", "netherite_ingot.png", "netherite_ingot.png",
+            "netherite_ingot.png", "netherite_ingot.png", "netherite_ingot.png"]
+        ],
+        "src" : "netherite_block.png"
+    },
+    "Amethyst Block" : {
+        "recipes" : [
+            ["amethyst_shard.png", "amethyst_shard.png", null,
+            "amethyst_shard.png", "amethyst_shard.png", null,
+            null, null, null],
+            
+            [null, "amethyst_shard.png", "amethyst_shard.png",
+            null, "amethyst_shard.png", "amethyst_shard.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "amethyst_shard.png", "amethyst_shard.png",
+            null, "amethyst_shard.png", "amethyst_shard.png"],
+            
+            [null, null, null,
+            "amethyst_shard.png", "amethyst_shard.png", null,
+            "amethyst_shard.png", "amethyst_shard.png", null]
+        ],
+        "src" : "amethyst_block.png"
+    },
+    "Copper Block" : {
+        "recipes" : [
+            ["copper_ingot.png", "copper_ingot.png", "copper_ingot.png",
+            "copper_ingot.png", "copper_ingot.png", "copper_ingot.png",
+            "copper_ingot.png", "copper_ingot.png", "copper_ingot.png"]
+        ],
+        "src" : "copper_block.png"
+    },
+    "Cut Copper Block" : {
+        "recipes" : [
+            ["copper_block.png", "copper_block.png", null,
+            "copper_block.png", "copper_block.png", null,
+            null, null, null],
+            
+            [null, "copper_block.png", "copper_block.png",
+            null, "copper_block.png", "copper_block.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "copper_block.png", "copper_block.png",
+            null, "copper_block.png", "copper_block.png"],
+            
+            [null, null, null,
+            "copper_block.png", "copper_block.png", null,
+            "copper_block.png", "copper_block.png", null]
+        ],
+        "src" : "copper_cut.png"
+    },
+    "Waxed Block of Copper" : {
+        "recipes" : [
+            ["copper_block.png", "honeycomb.png", null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "andesite.png",
+        "any-order" : "true"
+    },
+    "Dripstone Block" : {
+        "recipes" : [
+            ["pointed_dripstone.png", "pointed_dripstone.png", null,
+            "pointed_dripstone.png", "pointed_dripstone.png", null,
+            null, null, null],
+            
+            [null, "pointed_dripstone.png", "pointed_dripstone.png",
+            null, "pointed_dripstone.png", "pointed_dripstone.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "pointed_dripstone.png", "pointed_dripstone.png",
+            null, "pointed_dripstone.png", "pointed_dripstone.png"],
+            
+            [null, null, null,
+            "pointed_dripstone.png", "pointed_dripstone.png", null,
+            "pointed_dripstone.png", "pointed_dripstone.png", null]
+        ],
+        "src" : "dripstone_block.png"
+    },
+    "Wooden Pickaxe" : {
+        "recipes" : [
+            ["wood_plank.png", "wood_plank.png", "wood_plank.png",
+            null, "stick.png", null,
+            null, "stick.png", null]
+        ],
+        "src" : "wooden_pickaxe.png"
+    },
+    "Stone Pickaxe" : {
+        "recipes" : [
+            ["cobblestone.png", "cobblestone.png", "cobblestone.png",
+            null, "stick.png", null,
+            null, "stick.png", null]
+        ],
+        "src" : "stone_pickaxe.png"
+    },
+    "Iron Pickaxe" : {
+        "recipes" : [
+            ["iron_ingot.png", "iron_ingot.png", "iron_ingot.png",
+            null, "stick.png", null,
+            null, "stick.png", null]
+        ],
+        "src" : "iron_pickaxe.png"
+    },
+    "Gold Pickaxe" : {
+        "recipes" : [
+            ["gold_ingot.png", "gold_ingot.png", "gold_ingot.png",
+            null, "stick.png", null,
+            null, "stick.png", null]
+        ],
+        "src" : "gold_pickaxe.png"
+    },
+    "Diamond Pickaxe" : {
+        "recipes" : [
+            ["diamond_ingot.png", "diamond_ingot.png", "diamond_ingot.png",
+            null, "stick.png", null,
+            null, "stick.png", null]
+        ],
+        "src" : "diamond_pickaxe.png"
+    },
+    "Netherite Pickaxe" : {
+        "recipes" : [
+            ["netherite_ingot.png", "netherite_ingot.png", "netherite_ingot.png",
+            null, "stick.png", null,
+            null, "stick.png", null]
+        ],
+        "src" : "netherite_pickaxe.png"
+    },
+    "Wooden Axe" : {
+        "recipes" : [
+            ["wood_plank.png", "wood_plank.png", null,
+            "wood_plank.png", "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "wood_plank.png", "wood_plank.png",
+            null, "stick.png", "wood_plank.png",
+            null, "stick.png", null],
+
+            [null, "wood_plank.png", "wood_plank.png",
+            null, "wood_plank.png", "stick.png",
+            null, null, "stick.png"],
+
+            ["wood_plank.png", "wood_plank.png", null,
+            "stick.png", "wood_plank.png", null, 
+            "stick.png", null, null]
+        ],
+        "src" : "wooden_axe.png"
+    },
+    "Stone Axe" : {
+        "recipes" : [
+            ["cobblestone.png", "cobblestone.png", null,
+            "cobblestone.png", "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "cobblestone.png", "cobblestone.png",
+            null, "stick.png", "cobblestone.png",
+            null, "stick.png", null],
+
+            [null, "cobblestone.png", "cobblestone.png",
+            null, "cobblestone.png", "stick.png",
+            null, null, "stick.png"],
+
+            ["cobblestone.png", "cobblestone.png", null,
+            "stick.png", "cobblestone.png", null, 
+            "stick.png", null, null]
+        ],
+        "src" : "stone_axe.png"
+    },
+    "Iron Axe" : {
+        "recipes" : [
+            ["iron_ingot.png", "iron_ingot.png", null,
+            "iron_ingot.png", "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "iron_ingot.png", "iron_ingot.png",
+            null, "stick.png", "iron_ingot.png",
+            null, "stick.png", null],
+
+            [null, "iron_ingot.png", "iron_ingot.png",
+            null, "iron_ingot.png", "stick.png",
+            null, null, "stick.png"],
+
+            ["iron_ingot.png", "iron_ingot.png", null,
+            "stick.png", "iron_ingot.png", null, 
+            "stick.png", null, null]
+        ],
+        "src" : "iron_axe.png"
+    },
+    "Gold Axe" : {
+        "recipes" : [
+            ["iron_ingot.png", "iron_ingot.png", null,
+            "iron_ingot.png", "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "iron_ingot.png", "iron_ingot.png",
+            null, "stick.png", "iron_ingot.png",
+            null, "stick.png", null],
+
+            [null, "iron_ingot.png", "iron_ingot.png",
+            null, "iron_ingot.png", "stick.png",
+            null, null, "stick.png"],
+
+            ["iron_ingot.png", "iron_ingot.png", null,
+            "stick.png", "iron_ingot.png", null, 
+            "stick.png", null, null]
+        ],
+        "src" : "gold_axe.png"
+    },
+    "Diamond axe" : {
+        "recipes" : [
+            ["diamond.png", "diamond.png", null,
+            "diamond.png", "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "diamond.png", "diamond.png",
+            null, "stick.png", "diamond.png",
+            null, "stick.png", null],
+
+            [null, "diamond.png", "diamond.png",
+            null, "diamond.png", "stick.png",
+            null, null, "stick.png"],
+
+            ["diamond.png", "diamond.png", null,
+            "stick.png", "diamond.png", null, 
+            "stick.png", null, null]
+        ],
+        "src" : "diamond_axe.png"
+    },
+    "Netherite Axe" : {
+        "recipes" : [
+            ["netherite_ingot.png", "netherite_ingot.png", null,
+            "netherite_ingot.png", "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "netherite_ingot.png", "netherite_ingot.png",
+            null, "stick.png", "netherite_ingot.png",
+            null, "stick.png", null],
+
+            [null, "netherite_ingot.png", "netherite_ingot.png",
+            null, "netherite_ingot.png", "stick.png",
+            null, null, "stick.png"],
+
+            ["netherite_ingot.png", "netherite_ingot.png", null,
+            "stick.png", "netherite_ingot.png", null, 
+            "stick.png", null, null]
+        ],
+        "src" : "netherite_axe.png"
+    },
+    "Wooden Shovel" : {
+        "recipes" : [
+            ["wood_plank.png", null, null,
+            "stick.png", null,
+            "stick.png", null, null],
+
+            [null, "wood_plank.png", null,
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, null, "wood_plank.png",
+            null, null, "stick.png",
+            null, null, "stick.png"]
+        ],
+        "src" : "wooden_axe.png"
+    },
+    "Stone Shovel" : {
+        "recipes" : [
+            ["cobblestone.png", null, null,
+            "stick.png", null,
+            "stick.png", null, null],
+
+            [null, "cobblestone.png", null,
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, null, "cobblestone.png",
+            null, null, "stick.png",
+            null, null, "stick.png"]
+        ],
+        "src" : "stone_axe.png"
+    },
+    "Iron Shovel" : {
+        "recipes" : [
+            ["iron_ingot.png", null, null,
+            "stick.png", null,
+            "stick.png", null, null],
+
+            [null, "iron_ingot.png", null,
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, null, "iron_ingot.png",
+            null, null, "stick.png",
+            null, null, "stick.png"]
+        ],
+        "src" : "iron_axe.png"
+    },
+    "Gold Shovel" : {
+        "recipes" : [
+            ["gold_ingot.png", null, null,
+            "stick.png", null,
+            "stick.png", null, null],
+
+            [null, "gold_ingot.png", null,
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, null, "gold_ingot.png",
+            null, null, "stick.png",
+            null, null, "stick.png"]
+        ],
+        "src" : "gold_axe.png"
+    },
+    "Diamond Shovel" : {
+        "recipes" : [
+            ["diamond.png", null, null,
+            "stick.png", null,
+            "stick.png", null, null],
+
+            [null, "diamond.png", null,
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, null, "diamond.png",
+            null, null, "stick.png",
+            null, null, "stick.png"]
+        ],
+        "src" : "diamond_axe.png"
+    },
+    "Netherite Shovel" : {
+        "recipes" : [
+            ["netherite_ingot.png", null, null,
+            "stick.png", null,
+            "stick.png", null, null],
+
+            [null, "netherite_ingot.png", null,
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, null, "netherite_ingot.png",
+            null, null, "stick.png",
+            null, null, "stick.png"]
+        ],
+        "src" : "netherite_shovel.png"
+    },
+    "Wooden Hoe" : {
+        "recipes" : [
+            ["wood_plank.png", "wood_plank.png", null,
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "wood_plank.png", "wood_plank.png",
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "wood_plank.png", "wood_plank.png",
+            null, null, "stick.png",
+            null, null, "stick.png"],
+
+            ["wood_plank.png", "wood_plank.png", null,
+            "stick.png", null, null, 
+            "stick.png", null, null]
+        ],
+        "src" : "wooden_hoe.png"
+    },
+    "Stone Hoe" : {
+        "recipes" : [
+            ["cobblestone.png", "cobblestone.png", null,
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "cobblestone.png", "cobblestone.png",
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "cobblestone.png", "cobblestone.png",
+            null, null, "stick.png",
+            null, null, "stick.png"],
+
+            ["cobblestone.png", "cobblestone.png", null,
+            "stick.png", null, null, 
+            "stick.png", null, null]
+        ],
+        "src" : "stone_hoe.png"
+    },
+    "Iron Hoe" : {
+        "recipes" : [
+            ["iron_ingot.png", "iron_ingot.png", null,
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "iron_ingot.png", "iron_ingot.png",
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "iron_ingot.png", "iron_ingot.png",
+            null, null, "stick.png",
+            null, null, "stick.png"],
+
+            ["iron_ingot.png", "iron_ingot.png", null,
+            "stick.png", null, null, 
+            "stick.png", null, null]
+        ],
+        "src" : "wooden_hoe.png"
+    },
+    "Gold Hoe" : {
+        "recipes" : [
+            ["gold_ingot.png", "gold_ingot.png", null,
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "gold_ingot.png", "gold_ingot.png",
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "gold_ingot.png", "gold_ingot.png",
+            null, null, "stick.png",
+            null, null, "stick.png"],
+
+            ["gold_ingot.png", "gold_ingot.png", null,
+            "stick.png", null, null, 
+            "stick.png", null, null]
+        ],
+        "src" : "gold_hoe.png"
+    },
+    "Diamond Hoe" : {
+        "recipes" : [
+            ["diamond.png", "diamond.png", null,
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "diamond.png", "diamond.png",
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "diamond.png", "diamond.png",
+            null, null, "stick.png",
+            null, null, "stick.png"],
+
+            ["diamond.png", "diamond.png", null,
+            "stick.png", null, null, 
+            "stick.png", null, null]
+        ],
+        "src" : "diamond_hoe.png"
+    },
+    "Netherite Hoe" : {
+        "recipes" : [
+            ["netherite_ingot.png", "netherite_ingot.png", null,
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "netherite_ingot.png", "netherite_ingot.png",
+            null, "stick.png", null,
+            null, "stick.png", null],
+
+            [null, "netherite_ingot.png", "netherite_ingot.png",
+            null, null, "stick.png",
+            null, null, "stick.png"],
+
+            ["netherite_ingot.png", "netherite_ingot.png", null,
+            "stick.png", null, null, 
+            "stick.png", null, null]
+        ],
+        "src" : "netherite_ingot.png"
+    },
+    "Fishing Rod" : {
+        "recipes" : [
+            [null, null, "stick.png",
+            null, "stick.png", "string.png",
+            "stick.png", null, "string.png"],
+
+            ["stick.png", null, null,
+            "string.png", "stick.png", null,
+            "string.png", null, "stick.png"]
+        ],
+        "src" : "fishing_rod.png"
+    },
+    "Flint & Steel" : {
+        "recipes" : [
+            ["iron_ingot.png", "flint.png", null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "flint_and_steel.png",
+        "any-order" : "true"
+    },
+    "Compass" : {
+        "recipes" : [
+            [null, "iron_ingot.png", null,
+            "iron_ingot.png", "redstone_dust.png", "iron_ingot.png",
+            null, "iron_ingot.png", null]
+        ],
+        "src" : "compass.png"
+    },
+    "Clock" : {
+        "recipes" : [
+            [null, "gold_ingot.png", null,
+            "gold_ingot.png", "redstone_dust.png", "gold_ingot.png",
+            null, "gold_ingot.png", null]
+        ],
+        "src" : "clock.png"
+    },
+    "Bucket" : {
+        "recipes" : [
+            [null, null, null,
+            "iron_ingot.png", null, "iron_ingot.png",
+            null, "iron_ingot.png", null]
+        ],
+        "src" : "bucket.png"
+    },
+    "Shears" : {
+        "recipes" : [
+            ["iron_ingot.png", null, null,
+            null, "iron_ingot.png", null,
+            null, null, null],
+            
+            [null, "iron_ingot.png", null,
+            null, null, "iron_ingot.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "iron_ingot.png", null,
+            null, null, "iron_ingot.png"],
+            
+            [null, null, null,
+            "iron_ingot.png", null, null,
+            null, "iron_ingot.png", null],
+
+            [null, "iron_ingot.png", null,
+            "iron_ingot.png", null, null,
+            null, null, null],
+            
+            [null, null, "iron_ingot.png",
+            null, "iron_ingot.png", null,
+            null, null, null],
+            
+            [null, null, null,
+            null, null, "iron_ingot.png",
+            null, "iron_ingot.png", null],
+            
+            [null, null, null,
+            null, "iron_ingot.png", null,
+            "iron_ingot.png", null, null]
+        ],
+        "src" : "shears.png"
+    },
+    "Shulker Box" : {
+        "recipes" : [
+            ["shulker_shell.png", null, null,
+            "chest.png", null, null,
+            "shulker_shell.png", null, null],
+
+            [null, "shulker_shell.png", null,
+            null, "chest.png", null,
+            null, "shulker_shell.png", null],
+
+            [null, null, "shulker_shell.png",
+            null, null, "chest.png",
+            null, null, "shulker_shell.png"]
+        ],
+        "src" : "shulker_box.png"
+    },
+    "Spyglass" : {
+        "recipes" : [
+            ["amethyst_shard.png", null, null,
+            "copper_ingot.png", null,
+            "copper_ingot.png", null, null],
+
+            [null, "amethyst_shard.png", null,
+            null, "copper_ingot.png", null,
+            null, "copper_ingot.png", null],
+
+            [null, null, "amethyst_shard.png",
+            null, null, "copper_ingot.png",
+            null, null, "copper_ingot.png"]
+        ],
+        "src" : "spyglass.png"
+    },
+    "Leather Helmet" : {
+        "recipes" : [
+            ["leather.png", "leather.png", "leather.png",
+            "leather.png", null, "leather.png",
+            null, null, null],
+
+            [null, null, null,
+            "leather.png", "leather.png", "leather.png",
+            "leather.png", null, "leather.png"]
+        ],
+        "src" : "leather_helmet.png"
+    },
+    "Iron Helmet" : {
+        "recipes" : [
+            ["iron_ingot.png", "iron_ingot.png", "iron_ingot.png",
+            "iron_ingot.png", null, "iron_ingot.png",
+            null, null, null],
+
+            [null, null, null,
+            "iron_ingot.png", "iron_ingot.png", "iron_ingot.png",
+            "iron_ingot.png", null, "iron_ingot.png"]
+        ],
+        "src" : "iron_helmet.png"
+    },
+    "Gold Helmet" : {
+        "recipes" : [
+            ["gold_ingot.png", "gold_ingot.png", "gold_ingot.png",
+            "gold_ingot.png", null, "gold_ingot.png",
+            null, null, null],
+
+            [null, null, null,
+            "gold_ingot.png", "gold_ingot.png", "gold_ingot.png",
+            "gold_ingot.png", null, "gold_ingot.png"]
+        ],
+        "src" : "gold_helmet.png"
+    },
+    "Diamond Helmet" : {
+        "recipes" : [
+            ["diamond.png", "diamond.png", "diamond.png",
+            "diamond.png", null, "diamond.png",
+            null, null, null],
+
+            [null, null, null,
+            "diamond.png", "diamond.png", "diamond.png",
+            "diamond.png", null, "diamond.png"]
+        ],
+        "src" : "iron_helmet.png"
+    },
+    "Leather Chestplate" : {
+        "recipes" : [
+            ["leather.png", null, "leather.png",
+            "leather.png", "leather.png", "leather.png",
+            "leather.png", "leather.png", "leather.png"]
+        ],
+        "src" : "leather_chestplate.png"
+    },
+    "Iron Chestplate" : {
+        "recipes" : [
+            ["iron_ingot.png", null, "iron_ingot.png",
+            "iron_ingot.png", "iron_ingot.png", "iron_ingot.png",
+            "iron_ingot.png", "iron_ingot.png", "iron_ingot.png"]
+        ],
+        "src" : "iron_chestplate.png"
+    },
+    "Gold Chestplate" : {
+        "recipes" : [
+            ["gold_ingot.png", null, "gold_ingot.png",
+            "gold_ingot.png", "gold_ingot.png", "gold_ingot.png",
+            "gold_ingot.png", "gold_ingot.png", "gold_ingot.png"]
+        ],
+        "src" : "gold_chestplate.png"
+    },
+    "Diamond Chestplate" : {
+        "recipes" : [
+            ["diamond.png", null, "diamond.png",
+            "diamond.png", "diamond.png", "diamond.png",
+            "diamond.png", "diamond.png", "diamond.png"]
+        ],
+        "src" : "diamond_chestplate.png"
+    },
+    "Leather Leggings" : {
+        "recipes" : [
+            ["leather.png", "leather.png", "leather.png",
+            "leather.png", null, "leather.png",
+            "leather.png", null, "leather.png"]
+        ],
+        "src" : "leather_leggings.png"
+    },
+    "Iron Leggings" : {
+        "recipes" : [
+            ["iron_ingot.png", "iron_ingot.png", "iron_ingot.png",
+            "iron_ingot.png", null, "iron_ingot.png",
+            "iron_ingot.png", null, "iron_ingot.png"]
+        ],
+        "src" : "iron_leggings.png"
+    },
+    "Gold Leggings" : {
+        "recipes" : [
+            ["gold_ingot.png", "gold_ingot.png", "gold_ingot.png",
+            "gold_ingot.png", null, "gold_ingot.png",
+            "gold_ingot.png", null, "gold_ingot.png"]
+        ],
+        "src" : "gold_leggings.png"
+    },
+    "Diamond Leggings" : {
+        "recipes" : [
+            ["diamond.png", "diamond.png", "diamond.png",
+            "diamond.png", null, "diamond.png",
+            "diamond.png", null, "diamond.png"]
+        ],
+        "src" : "diamond_leggings.png"
+    },
+    "Leather Boots" : {
+        "recipes" : [
+            ["leather.png", null, "leather.png",
+            "leather.png", null, "leather.png",
+            null, null, null],
+
+            [null, null, null,
+            "leather.png", null, "leather.png",
+            "leather.png", null, "leather.png"]
+        ],
+        "src" : "leather_boots.png"
+    },
+    "Iron Boots" : {
+        "recipes" : [
+            ["iron_ingot.png", null, "iron_ingot.png",
+            "iron_ingot.png", null, "iron_ingot.png",
+            null, null, null],
+
+            [null, null, null,
+            "iron_ingot.png", null, "iron_ingot.png",
+            "iron_ingot.png", null, "iron_ingot.png"]
+        ],
+        "src" : "iron_boots.png"
+    },
+    "Gold Boots" : {
+        "recipes" : [
+            ["gold_ingot.png", null, "gold_ingot.png",
+            "gold_ingot.png", null, "gold_ingot.png",
+            null, null, null],
+
+            [null, null, null,
+            "gold_ingot.png", null, "gold_ingot.png",
+            "gold_ingot.png", null, "gold_ingot.png"]
+        ],
+        "src" : "gold_boots.png"
+    },
+    "Diamond Boots" : {
+        "recipes" : [
+            ["diamond.png", null, "diamond.png",
+            "diamond.png", null, "diamond.png",
+            null, null, null],
+
+            [null, null, null,
+            "diamond.png", null, "diamond.png",
+            "diamond.png", null, "diamond.png"]
+        ],
+        "src" : "diamond_boots.png"
+    },
+    "Wood Sword" : {
+        "recipes" : [
+            ["wood_plank.png", null, null,
+            "wood_plank.png", null, null,
+            "stick.png", null, null],
+
+            [null, "wood_plank.png", null,
+            null, "wood_plank.png", null,
+            null, "stick.png", null],
+
+            [null, null, "wood_plank.png",
+            null, null, "wood_plank.png",
+            null, null, "stick.png"]
+        ],
+        "src" : "wood_sword.png"
+    },
+    "Stone Sword" : {
+        "recipes" : [
+            ["cobblestone.png", null, null,
+            "cobblestone.png", null, null,
+            "stick.png", null, null],
+
+            [null, "cobblestone.png", null,
+            null, "cobblestone.png", null,
+            null, "stick.png", null],
+
+            [null, null, "cobblestone.png",
+            null, null, "cobblestone.png",
+            null, null, "stick.png"]
+        ],
+        "src" : "stone_sword.png"
+    },
+    "Iron Sword" : {
+        "recipes" : [
+            ["iron_ingot.png", null, null,
+            "iron_ingot.png", null, null,
+            "stick.png", null, null],
+
+            [null, "iron_ingot.png", null,
+            null, "iron_ingot.png", null,
+            null, "stick.png", null],
+
+            [null, null, "iron_ingot.png",
+            null, null, "iron_ingot.png",
+            null, null, "stick.png"]
+        ],
+        "src" : "iron_sword.png"
+    },
+    "Gold Sword" : {
+        "recipes" : [
+            ["gold_ingot.png", null, null,
+            "gold_ingot.png", null, null,
+            "stick.png", null, null],
+
+            [null, "gold_ingot.png", null,
+            null, "gold_ingot.png", null,
+            null, "stick.png", null],
+
+            [null, null, "gold_ingot.png",
+            null, null, "gold_ingot.png",
+            null, null, "stick.png"]
+        ],
+        "src" : "gold_sword.png"
+    },
+    "Diamond Sword" : {
+        "recipes" : [
+            ["diamond.png", null, null,
+            "diamond.png", null, null,
+            "stick.png", null, null],
+
+            [null, "diamond.png", null,
+            null, "diamond.png", null,
+            null, "stick.png", null],
+
+            [null, null, "diamond.png",
+            null, null, "diamond.png",
+            null, null, "stick.png"]
+        ],
+        "src" : "diamond_sword.png"
+    },
+    "Bow" : {
+        "recipes" : [
+            ["string.png", "stick.png", null,
+            "string.png", null, "stick.png",
+            "string.png", "stick.png", null],
+
+            [null, "stick.png", "string.png",
+            "stick.png", null, "string.png",
+            null, "stick.png", "string.png"]
+        ],
+        "src" : "bow.png"
+    },
+    "Arrow" : {
+        "recipes" : [
+            ["flint.png", null, null,
+            "stick.png", null, null,
+            "feather.png", null, null],
+
+            [null, "flint.png", null,
+            null, "stick.png", null,
+            null, "feather.png", null],
+
+            [null, null, "flint.png",
+            null, null, "stick.png",
+            null, null, "feather.png"]
+        ],
+        "src" : "arrow.png"
+    },
+    "Horse Armor" : {
+        "recipes" : [
+            ["leather.png", null, "leather.png",
+            "leather.png", "leather.png", "leather.png",
+            "leather.png", null, "leather.png"]
+        ],
+        "src" : "horse_armor.png"
+    },
+    "Shield" : {
+        "recipes" : [
+            ["wood_plank.png", "iron_ingot.png", "wood_plank.png",
+            "wood_plank.png", "wood_plank.png", "wood_plank.png",
+            null, "wood_plank.png", null]
+        ],
         "src" : "src.png"
     },
-}
+    "Spectral Arrow" : {
+        "recipes" : [
+            [null, "glowstone_dust.png", null,
+            "glowstone_dust.png", "arrow.png", "glowstone_dust.png",
+            null, "glowstone_dust.png", null]
+        ],
+        "src" : "spectral_arrow.png"
+    },
+    "Tipped Arrow" : {
+        "recipes" : [
+            ["arrow.png", "arrow.png", "arrow.png",
+            "arrow.png", "lingering_potion.png", "arrow.png",
+            "arrow.png", "arrow.png", "arrow.png"]
+        ],
+        "src" : "tipped_arrow.png"
+    },
+    "Conduit" : {
+        "recipes" : [
+            ["nautilus_shell.png", "nautilus_shell.png", "nautilus_shell.png",
+            "nautilus_shell.png", "heart_of_the_sea.png", "nautilus_shell.png",
+            "nautilus_shell.png", "nautilus_shell.png", "nautilus_shell.png"]
+        ],
+        "src" : "conduit.png"
+    },
+    "Turtle Shell" : {
+        "recipes" : [
+            ["scuta.png", "scuta.png", "scuta.png",
+            "scuta.png", null, "scuta.png",
+            null, null, null],
 
-"item" : {
-    "recipes" : [
-        [null, null, null,
-        null, null, null,
-        null, null, null]
+            [null, null, null,
+            "scuta.png", "scuta.png", "scuta.png",
+            "scuta.png", null, "scuta.png"]
+        ],
+        "src" : "turtle_shell.png"
+    },
+    "Crossbow" : {
+        "recipes" : [
+            ["stick.png", "iron_ingot.png", "stick.png",
+            "string.png", "tripwire_hook.png", "string.png",
+            null, "string.png", null]
+        ],
+        "src" : "crossbow.png"
+    },
+    "Wood Pressure Plate" : {
+        "recipes" : [
+            ["wood_plank.png", "wood_plank.png", null,
+            null, null, null,
+            null, null, null],
+
+            [null, "wood_plank.png", "wood_plank.png",
+            null, null, null,
+            null, null, null],
+
+            [null, null, null,
+            "wood_plank.png", "wood_plank.png", null,
+            null, null, null],
+
+            [null, null, null,
+            null, "wood_plank.png", "wood_plank.png",
+            null, null, null],
+
+            [null, null, null,
+            null, null, null,
+            "wood_plank.png", "wood_plank.png", null],
+
+            [null, null, null,
+            null, null, null,
+            null, "wood_plank.png", "wood_plank.png"]
+        ],
+        "src" : "wood_pressure_plate.png"
+    },
+    "Stone Pressure Plate" : {
+        "recipes" : [
+            ["stone.png", "stone.png", null,
+            null, null, null,
+            null, null, null],
+
+            [null, "stone.png", "stone.png",
+            null, null, null,
+            null, null, null],
+
+            [null, null, null,
+            "stone.png", "stone.png", null,
+            null, null, null],
+
+            [null, null, null,
+            null, "stone.png", "stone.png",
+            null, null, null],
+
+            [null, null, null,
+            null, null, null,
+            "stone.png", "stone.png", null],
+
+            [null, null, null,
+            null, null, null,
+            null, "stone.png", "stone.png"]
+        ],
+        "src" : "stone_pressure_plate.png"
+    },
+    "Light Weighted Pressure Plate" : {
+        "recipes" : [
+            ["gold_ingot.png", "gold_ingot.png", null,
+            null, null, null,
+            null, null, null],
+
+            [null, "gold_ingot.png", "gold_ingot.png",
+            null, null, null,
+            null, null, null],
+
+            [null, null, null,
+            "gold_ingot.png", "gold_ingot.png", null,
+            null, null, null],
+
+            [null, null, null,
+            null, "gold_ingot.png", "gold_ingot.png",
+            null, null, null],
+
+            [null, null, null,
+            null, null, null,
+            "gold_ingot.png", "gold_ingot.png", null],
+
+            [null, null, null,
+            null, null, null,
+            null, "gold_ingot.png", "gold_ingot.png"]
+        ],
+        "src" : "light_weighted_pressure_plate.png"
+    },
+    "Heavy Weighted Pressure Plate" : {
+        "recipes" : [
+            ["iron_ingot.png", "iron_ingot.png", null,
+            null, null, null,
+            null, null, null],
+
+            [null, "iron_ingot.png", "iron_ingot.png",
+            null, null, null,
+            null, null, null],
+
+            [null, null, null,
+            "iron_ingot.png", "iron_ingot.png", null,
+            null, null, null],
+
+            [null, null, null,
+            null, "iron_ingot.png", "iron_ingot.png",
+            null, null, null],
+
+            [null, null, null,
+            null, null, null,
+            "iron_ingot.png", "iron_ingot.png", null],
+
+            [null, null, null,
+            null, null, null,
+            null, "iron_ingot.png", "iron_ingot.png"]
+        ],
+        "src" : "heavy_weighted_pressure_plate.png"
+    },
+    "Trapdoor" : {
+        "recipes" : [
+            ["wood_plank.png", "wood_plank.png", "wood_plank.png",
+            "wood_plank.png", "wood_plank.png", "wood_plank.png",
+            null, null, null],
+
+            [null, null, null,
+            "wood_plank.png", "wood_plank.png", "wood_plank.png",
+            "wood_plank.png", "wood_plank.png", "wood_plank.png"]
+        ],
+        "src" : "wood_trapdoor.png"
+    },
+    "Fence Gate" : {
+        "recipes" : [
+            ["stick.png", "wood_plank.png", "stick.png",
+            "stick.png", "wood_plank.png", "stick.png",
+            null, null, null],
+
+            [null, null, null,
+            "stick.png", "wood_plank.png", "stick.png",
+            "stick.png", "wood_plank.png", "stick.png"]
+        ],
+        "src" : "wood_fence_gate.png"
+    },
+    "Wood Button" : {
+        "recipes" : [
+            ["wood_plank.png",null,null,
+            null,null,null,
+            null,null,null],
+
+            [null,"wood_plank.png",null,
+            null,null,null,
+            null,null,null],
+
+            [null,null,"wood_plank.png",
+            null,null,null,
+            null,null,null],
+
+            [null,null,null,
+            "wood_plank.png",null,null,
+            null,null,null],
+
+            [null,null,null,
+            null,"wood_plank.png",null,
+            null,null,null],
+
+            [null,null,null,
+            null,null,"wood_plank.png",
+            null,null,null],
+
+            [null,null,null,
+            null,null,null,
+            "wood_plank.png",null,null],
+            [null,null,null,
+            null,null,null,
+            null,"wood_plank.png",null],
+
+            [null,null,null,
+            null,null,null,
+            null,null,"wood_plank.png"]
+        ],
+        "src" : "wood_button.png"
+    },
+    "Stone Button" : {
+        "recipes" : [
+            ["stone.png",null,null,
+            null,null,null,
+            null,null,null],
+
+            [null,"stone.png",null,
+            null,null,null,
+            null,null,null],
+
+            [null,null,"stone.png",
+            null,null,null,
+            null,null,null],
+
+            [null,null,null,
+            "stone.png",null,null,
+            null,null,null],
+
+            [null,null,null,
+            null,"stone.png",null,
+            null,null,null],
+
+            [null,null,null,
+            null,null,"stone.png",
+            null,null,null],
+
+            [null,null,null,
+            null,null,null,
+            "stone.png",null,null],
+            [null,null,null,
+            null,null,null,
+            null,"stone.png",null],
+
+            [null,null,null,
+            null,null,null,
+            null,null,"stone.png"]
+        ],
+        "src" : "stone_button.png"
+    },
+    "Lever" : {
+        "recipes" : [
+            ["stick.png",null,null,
+            "cobblestone.png",null,null,
+            null,null,null],
+
+            [null,"stick.png",null,
+            null,"cobblestone.png",null,
+            null,null,null],
+
+            [null,null,"stick.png",
+            null,null,"cobblestone.png",
+            null,null,null],
+
+            [null,null,null,
+            "stick.png",null,null,
+            "cobblestone.png",null,null],
+
+            [null,null,null,
+            null,"stick.png",null,
+            null,"cobblestone.png",null],
+
+            [null,null,null,
+            null,null,"stick.png",
+            null,null,"cobblestone.png"]
+        ],
+            "src" : "torch.png"
+    },
+    "Redstone Repeater" : {
+        "recipes" : [
+            ["redstone_torch.png", "redstone_dust.png", "redstone_torch.png",
+            "stone.png", "stone.png", "stone.png",
+            null, null, null],
+
+            [null, null, null,
+            "redstone_torch.png", "redstone_dust.png", "redstone_torch.png",
+            "stone.png", "stone.png", "stone.png"]
+        ],
+        "src" : "redstone_repeater.png"
+    },
+    "Redstone Torch" : {
+        "recipes" : [
+            ["redstone.png",null,null,
+            "stick.png",null,null,
+            null,null,null],
+
+            [null,"redstone.png",null,
+            null,"stick.png",null,
+            null,null,null],
+
+            [null,null,"redstone.png",
+            null,null,"stick.png",
+            null,null,null],
+
+            [null,null,null,
+            "redstone.png",null,null,
+            "stick.png",null,null],
+
+            [null,null,null,
+            null,"redstone.png",null,
+            null,"stick.png",null],
+
+            [null,null,null,
+            null,null,"redstone.png",
+            null,null,"stick.png"]
+        ],
+            "src" : "redstone_torch.png"
+    },
+    "Jukebox" : {
+        "recipes" : [
+            ["wood_plank.png", "wood_plank.png", "wood_plank.png",
+            "wood_plank.png", "diamond.png", "wood_plank.png",
+            "wood_plank.png", "wood_plank.png", "wood_plank.png"]
+        ],
+        "src" : "jukebox.png"
+    },
+    "Dispenser" : {
+        "recipes" : [
+            ["cobblestone.png", "cobblestone.png", "cobblestone.png",
+            "cobblestone.png", "bow.png", "cobblestone.png",
+            "cobblestone.png", "redstone_dust.png", "cobblestone.png"]
+        ],
+        "src" : "dispenser.png"
+    },
+    "Piston" : {
+        "recipes" : [
+            ["wodd_plank.png", "wood_plank.png", "wood_plank.png",
+            "cobblestone.png", "iron_ingot.png", "cobblestone.png",
+            "cobblestone.png", "redstone_dust.png", "cobblestone.png"]
+        ],
+        "src" : "piston.png"
+    },
+    "Sticky Piston" : {
+        "recipes" : [
+            ["slime_ball.png",null,null,
+            "piston.png",null,null,
+            null,null,null],
+
+            [null,"slime_ball.png",null,
+            null,"piston.png",null,
+            null,null,null],
+
+            [null,null,"slime_ball.png",
+            null,null,"piston.png",
+            null,null,null],
+
+            [null,null,null,
+            "slime_ball.png",null,null,
+            "piston.png",null,null],
+
+            [null,null,null,
+            null,"slime_ball.png",null,
+            null,"piston.png",null],
+
+            [null,null,null,
+            null,null,"slime_ball.png",
+            null,null,"piston.png"]
+        ],
+            "src" : "sticky_piston.png"
+    },
+    "Minecart" : {
+        "recipes" : [
+            ["iron_ingot.png", null, "iron_ingot.png",
+            "iron_ingot.png", "iron_ingot.png","iron_ingot.png",
+            null, null, null],
+
+            [null, null, null,
+            "iron_ingot.png", null, "iron_ingot.png",
+            "iron_ingot.png", "iron_ingot.png", "iron_ingot.png"]
+        ],
+        "src" : "minecart.png"
+    },
+    "Powered Minecart" : {
+        "recipes" : [
+            ["furnace.png",null,null,
+            "minecart.png",null,null,
+            null,null,null],
+
+            [null,"furnace.png",null,
+            null,"minecart.png",null,
+            null,null,null],
+
+            [null,null,"furnace.png",
+            null,null,"minecart.png",
+            null,null,null],
+
+            [null,null,null,
+            "furnace.png",null,null,
+            "minecart.png",null,null],
+
+            [null,null,null,
+            null,"furnace.png",null,
+            null,"minecart.png",null],
+
+            [null,null,null,
+            null,null,"furnace.png",
+            null,null,"minecart.png"]
+        ],
+            "src" : "minecart_with_furnace.png"
+    },
+    "Storage Minecart" : {
+        "recipes" : [
+            ["chest.png",null,null,
+            "minecart.png",null,null,
+            null,null,null],
+
+            [null,"chest.png",null,
+            null,"minecart.png",null,
+            null,null,null],
+
+            [null,null,"chest.png",
+            null,null,"minecart.png",
+            null,null,null],
+
+            [null,null,null,
+            "chest.png",null,null,
+            "minecart.png",null,null],
+
+            [null,null,null,
+            null,"chest.png",null,
+            null,"minecart.png",null],
+
+            [null,null,null,
+            null,null,"chest.png",
+            null,null,"minecart.png"]
+        ],
+            "src" : "minecart_with_chest.png"
+    },
+    "Rail" : {
+        "recipes" : [
+            ["iron_ingot.png", null, "iron_ingot.png",
+            "iron_ingot.png", "stick.png", "iron_ingot.png",
+            "iron_ingot.png", null, "iron_ingot.png"]
+        ],
+        "src" : "rail.png"
+    },
+    "Powered Rail" : {
+        "recipes" : [
+            ["gold_ingot.png", null, "gold_ingot.png",
+            "gold_ingot.png", "stick.png", "gold_ingot.png",
+            "gold_ingot.png", "redstone_dust.png", "gold_ingot.png"]
+        ],
+        "src" : "powered_rail.png"
+    },
+    "Detector Rail" : {
+        "recipes" : [
+            ["iron_ingot.png", null, "iron_ingot.png",
+            "iron_ingot.png", "stone_pressure_plate.png", "iron_ingot.png",
+            "iron_ingot.png", "redstone_dust.png", "iron_ingot.png"]
+        ],
+        "src" : "detector_rail.png"
+    },
+    "Redstone Lamp" : {
+        "recipes" : [
+            [null, "redstone_dust.png", null,
+            "redstone_dust.png", "glowstone.png", "redstone_dust.png",
+            null, "redstone_dust.png", null]
+        ],
+        "src" : "redstone_lamp.png"
+    },
+    "Tripwire Hook" : {
+        "recipes" : [
+            ["iron_ingot.png", null, null,
+            "stick.png", null, null,
+            "wood_plank.png", null, null],
+            
+            [null, "iron_ingot.png", null,
+            null, "stick.png", null,
+            null, "wood_plank.png", null],
+        
+            [null, null, "iron_ingot.png",
+            null, null, "stick.png",
+            null, null, "wood_plank.png"]
+        ],
+        "src" : "tripwire_hook.png"
+    },
+    "Activator Rail" : {
+        "recipes" : [
+            ["iron_ingot.png", "stick.png", "iron_ingot.png",
+            "iron_ingot.png", "redstone_torch.png", "iron_ingot.png",
+            "iron_ingot.png", "stick.png", "iron_ingot.png"]
+        ],
+        "src" : "activator_rail.png"
+    },
+    "Daylight Sensor" : {
+        "recipes" : [
+            ["glass.png", "glass.png", "glass.png",
+            "nether_quartz.png", "nether_quartz.png", "nether_quartz.png",
+            "wood_slab.png", "wood_slab.png", "wood_slab.png"]
+        ],
+        "src" : "daylight_sensor.png"
+    },
+    "Dropper" : {
+        "recipes" : [
+            ["cobblestone.png","cobblestone.png","cobblestone.png",
+            "cobblestone.png",null,"cobblestone.png",
+            "cobblestone.png","redstone_dust.png","cobblestone.png"]
+        ],
+            "src" : "dropper.png"
+    },
+    "Hopper" : {
+        "recipes" : [
+            ["iron_ingot.png",null,"iron_ingot.png",
+            "iron_ingot.png","chest.png","iron_ingot.png",
+            null,"iron_ingot.png",null]
+        ],
+            "src" : "hopper.png"
+    },
+    "Hopper Minecart" : {
+        "recipes" : [
+            ["hopper.png",null,null,
+            "minecart.png",null,null,
+            null,null,null],
+
+            [null,"hopper.png",null,
+            null,"minecart.png",null,
+            null,null,null],
+
+            [null,null,"hopper.png",
+            null,null,"minecart.png",
+            null,null,null],
+
+            [null,null,null,
+            "hopper.png",null,null,
+            "minecart.png",null,null],
+
+            [null,null,null,
+            null,"hopper.png",null,
+            null,"minecart.png",null],
+
+            [null,null,null,
+            null,null,"hopper.png",
+            null,null,"minecart.png"]
+        ],
+            "src" : "minecart_with_hopper.png"
+    },
+    "TNT Minecart" : {
+        "recipes" : [
+            ["tnt.png",null,null,
+            "minecart.png",null,null,
+            null,null,null],
+
+            [null,"tnt.png",null,
+            null,"minecart.png",null,
+            null,null,null],
+
+            [null,null,"tnt.png",
+            null,null,"minecart.png",
+            null,null,null],
+
+            [null,null,null,
+            "tnt.png",null,null,
+            "minecart.png",null,null],
+
+            [null,null,null,
+            null,"tnt.png",null,
+            null,"minecart.png",null],
+
+            [null,null,null,
+            null,null,"tnt.png",
+            null,null,"minecart.png"]
+        ],
+            "src" : "minecart_with_tnt.png"
+    },
+    "Redstone Comparator" : {
+        "recipes" : [
+            [null, "redstone_torch.png", null,
+            "redstone_torch.png", "nether_quartz.png", "redstone_torch.png",
+            "stone.png", "stone.png", "stone.png"]
+        ],
+        "src" : "redstone_comparator.png"
+    },
+    "Trapped Chest" : {
+        "recipes" : [
+            ["chest.png", "tripwire_hook.png", null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "src.png",
+        "any-order" : "true"
+    },
+    "Iron Trapdoor" : {
+        "recipes" : [
+            ["iron_ingot.png", "iron_ingot.png", null,
+            "iron_ingot.png", "iron_ingot.png", null,
+            null, null, null],
+            
+            [null, "iron_ingot.png", "iron_ingot.png",
+            null, "iron_ingot.png", "iron_ingot.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "iron_ingot.png", "iron_ingot.png",
+            null, "iron_ingot.png", "iron_ingot.png"],
+            
+            [null, null, null,
+            "iron_ingot.png", "iron_ingot.png", null,
+            "iron_ingot.png", "iron_ingot.png", null]
+        ],
+        "src" : "iron_trapdoor.png"
+    },
+    "item" : {
+        "recipes" : [
+            ["cobblestone.png", "cobblestone.png", "cobblestone.png",
+            "redstone_dust.png", "redstone_dust.png", "nether_quartz.png",
+            "cobblestone.png", "cobblestone.png", "cobblestone.png"]
+        ],
+        "src" : "src.png"
+    },
+    "Target" : {
+        "recipes" : [
+            [null, "redstone_dust.png", null,
+            "redstone_dust.png", "hay_block.png", "redstone_dust.png",
+            null, "redstone_dust.png", null]
+        ],
+        "src" : "target.png"
+    },
+    "Bowl" : {
+        "recipes" : [
+            ["wood_plank.png", null, "wood_plank.png",
+            null, "wood_plank.png", null,
+            null, null, null],
+
+            [null, null, null,
+            "wood_plank.png", null, "wood_plank.png",
+            null, "wood_plank.png", null]
+        ],
+        "src" : "bowl.png"
+    },
+    "Mushroom Stew" : {
+        "recipes" : [
+            ["bowl.png", "red_mushroom.png", "brown_mushroom.png",
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "src.png",
+        "any-order" : "true"
+    },
+    "Bread" : {
+        "recipes" : [
+            ["wheat.png", "wheat.png", "wheat.png",
+            null, null, null,
+            null, null, null],
+            
+            [null, null, null,
+            "wheat.png", "wheat.png", "wheat.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, null, null,
+            "wheat.png", "wheat.png", "wheat.png"]
+        ],
+        "src" : "bread.png"
+    },
+    "Golden Apple" : {
+        "recipes" : [
+            ["gold_ingot.png", "gold_ingot.png", "gold_ingot.png",
+            "gold_ingot.png", "apple.png", "gold_ingot.png",
+            "gold_ingot.png", "gold_ingot.png", "gold_ingot.png"]
+        ],
+        "src" : "src.png"
+    },
+    "Sugar" : {
+        "recipes" : [
+            ["sugarcane.png", null, null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "src.png",
+        "any-order" : "true"
+    },
+    "Cake" : {
+        "recipes" : [
+            ["milk_bucket.png", "milk_bucket.png", "milk_bucket.png",
+            "sugar.png", "egg.png", "sugar.png",
+            "wheat.png", "wheat.png", "wheat.png"]
+        ],
+        "src" : "cake.png"
+    },
+    "Cookie" : {
+        "recipes" : [
+            ["wheat.png", "cocoa_beans.png", "wheat.png",
+            null, null, null,
+            null, null, null],
+            
+            [null, null, null,
+            "wheat.png", "cocoa_beans.png", "wheat.png",
+            null, null, null],
+        
+            [null, null, null,
+            null, null, null,
+            "wheat.png", "cocoa_beans.png", "wheat.png"]
+        ],
+        "src" : "cookie.png"
+    },
+    "Melon Block" : {
+        "recipes" : [
+            ["melon_slice.png", "melon_slice.png", "melon_slice.png",
+            "melon_slice.png", "melon_slice.png", "melon_slice.png",
+            "melon_slice.png", "melon_slice.png", "melon_slice.png"]
+        ],
+        "src" : "melon.png"
+    },
+    "Melon Seeds" : {
+        "recipes" : [
+            ["melon_slice.png", null, null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "melon_seeds.png",
+        "any-order" : "true"
+    },
+    "Pumpkin Seeds" : {
+        "recipes" : [
+            ["pumpkin.png", null, null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "pumpkin_seeds.png",
+        "any-order" : "true"
+    },
+    "Golden Carrot" : {
+        "recipes" : [
+            ["gold_nugget.png", "gold_nugget.png", "gold_nugget.png",
+            "gold_nugget.png", "carrot.png", "gold_nugget.png",
+            "gold_nugget.png", "gold_nugget.png", "gold_nugget.png"]
+        ],
+        "src" : "golden_carrot.png"
+    },
+    "Pumpkin Pie" : {
+        "recipes" : [
+            ["pumpkin.png", "sugar.png", "egg.png",
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "pumpkin_pie.png",
+        "any-order" : "true"
+    },
+    "Rabbit Stew" : {
+        "recipes" : [
+            ["bowl.png", "carrot.png", "red_mushroom.png",
+            "baked_potato.png", "cooked_rabbit.png", null,
+            null, null, null]
+        ],
+        "src" : "rabbit_stew.png",
+        "any-order" : "true"
+    },
+    "Suspicious Stew" : {
+        "recipes" : [
+            ["bowl.png", "brown_mushroom.png", "red_mushroom.png",
+            "flower.png", null, null,
+            null, null, null]
+        ],
+        "src" : "suspicious_stew.png",
+        "any-order" : "true"
+    },
+    "Honey Bottle" : {
+        "recipes" : [
+            ["glass_bottle.png", "glass_bottle.png", "glass_bottle.png",
+            "glass_bottle.png", "honey_block.png", null,
+            null, null, null]
+        ],
+        "src" : "honey_bottle.png"
+    },
+    "Bed" : {
+        "recipes" : [
+            ["white_wool.png", "white_wool.png", "white_wool.png",
+            "wood_plank.png", "wood_plank.png", "wood_plank.png",
+            null, null, null],
+            
+            [null, null, null,
+            "white_wool.png", "white_wool.png", "white_wool.png",
+            "wood_plank.png", "wood_plank.png", "wood_plank.png"]
+        ],
+        "src" : "bed.png"
+    },
+    "Painting" : {
+        "recipes" : [
+            ["stick.png", "stick.png", "stick.png",
+            "stick.png", "white_wool.png", "stick.png",
+            "stick.png", "stick.png", "stick.png"]
+        ],
+        "src" : "painting.png"
+    },
+    "Paper" : {
+        "recipes" : [
+            ["sugarcane.png", "sugarcane.png", "sugarcane.png",
+            null, null, null,
+            null, null, null],
+            
+            [null, null, null,
+            "sugarcane.png", "sugarcane.png", "sugarcane.png",
+            null, null, null],
+                
+            [null, null, null,
+            null, null, null,
+            "sugarcane.png", "sugarcane.png", "sugarcane.png"]
+        ],
+        "src" : "paper.png"
+    },
+    "Book" : {
+        "recipes" : [
+            ["leather.png", "paper.png", "paper.png",
+            "paper.png", null, null,
+            null, null, null]
+        ],
+        "src" : "book.png",
+        "any-order" : "true"
+    },
+    "Book and Quill" : {
+        "recipes" : [
+            ["feather.png", "book.png", "ink_sac.png",
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "src.png",
+        "any-order" : "true"
+    },
+    "Map" : {
+        "recipes" : [
+            ["paper.png", "paper.png", "paper.png",
+            "paper.png", "compass.png", "paper.png",
+            "paper.png", "paper.png", "paper.png"]
+        ],
+        "src" : "map.png"
+    },
+    "Glass Pane" : {
+        "recipes" : [
+            ["glass.png", "glass.png", "glass.png",
+            "glass.png", "glass.png", "glass.png",
+            null, null, null],
+            
+            [null, null, null,
+            "glass.png", "glass.png", "glass.png",
+            "glass.png", "glass.png", "glass.png"]
+        ],
+        "src" : "glass_pane.png"
+    },
+    "Iron Bars" : {
+        "recipes" : [
+            ["iron_ingot.png", "iron_ingot.png", "iron_ingot.png",
+            "iron_ingot.png", "iron_ingot.png", "iron_ingot.png",
+            null, null, null],
+            
+            [null, null, null,
+            "iron_ingot.png", "iron_ingot.png", "iron_ingot.png",
+            "iron_ingot.png", "iron_ingot.png", "iron_ingot.png"]
+        ],
+        "src" : "glass_pane.png"
+    },
+    "Gold_ingot" : {
+        "recipes" : [
+            ["gold_nugget.png", "gold_nugget.png", "gold_nugget.png",
+            "gold_nugget.png", "gold_nugget.png", "gold_nugget.png",
+            "gold_nugget.png", "gold_nugget.png", "gold_nugget.png"]
+        ],
+        "src" : "gold_ingot.png"
+    },
+    "Nether Brick Fence" : {
+        "recipes" : [
+        ["nether_bricks.png","nether_brick.png","nether_bricks.png",
+        "nether_bricks.png","nether_brick.png","nether_bricks.png",
+        null,null,null],
+
+        [null,null,null,
+        "nether_bricks.png","nether_brick.png","nether_bricks.png",
+        "nether_bricks.png","nether_brick.png","nether_bricks.png"]
     ],
-    "src" : "src.png"
-},
+    "src" : "nether_brick_fence.png"
+    },
+    "Eye of Ender" : {
+        "recipes" : [
+            ["ender_pearl.png", "blaze_powder.png", null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "eye_of_ender.png",
+        "any-order" : "true"
+    },
+    "Enchantment Table" : {
+        "recipes" : [
+            [null, "book.png", null,
+            "diamond.png", "obsidian.png", "diamond.png",
+            "obsidian.png", "obsidian.png", "obsidian.png"]
+        ],
+        "src" : "enchantment_table.png"
+    },
+    "Fire Charge" : {
+        "recipes" : [
+            ["blaze_powder.png", "coal.png", "gunpowder.png",
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "src.png",
+        "any-order" : "true"
+    },
+    "Ender Chest" : {
+        "recipes" : [
+            ["obsidian.png", "obsidian.png", "obsidian.png",
+            "obsidian.png", "eye_of_ender.png", "obsidian.png",
+            "obsidian.png", "obsidian.png", "obsidian.png"]
+        ],
+        "src" : "ender_chest.png"
+    },
+    "Beacon" : {
+        "recipes" : [
+            ["glass.png", "glass.png", "glass.png",
+            "glass.png", "nether_star.png", "glass.png",
+            "obsidian.png", "obsidian.png", "obsidian.png"]
+        ],
+        "src" : "beacon.png"
+    },
+    "Anvil" : {
+        "recipes" : [
+            ["iron_block.png", "iron_block.png", "iron_block.png",
+            null, "iron_ingot.png", null,
+            "iron_ingot.png", "iron_ingot.png", "iron_ingot.png"]
+        ],
+        "src" : "anvil.png"
+    },
+    "Flower Pot" : {
+        "recipes" : [
+            [null, null, null,
+            "brick.png", null, "brick.png",
+            null, "brick.png", null],
+
+            ["brick.png", null, "brick.png",
+            null, "brick.png", null,
+            null, null, null]
+        ],
+        "src" : "flower_pot.png"
+    },
+    "Item Frame" : {
+        "recipes" : [
+            ["stick.png", "stick.png", "stick.png",
+            "stick.png", "leather.png", "stick.png",
+            "stick.png", "stick.png", "stick.png"]
+        ],
+        "src" : "item_frame.png"
+    },
+    "Carrot on a Stick" : {
+        "recipes" : [
+            ["fishing_rod.png", null, null,
+            null, "carrot.png", null,
+            null, null, null],
+            
+            [null, "fishing_rod.png", null,
+            null, null, "carrot.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "fishing_rod.png", null,
+            null, null, "carrot.png"],
+            
+            [null, null, null,
+            "fishing_rod.png", null, null,
+            null, "carrot.png", null],
+
+            [null, "fishing_rod.png", null,
+            "carrot.png", null, null,
+            null, null, null],
+            
+            [null, null, "fishing_rod.png",
+            null, "carrot.png", null,
+            null, null, null],
+            
+            [null, null, null,
+            null, null, "fishing_rod.png",
+            null, "carrot.png", null],
+            
+            [null, null, null,
+            null, "fishing_rod.png", null,
+            "carrot.png", null, null]
+        ],
+        "src" : "carrot_on_a_stick.png"
+    },
+    "Warped Fungus on a Stick" : {
+        "recipes" : [
+            ["fishing_rod.png", null, null,
+            null, "warped_fungus_on_a_stick.png", null,
+            null, null, null],
+            
+            [null, "fishing_rod.png", null,
+            null, null, "warped_fungus_on_a_stick.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "fishing_rod.png", null,
+            null, null, "warped_fungus_on_a_stick.png"],
+            
+            [null, null, null,
+            "fishing_rod.png", null, null,
+            null, "warped_fungus_on_a_stick.png", null],
+
+            [null, "fishing_rod.png", null,
+            "warped_fungus_on_a_stick.png", null, null,
+            null, null, null],
+            
+            [null, null, "fishing_rod.png",
+            null, "warped_fungus_on_a_stick.png", null,
+            null, null, null],
+            
+            [null, null, null,
+            null, null, "fishing_rod.png",
+            null, "warped_fungus_on_a_stick.png", null],
+            
+            [null, null, null,
+            null, "fishing_rod.png", null,
+            "warped_fungus_on_a_stick.png", null, null]
+        ],
+        "src" : "warped_fungus_on_a_stick.png"
+    },
+    "Firework Rocket" : {
+        "recipes" : [
+            ["firework_star.png", "paper.png", "gunpowder.png",
+            null, null, null,
+            null, null, null],
+
+            ["firework_star.png", "paper.png", "gunpowder.png",
+            "gunpowder.png", null, null,
+            null, null, null],
+            
+            ["firework_star.png", "paper.png", "gunpowder.png",
+            "gunpowder.png", "gunpowder.png", null,
+                null, null, null]
+        ],
+        "src" : "firework.png",
+        "any-order" : "true"
+    },
+    "Leash" : {
+        "recipes" : [
+            ["string.png", "string.png", null,
+                "string.png", "slime_ball.png", null,
+            null, null, "string.png"],
+
+            [null, "string.png", "string.png",
+            null, "slime_ball.png", "string.png",
+            "string.png", null, null]
+        ],
+        "src" : "leash.png"
+    },
+    "Carpet" : {
+        "recipes" : [
+            ["white_wool.png", "white_wool.png", null,
+            null, null, null,
+            null, null, null],
+
+            [null, "white_wool.png", "white_wool.png",
+            null, null, null,
+            null, null, null],
+
+            [null, null, null,
+            "white_wool.png", "white_wool.png", null,
+            null, null, null],
+
+            [null, null, null,
+            null, "white_wool.png", "white_wool.png",
+            null, null, null],
+
+            [null, null, null,
+            null, null, null,
+            "white_wool.png", "white_wool.png", null],
+
+            [null, null, null,
+            null, null, null,
+            null, "white_wool.png", "white_wool.png"]
+        ],
+        "src" : "carpet.png"
+    },
+    "Leather" : {
+        "recipes" : [
+            ["rabbit_hide.png", "rabbit_hide.png", null,
+            "rabbit_hide.png", "rabbit_hide.png", null,
+            null, null, null],
+            
+            [null, "rabbit_hide.png", "rabbit_hide.png",
+            null, "rabbit_hide.png", "rabbit_hide.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "rabbit_hide.png", "rabbit_hide.png",
+            null, "rabbit_hide.png", "rabbit_hide.png"],
+            
+            [null, null, null,
+            "rabbit_hide.png", "rabbit_hide.png", null,
+            "rabbit_hide.png", "rabbit_hide.png", null]
+        ],
+        "src" : "leather.png"
+    },
+    "Banner" : {
+        "recipes" : [
+            ["white_wool.png", "white_wool.png", "white_wool.png",
+            "white_wool.png", "white_wool.png", "white_wool.png",
+            null, "stick.png", null]
+        ],
+        "src" : "banner.png"
+    },
+    "Armor Stand" : {
+        "recipes" : [
+            ["stick.png", "stick.png", "stick.png",
+            null, "stick.png", null,
+            "stick.png", "stone_smooth_slab.png", "stick.png"]
+        ],
+        "src" : "armor_stand.png"
+    },
+    "End Rod" : {
+        "recipes" : [
+            ["blaze_rod.png",null,null,
+            "popped_chorus_fruit.png",null,null,
+            null,null,null],
+
+            [null,"blaze_rod.png",null,
+            null,"popped_chorus_fruit.png",null,
+            null,null,null],
+
+            [null,null,"blaze_rod.png",
+            null,null,"popped_chorus_fruit.png",
+            null,null,null],
+
+            [null,null,null,
+            "blaze_rod.png",null,null,
+            "popped_chorus_fruit.png",null,null],
+
+            [null,null,null,
+            null,"blaze_rod.png",null,
+            null,"popped_chorus_fruit.png",null],
+
+            [null,null,null,
+            null,null,"blaze_rod.png",
+            null,null,"popped_chorus_fruit.png"]
+        ],
+            "src" : "end_rod.png"
+    },
+    "End Crystal" : {
+        "recipes" : [
+            ["glass.png", "glass.png", "glass.png",
+            "glass.png", "eye_of_ender.png", "glass.png",
+            "glass.png", "ghast_tear.png", "glass.png"]
+            ],
+        "src" : "src.png"
+    },
+    "Iron Nugget" : {
+        "recipes" : [
+            ["iron_ingot.png", null, null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "iron_nugget.png",
+        "any-order" : "true"
+    },
+    "Concrete Powder" : {
+        "recipes" : [
+            ["black_dye.png", "sand.png", "sand.png",
+            "sand.png", "sand.png", "gravel.png",
+            "gravel.png", "gravel.png", "gravel.png"]
+        ],
+        "src" : "concrete_powder.png",
+        "any-order" : "true"
+    },
+    "Campfire" : {
+        "recipes" : [
+            [null, "stick.png", null,
+            "stick.png", "coal.png", "stick.png",
+            "wood_log.png", "wood_log.png", "wood_log.png"]
+        ],
+        "src" : "campfire.png"
+    },
+    "Soul Campfire" : {
+        "recipes" : [
+            [null, "stick.png", null,
+            "stick.png", "soul_sand.png", "stick.png",
+            "wood_log.png", "wood_log.png", "wood_log.png"]
+        ],
+        "src" : "soul_campfire.png"
+    },
+    "Scaffolding" : {
+        "recipes" : [
+            ["bamboo.png", "string.png", "bamboo.png",
+            "bamboo.png", null, "bamboo.png",
+            "bamboo.png", null, "bamboo.png"]
+        ],
+        "src" : "scaffolding.png"
+    },
+    "Barrel" : {
+        "recipes" : [
+            ["wood_plank.png", "wood_slab.png", "wood_plank.png",
+            "wood_plank.png", null, "wood_plank.png",
+            "wood_plank.png", "wood_slab.png", "wood_plank.png"]
+        ],
+        "src" : "src.png"
+    },
+    "Blast Furnace" : {
+        "recipes" : [
+            ["iron_ingot.png", "iron_ingot.png", "iron_ingot.png",
+            "iron_ingot.png", "furnace.png", "iron_ingot.png",
+            "stone_smooth.png", "stone_smooth.png", "stone_smooth.png"]
+        ],
+        "src" : "blast_furnace.png"
+    },
+    "Smoker" : {
+        "recipes" : [
+            [null, "wood_log.png", null,
+            "wood_log.png", "furnace.png", "wood_log.png",
+            null, "wood_log.png", null]
+        ],
+        "src" : "smoker.png"
+    },
+    "Cartography Table" : {
+        "recipes" : [
+            ["paper.png", "paper.png", null,
+            "wood_plank.png", "wood_plank.png", null,
+            "wood_plank.png", "wood_plank.png", null],
+
+            [null, "paper.png", "paper.png",
+            null,"wood_plank.png", "wood_plank.png",
+            null, "wood_plank.png", "wood_plank.png"]
+        ],
+        "src" : "cartography_table.png"
+    },
+    "Composter" : {
+        "recipes" : [
+            ["wood_slab.png", null, "wood_slab.png",
+            "wood_slab.png", null, "wood_slab.png",
+            "wood_slab.png", "wood_slab.png", "wood_slab.png"]
+        ],
+        "src" : "composter.png"
+    },
+    "Fletching Table" : {
+        "recipes" : [
+            ["flint.png", "flint.png", null,
+            "wood_plank.png", "wood_plank.png", null,
+            "wood_plank.png", "wood_plank.png", null],
+
+            [null, "flint.png", "flint.png",
+            null,"wood_plank.png", "wood_plank.png",
+            null, "wood_plank.png", "wood_plank.png"]
+        ],
+        "src" : "fletching_table.png"
+    },
+    "Smithing Table" : {
+        "recipes" : [
+            ["iron_ingot.png", "iron_ingot.png", null,
+            "wood_plank.png", "wood_plank.png", null,
+            "wood_plank.png", "wood_plank.png", null],
+
+            [null, "iron_ingot.png", "iron_ingot.png",
+            null,"wood_plank.png", "wood_plank.png",
+            null, "wood_plank.png", "wood_plank.png"]
+        ],
+        "src" : "cartography_table.png"
+    },
+    "Stonecutter" : {
+        "recipes" : [
+            [null, "iron_ingot.png", null,
+            "stone.png", "stone.png", "stone.png",
+            null, null, null],
+            
+            [null, null, null, 
+            null, "iron_ingot.png", null,
+            "stone.png", "stone.png", "stone.png"]
+        ],
+        "src" : "stonecutter.gif"
+    },
+    "Grindstone" : {
+        "recipes" : [
+            ["stick.png", "slab_stone.png", "stick.png",
+            "wood_plank.png", null, "wood_plank.png",
+            null, null, null],
+            
+            [null, null, null,
+            "stick.png", "slab_stone.png", "stick.png",
+            "wood_plank.png", null, "wood_plank.png"]
+        ],
+        "src" : "stonecutter.gif"
+    },
+    "Lantern" : {
+        "recipes" : [
+            ["iron_nugget.png", "iron_nugget.png", "iron_nugget.png",
+            "iron_nugget.png", "torch.png", "iron_nugget.png",
+            "iron_nugget.png", "iron_nugget.png", "iron_nugget.png"]
+        ],
+        "src" : "lantern.png"
+    },
+    "Lectern" : {
+        "recipes" : [
+            ["wood_slab.png", "wood_slab.png", "wood_slab.png",
+            null, "bookshelf.png", null,
+            null, "wood_slab.png", null]
+        ],
+        "src" : "src.png"
+    },
+    "Loom" : {
+        "recipes" : [
+            ["string.png", "string.png", null,
+            "wood_plank.png", "wood_plank.png", null,
+            null, null, null],
+            
+            [null, "string.png", "string.png",
+            null, "wood_plank.png", "wood_plank.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "string.png", "string.png",
+            null, "wood_plank.png", "wood_plank.png"],
+            
+            [null, null, null,
+            "string.png", "string.png", null,
+            "wood_plank.png", "wood_plank.png", null]
+        ],
+        "src" : "loom.png"
+    },
+    "Beehive" : {
+        "recipes" : [
+            ["wood_plank.png", "wood_plank.png", "wood_plank.png",
+            "honeycomb.png", "honeycomb.png", "honeycomb.png",
+            "wood_plank.png", "wood_plank.png", "wood_plank.png"]
+        ],
+        "src" : "beehive.png"
+    },
+    "Netherite Ingot" : {
+        "recipes" : [
+            ["netherite_scraps.png", "netherite_scraps.png", "netherite_scraps.png",
+            "netherite_scraps.png", "gold_ingot.png", "gold_ingot.png",
+            "gold_ingot.png", "gold_ingot.png", null]
+        ],
+        "src" : "src.png",
+        "any-order" : "true"
+    },
+    "Chain" : {
+        "recipes" : [
+            ["iron_nugget.png", null, null,
+            "iron_ingot.png", null, null,
+            "iron_nugget.png", null, null],
+            
+            [null, "iron_nugget.png", null,
+            null,"iron_ingot.png", null,
+            null,"iron_nugget.png", null],
+    
+            [ null, null,"iron_nugget.png",
+            null, null, "iron_ingot.png",
+            null, null, "iron_nugget.png"]
+                    
+        ],
+        "src" : "chain.png"
+    },
+    "Respawn Anchor" : {
+        "recipes" : [
+            ["obsidian_crying.png", "obsidian_crying.png", "obsidian_crying.png",
+            "glowstone.png", "glowstone.png", "glowstone.png",
+            "obsidian_crying.png", "obsidian_crying.png", "obsidian_crying.png"]
+        ],
+        "src" : "respawn_anchor.png"
+    },
+    "Lodestone" : {
+        "recipes" : [
+            ["chiseled_stone_brick.png", "chiseled_stone_brick.png", "chiseled_stone_brick.png",
+            "chiseled_stone_brick.png", "netherite_ingot.png", "chiseled_stone_brick.png",
+            "chiseled_stone_brick.png", "chiseled_stone_brick.png", "chiseled_stone_brick.png"]
+        ],
+        "src" : "lodestone.png"
+    },
+    "Candle" : {
+        "recipes" : [
+            ["string.png",null,null,
+            "honeycomb.png",null,null,
+            null,null,null],
+
+            [null,"string.png",null,
+            null,"honeycomb.png",null,
+            null,null,null],
+
+            [null,null,"string.png",
+            null,null,"honeycomb.png",
+            null,null,null],
+
+            [null,null,null,
+            "string.png",null,null,
+            "honeycomb.png",null,null],
+
+            [null,null,null,
+            null,"string.png",null,
+            null,"honeycomb.png",null],
+
+            [null,null,null,
+            null,null,"string.png",
+            null,null,"honeycomb.png"]
+        ],
+        "src" : "candle.png"
+    },
+    "Lightning Rod" : {
+        "recipes" : [
+            ["copper_ingot.png", null, null,
+            "copper_ingot.png", null, null,
+            "copper_ingot.png", null, null],
+            
+            [null, "copper_ingot.png", null,
+            null,"copper_ingot.png", null,
+            null,"copper_ingot.png", null],
+    
+            [ null, null,"copper_ingot.png",
+            null, null, "copper_ingot.png",
+            null, null, "copper_ingot.png"]
+        ],
+        "src" : "lightning_rod.png"
+    },
+    "Wool" : {
+        "recipes" : [
+            ["string.png", "string.png", null,
+            "string.png", "string.png", null,
+            null, null, null],
+            
+            [null, "string.png", "string.png",
+            null, "string.png", "string.png",
+            null, null, null],
+            
+            [null, null, null,
+            null, "string.png", "string.png",
+            null, "string.png", "string.png"],
+            
+            [null, null, null,
+            "string.png", "string.png", null,
+            "string.png", "string.png", null]
+        ],
+        "src" : "white_wool.png"
+    },
+    "Glass Bottle" : {
+        "recipes" : [
+            [null, null, null,
+            "glass.png", null, "glass.png",
+            null, "glass.png", null],
+
+            ["glass.png", null, "glass.png",
+            null, "glass.png", null,
+            null, null, null]
+        ],
+        "src" : "glass_bottle.png"
+    },
+    "Cauldron" : {
+        "recipes" : [
+            ["iron_ingot.png", null, "iron_ingot.png",
+            "iron_ingot.png", null, "iron_ingot.png",
+            "iron_ingot.png", "iron_ingot.png", "iron_ingot.png"]
+        ],
+        "src" : "cauldron.png"
+    },
+    "Brewing Stand" : {
+        "recipes" : [
+            [null, "blaze_rod.png", null,
+            "cobblestone.png", "cobblestone.png", "cobblestone.png",
+            null, null, null],
+            
+            [null, null, null, 
+            null, "blaze_rod.png", null,
+            "cobblestone.png", "cobblestone.png", "cobblestone.png"]
+        ],
+        "src" : "brewing_stand.gif"
+    },
+    "Blaze Powder" : {
+        "recipes" : [
+            ["blaze_rod.png", null, null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "blaze_powder.png",
+        "any-order" : "true"
+    },
+    "Magma Cream" : {
+        "recipes" : [
+            ["slime_ball.png",null,null,
+            "blaze_powder.png",null,null,
+            null,null,null],
+
+            [null,"slime_ball.png",null,
+            null,"blaze_powder.png",null,
+            null,null,null],
+
+            [null,null,"slime_ball.png",
+            null,null,"blaze_powder.png",
+            null,null,null],
+
+            [null,null,null,
+            "slime_ball.png",null,null,
+            "blaze_powder.png",null,null],
+
+            [null,null,null,
+            null,"slime_ball.png",null,
+            null,"blaze_powder.png",null],
+
+            [null,null,null,
+            null,null,"slime_ball.png",
+            null,null,"blaze_powder.png"]
+        ],
+            "src" : "magma_cream.png"
+    },
+    "Fermented Spider Eye" : {
+        "recipes" : [
+            ["spider_eye.png", "brown_mushroom.png", "sugar.png",
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "fermented_spider_eye.png",
+        "any-order" : "true"
+    },
+    "Glistering Melon" : {
+        "recipes" : [
+            ["gold_nugget.png", "gold_nugget.png", "gold_nugget.png",
+            "gold_nugget.png", "melon_slice.png", "gold_nugget.png",
+            "gold_nugget.png", "gold_nugget.png", "gold_nugget.png"]
+        ],
+        "src" : "glistering_melon.png"
+    }
+}
+}
