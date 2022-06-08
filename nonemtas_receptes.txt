@@ -1,0 +1,207 @@
+
+    "Granite" : {
+        "recipes" : [
+            ["diorite.png", "nether_quartz.png", null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "granite.png",
+        "any-order": "true"
+    },
+    "Andesite" : {
+        "recipes" : [
+            ["diorite.png", "cobblestone.png", null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "andesite.png",
+        "any-order" : "true"
+    },
+    "Waxed Block of Copper" : {
+        "recipes" : [
+            ["copper_block.png", "honeycomb.png", null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "andesite.png",
+        "any-order" : "true"
+    },
+    "Flint & Steel" : {
+        "recipes" : [
+            ["iron_ingot.png", "flint.png", null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "flint_and_steel.png",
+        "any-order" : "true"
+    },
+    "Trapped Chest" : {
+        "recipes" : [
+            ["chest.png", "tripwire_hook.png", null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "src.png",
+        "any-order" : "true"
+    },
+    "Mushroom Stew" : {
+        "recipes" : [
+            ["bowl.png", "red_mushroom.png", "brown_mushroom.png",
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "src.png",
+        "any-order" : "true"
+    },
+    "Sugar" : {
+        "recipes" : [
+            ["sugarcane.png", null, null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "src.png",
+        "any-order" : "true"
+    },
+    "Melon Seeds" : {
+        "recipes" : [
+            ["melon_slice.png", null, null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "melon_seeds.png",
+        "any-order" : "true"
+    },
+    "Pumpkin Seeds" : {
+        "recipes" : [
+            ["pumpkin.png", null, null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "pumpkin_seeds.png",
+        "any-order" : "true"
+    },
+    "Pumpkin Pie" : {
+        "recipes" : [
+            ["pumpkin.png", "sugar.png", "egg.png",
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "pumpkin_pie.png",
+        "any-order" : "true"
+    },
+    "Rabbit Stew" : {
+        "recipes" : [
+            ["bowl.png", "carrot.png", "red_mushroom.png",
+            "baked_potato.png", "cooked_rabbit.png", null,
+            null, null, null]
+        ],
+        "src" : "rabbit_stew.png",
+        "any-order" : "true"
+    },
+    "Suspicious Stew" : {
+        "recipes" : [
+            ["bowl.png", "brown_mushroom.png", "red_mushroom.png",
+            "flower.png", null, null,
+            null, null, null]
+        ],
+        "src" : "suspicious_stew.png",
+        "any-order" : "true"
+    },
+    "Book" : {
+        "recipes" : [
+            ["leather.png", "paper.png", "paper.png",
+            "paper.png", null, null,
+            null, null, null]
+        ],
+        "src" : "book.png",
+        "any-order" : "true"
+    },
+    "Book and Quill" : {
+        "recipes" : [
+            ["feather.png", "book.png", "ink_sac.png",
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "src.png",
+        "any-order" : "true"
+    },
+    "Eye of Ender" : {
+        "recipes" : [
+            ["ender_pearl.png", "blaze_powder.png", null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "eye_of_ender.png",
+        "any-order" : "true"
+    },
+    "Fire Charge" : {
+        "recipes" : [
+            ["blaze_powder.png", "coal.png", "gunpowder.png",
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "src.png",
+        "any-order" : "true"
+    },
+    "Firework Rocket" : {
+        "recipes" : [
+            ["firework_star.png", "paper.png", "gunpowder.png",
+            null, null, null,
+            null, null, null],
+
+            ["firework_star.png", "paper.png", "gunpowder.png",
+            "gunpowder.png", null, null,
+            null, null, null],
+            
+            ["firework_star.png", "paper.png", "gunpowder.png",
+            "gunpowder.png", "gunpowder.png", null,
+                null, null, null]
+        ],
+        "src" : "firework.png",
+        "any-order" : "true"
+    },
+    "Iron Nugget" : {
+        "recipes" : [
+            ["iron_ingot.png", null, null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "iron_nugget.png",
+        "any-order" : "true"
+    },
+    "Concrete Powder" : {
+        "recipes" : [
+            ["black_dye.png", "sand.png", "sand.png",
+            "sand.png", "sand.png", "gravel.png",
+            "gravel.png", "gravel.png", "gravel.png"]
+        ],
+        "src" : "concrete_powder.png",
+        "any-order" : "true"
+    },
+    "Netherite Ingot" : {
+        "recipes" : [
+            ["netherite_scraps.png", "netherite_scraps.png", "netherite_scraps.png",
+            "netherite_scraps.png", "gold_ingot.png", "gold_ingot.png",
+            "gold_ingot.png", "gold_ingot.png", null]
+        ],
+        "src" : "src.png",
+        "any-order" : "true"
+    },
+    "Blaze Powder" : {
+        "recipes" : [
+            ["blaze_rod.png", null, null,
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "blaze_powder.png",
+        "any-order" : "true"
+    },
+    "Fermented Spider Eye" : {
+        "recipes" : [
+            ["spider_eye.png", "brown_mushroom.png", "sugar.png",
+            null, null, null,
+            null, null, null]
+        ],
+        "src" : "fermented_spider_eye.png",
+        "any-order" : "true"
+    },
